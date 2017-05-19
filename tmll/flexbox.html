@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>flexbox</title>
+	<style>
+		*{margin: 0;padding: 0;box-sizing: border-box;overflow: hidden;}
+		img{vertical-align: middle;}
+		.ui-flex{display: flex;flex-wrap: wrap;}
+		.ui-flex .cell{flex: 1;}
+		.shop-con{margin: 5px;}
+		div.cell{background-color: red;}
+		.ui-flex div.pic-big{background-color: blue;/*height: 200px;*/flex: 4;}
+		.ui-flex div.pic-small{background-color: yellow;flex: 2;}
+		div.small{background-color: green;/*height: 100px;*/}
+		.shop-pic-1,.shop-pic-2,.shop-pic-3{width: 100%;}
+	</style>
+</head>
+<body>
+	<div class="ui-flex">
+		<div class="cell ui-flex shop-con">
+			<div class="pic-big cell">
+				<img class="shop-pic-1" src="https://gw.alicdn.com/bao/uploaded/TB1ekgiOFXXXXaeXVXXXXXXXXXX_!!0-item_pic.jpg_760x760Q30s0.jpg_.webp">
+			</div>
+
+			<div class="pic-small cell">
+				<div class="small">
+					<img class="shop-pic-2" src="https://gw.alicdn.com/bao/uploaded/TB1hq_aOXXXXXbFXFXXXXXXXXXX_!!0-item_pic.jpg_760x760Q30s0.jpg_.webp">
+				</div>
+				<div class="small">
+					<img class="shop-pic-3" src="https://gw.alicdn.com/bao/uploaded/TB1WTYiOXXXXXXyapXXXXXXXXXX_!!0-item_pic.jpg_760x760Q30s0.jpg_.webp">
+				</div>
+			</div>
+		</div>
+
+		<div class="cell ui-flex shop-con">
+			<div class="pic-big cell"></div>
+
+			<div class="pic-small cell">
+				<div class="small"></div>
+				<div class="small"></div>
+			</div>
+		</div>
+	</div>
+
+		<ul class="ui-flex">
+		<li class="cell ui-flex shop-con">
+			<div class="pic-big cell">
+				<img class="shop-pic-1" src="https://gw.alicdn.com/bao/uploaded/TB1ekgiOFXXXXaeXVXXXXXXXXXX_!!0-item_pic.jpg_760x760Q30s0.jpg_.webp">
+			</div>
+
+			<div class="pic-small cell">
+				<div class="small">
+					<img class="shop-pic-2" src="https://gw.alicdn.com/bao/uploaded/TB1hq_aOXXXXXbFXFXXXXXXXXXX_!!0-item_pic.jpg_760x760Q30s0.jpg_.webp">
+				</div>
+				<div class="small">
+					<img class="shop-pic-3" src="https://gw.alicdn.com/bao/uploaded/TB1WTYiOXXXXXXyapXXXXXXXXXX_!!0-item_pic.jpg_760x760Q30s0.jpg_.webp">
+				</div>
+			</div>
+		</li>
+
+		<li class="cell ui-flex shop-con">
+			<div class="pic-big cell"></div>
+
+			<div class="pic-small cell">
+				<div class="small"></div>
+				<div class="small"></div>
+			</div>
+		</li>
+	</ul>
+</body>
+</html>
