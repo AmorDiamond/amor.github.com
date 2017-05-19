@@ -876,11 +876,12 @@
 		}
 		function aftLoadImg(obj,url){
 		  var oImg = new Image();
-		  oImg.src = url;
 		  oImg.onload = function(){
+		  	console.log("src:"+oImg.src);
 		    obj.src = oImg.src;
 		  }
-		  
+		  console.log("url:"+url);
+		  oImg.src = url;
 		}
 		 
 	</script>
