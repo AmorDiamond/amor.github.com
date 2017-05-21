@@ -67,7 +67,7 @@ section{height: 2000px}
     padding-bottom: 1px;
     overflow: hidden;
 }
-/*.floor-con .inner-con{padding: 2px;}*/
+.floor-con .inner-con{padding: 2px;}
 .floor-con .shop-pic-3-con{
     padding-left: 1px;
     height: 100%;
