@@ -82,14 +82,13 @@ textarea.fixAndroidKeyboard:focus,input.fixAKeyboard:focus {
 	float: right;
 }
 .flex-ui{
-    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */  
-    display: -webkit-flex;
 	display: flex;
-	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
 }
 .flex-ui .cell{
 	-webkit-box-flex: 1;
+	box-flex: 1;
 	-webkit-flex: 1;
 	flex: 1;
 }
@@ -106,21 +105,15 @@ textarea.fixAndroidKeyboard:focus,input.fixAKeyboard:focus {
     -webkit-flex: 16624.9875 !important;
     -ms-flex: 16624.9875 !important;*/
     flex: 1.66 !important;
+    -webkit-flex: 1.66 !important;
 }
 .flex-ui .flex-right{
     /*-webkit-box-flex: 20875.0125 !important;
     -webkit-flex: 20875.0125 !important;
     -ms-flex: 20875.0125 !important;*/
     flex: 2.08 !important;
+    -webkit-flex: 2.08 !important;
 }
 .flex-left a,.flex-right a{display: block;}
-.flex-ui .shop-flex-l{
-	-webkit-box-flex: 4 !important;
-	-webkit-flex: 4 !important;
-	flex: 4 !important;
-}
-.flex-ui .shop-flex-r{
-	-webkit-box-flex: 2 !important;
-	-webkit-flex: 2 !important;
-	flex: 2 !important;
-}
+.flex-ui .shop-flex-l{flex: 4 !important;-webkit-flex: 4 !important}
+.flex-ui .shop-flex-r{flex: 2 !important;-webkit-flex: 2 !important;}
