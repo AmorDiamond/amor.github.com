@@ -111,7 +111,7 @@ section{height: 2000px}
     width: 100%;
     text-overflow: ellipsis;
 }
-/*.shop-flex-r img,.shop-flex-l img{width: 100%;}*/
+.shop-flex-r img,.shop-flex-l img{width: 100%;}
 
 /* 猜你喜欢楼层 */
 .card-item img{width: 100%;}
