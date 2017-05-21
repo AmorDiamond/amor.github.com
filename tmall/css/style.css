@@ -299,4 +299,7 @@ section{height: 2000px}
     padding: 0!important;
     position: relative;
 }
+.flex-ui.vertical .cell {
+    width: auto;
+}
 
