@@ -115,5 +115,5 @@ textarea.fixAndroidKeyboard:focus,input.fixAKeyboard:focus {
     -webkit-flex: 2.08 !important;
 }
 .flex-left a,.flex-right a{display: block;}
-.flex-ui .shop-flex-l{flex: 4 !important;-webkit-flex: 4 !important}
-.flex-ui .shop-flex-r{flex: 2 !important;-webkit-flex: 2 !important;}
+.flex-ui .shop-flex-l{flex: 4 !important;-webkit-flex: 4 !important;-webkit-box-flex: 4;}
+.flex-ui .shop-flex-r{flex: 2 !important;-webkit-flex: 2 !important;-webkit-box-flex: 2;}
