@@ -260,7 +260,7 @@ section{height: 2000px}
     -ms-flex: 120!important;
     flex: 120!important;
 }
-.mui-flex.vertical {
+.flex-ui.vertical {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
