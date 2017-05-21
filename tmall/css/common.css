@@ -86,7 +86,7 @@ textarea.fixAndroidKeyboard:focus,input.fixAKeyboard:focus {
 	flex-wrap: wrap;
 	-webkit-flex-wrap: wrap;
 }
-.flex-ui .cell{
+.flex-ui>.cell{
 	-webkit-box-flex: 1;
 	box-flex: 1;
 	-webkit-flex: 1;

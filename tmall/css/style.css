@@ -285,7 +285,7 @@ section{height: 2000px}
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
-.flex-ui>.cell{
+/*.flex-ui>.cell{
     -webkit-box-flex: 1;
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -298,7 +298,7 @@ section{height: 2000px}
     display: block;
     padding: 0!important;
     position: relative;
-}
+}*/
 .flex-ui.vertical .cell {
     width: auto;
 }
