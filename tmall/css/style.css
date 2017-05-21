@@ -251,7 +251,7 @@ section{height: 2000px}
 	width: 76%;
     margin: 10px auto;
 }
-.shop-pic-1-con{overflow: hidden;background-color: red;}
-.shop-pic-2-con{overflow: hidden;background-color: blue;}
-.shop-pic-3-con{overflow: hidden;background-color: green;}
+.shop-pic-1-con{width: 100%;background-color: red;}
+.shop-pic-2-con{width: 100%;background-color: blue;}
+.shop-pic-3-con{width: 100%;background-color: green;}
 
