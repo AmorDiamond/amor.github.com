@@ -254,6 +254,9 @@ section{height: 2000px}
 /*.shop-pic-1-con{width: 100%;background-color: red;}
 .shop-pic-2-con{width: 100%;background-color: blue;}
 .shop-pic-3-con{width: 100%;background-color: green;}*/
+.shop-pic-2-con img,.shop-pic-3-con img {
+    width: 100%;
+}
 .flex-120 {
     -webkit-box-flex: 120!important;
     -webkit-flex: 120!important;
