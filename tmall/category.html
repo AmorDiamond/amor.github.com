@@ -1995,7 +1995,7 @@
 		var lTop = lActive.offset().top;
 		var flag = null;
 		leftCate.on("click","li",function () {
-			flag = lActive[0].dataset.index == 0 ? false : true; 
+			flag = this.dataset.index == 0 ? false : true; 
 			if (!$(this).hasClass('active')) {
 				if (flag) {
 					lActive.css("visibility","visible");
