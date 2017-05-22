@@ -1998,20 +1998,21 @@
 			flag = this.dataset.index == 0 ? false : true; 
 			if (!$(this).hasClass('active')) {
 				console.log(leftCate.find("li:first-child"));
+
+				clonShow.html($(this).html()).removeClass("show");
+				$(this).addClass('active').siblings().removeClass('active');
+				/*点击切换菜单后把右侧元素的scrollTop恢复为0*/
+				rightCate.scrollTop(0);
+				$(tabs[this.dataset.index]).addClass('active').siblings().removeClass('active');
 				if (flag) {
 					leftCate.find("li:first-child").css("visibility","visible");
 				}else{
 					clonShow.addClass('show');
 					leftCate.find("li:first-child").css("visibility","hidden");
 				}
-				
-				clonShow.html($(this).html()).removeClass("show");
-				$(this).addClass('active').siblings().removeClass('active');
-				/*点击切换菜单后把右侧元素的scrollTop恢复为0*/
-				rightCate.scrollTop(0);
-				$(tabs[this.dataset.index]).addClass('active').siblings().removeClass('active');
+				lActive = leftCate.find(".active");
 			}
-			lActive = leftCate.find(".active");
+			
 		});
 		
 		/*左侧菜单滚动实现固定当前所选项*/
