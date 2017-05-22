@@ -2012,9 +2012,9 @@
 			// lActive = leftCate.find(".active");
 			// lTop = lActive.offset().top;
 			// if(lActive.dataset){
-				// flag = $(lActive).dataset.index == 0 ? false : true; 
+				flag = $(lActive[0]).dataset.index == 0 ? false : true; 
 				console.log(lActive);
-				console.log(lActive[0].dataset);
+				console.log($(lActive[0]).dataset);
 		      // }else{
 		      // 	flag = lActive.getAttribute("data-index") = 0 ? false : true;
 		      // }
