@@ -2008,6 +2008,7 @@
 				console.log(leftCate.find("li:first-child"));
 				/*如果不是第一个，则把第一个显示出来*/
 				if (flag) {
+					clonShow.removeClass('show');
 					leftCate.find("li:first-child").css("visibility","visible");
 				/*如果是第一个，则调出clon元素并把第一个隐藏起来*/
 				}else{
@@ -2029,7 +2030,7 @@
 				console.log(lActive[0].dataset);
 				console.log(flag);
 				console.log(lTop);
-				
+
 	      	if (lTop <= 43) {
 				clonShow.addClass('show');
 			}else{
