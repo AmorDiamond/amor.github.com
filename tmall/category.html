@@ -1995,17 +1995,21 @@
 		var lTop = lActive.offset().top;
 		var flag = null;
 		leftCate.on("click","li",function () {
+			/*判断是否点击的第一个*/
 			flag = this.dataset.index == 0 ? false : true; 
 			if (!$(this).hasClass('active')) {
-				console.log(leftCate.find("li:first-child"));
-
+				
 				clonShow.html($(this).html()).removeClass("show");
 				$(this).addClass('active').siblings().removeClass('active');
 				/*点击切换菜单后把右侧元素的scrollTop恢复为0*/
 				rightCate.scrollTop(0);
 				$(tabs[this.dataset.index]).addClass('active').siblings().removeClass('active');
+
+				console.log(leftCate.find("li:first-child"));
+				/*如果不是第一个，则把第一个显示出来*/
 				if (flag) {
 					leftCate.find("li:first-child").css("visibility","visible");
+				/*如果是第一个，则调出clon元素并把第一个隐藏起来*/
 				}else{
 					clonShow.addClass('show');
 					leftCate.find("li:first-child").css("visibility","hidden");
@@ -2025,18 +2029,12 @@
 				console.log(lActive[0].dataset);
 				console.log(flag);
 				console.log(lTop);
-		      // }else{
-		      // 	flag = lActive.getAttribute("data-index") = 0 ? false : true;
-		      // }
-		      if (flag) {
-		      	if (lTop <= 43) {
-					clonShow.addClass('show');
-				}else{
-					clonShow.removeClass('show');
-				}
-		      }else{
-		      	lActive.css("visibility","hidden");
-		      }
+				
+	      	if (lTop <= 43) {
+				clonShow.addClass('show');
+			}else{
+				clonShow.removeClass('show');
+			}
 		})
 		console.log(tabs[0].className)
 	</script>
