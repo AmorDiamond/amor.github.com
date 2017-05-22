@@ -1995,8 +1995,12 @@
 		var lTop = lActive.offset().top;
 		var flag = null;
 		leftCate.on("click","li",function () {
-			console.log(1111)
+			flag = lActive[0].dataset.index == 0 ? false : true; 
 			if (!$(this).hasClass('active')) {
+				if (flag) {
+					lActive.css("visibility","visible");
+				}
+				
 				clonShow.html($(this).html()).removeClass("show");
 				$(this).addClass('active').siblings().removeClass('active');
 				/*点击切换菜单后把右侧元素的scrollTop恢复为0*/
@@ -2011,7 +2015,7 @@
 			// lActive = leftCate.find(".active");
 			lTop = $(lActive[0]).offset().top;
 			// if(lActive.dataset){
-				flag = lActive[0].dataset.index == 0 ? false : true; 
+				
 				console.log(lActive);
 				console.log(lActive[0].dataset);
 				console.log(flag);
