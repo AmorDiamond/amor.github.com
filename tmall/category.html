@@ -2004,7 +2004,7 @@
 				$(tabs[this.dataset.index]).addClass('active').siblings().removeClass('active');
 			}
 			lActive = leftCate.find(".active");
-			lTop = lActive[0].offset().top;
+			lTop = $(lActive[0]).offset().top;
 		});
 		
 		/*左侧菜单滚动实现固定当前所选项*/
