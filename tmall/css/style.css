@@ -178,7 +178,7 @@ section{height: 2000px}
     bottom: 0;
 	width: 23%;
 	overflow-y: scroll;
-    -webkit-overflow-scrolling : touch;
+    /*-webkit-overflow-scrolling : touch;*/
 }
 .cate-left li{
     cursor: pointer;
