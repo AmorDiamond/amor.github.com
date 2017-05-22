@@ -2008,11 +2008,11 @@
 			var lActive = leftCate.find(".active");
 			var lTop = lActive.offset().top;
 			var flag = null;
-			if(lActive.dataset){
+			// if(lActive.dataset){
 				flag = lActive.dataset.index = 0 ? false : true; 
-		      }else{
-		      	flag = lActive.getAttribute("data-index") = 0 ? false : true;
-		      }
+		      // }else{
+		      // 	flag = lActive.getAttribute("data-index") = 0 ? false : true;
+		      // }
 		      if (flag) {
 		      	if (lTop <= 43) {
 					clonShow.addClass('show');
