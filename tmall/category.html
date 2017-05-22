@@ -2005,12 +2005,21 @@
 		
 		/*左侧菜单滚动实现固定当前所选项*/
 		leftCate.on("scroll", function () {
-			var lTop = leftCate.find(".active").offset().top;
-			if (lTop <= 43) {
-				clonShow.addClass('show');
-			}else{
-				clonShow.removeClass('show');
-			}
+			var lActive = leftCate.find(".active");
+			var lTop = lActive.offset().top;
+			var flag = null;
+			if(lActive.dataset){
+				flag = lActive.dataset.index = 0 ? false : true; 
+		      }else{
+		      	flag = lActive.getAttribute("data-index") = 0 ? false : true;
+		      }
+		      if (flag) {
+		      	if (lTop <= 43) {
+					clonShow.addClass('show');
+				}else{
+					clonShow.removeClass('show');
+				}
+		      }
 		})
 		console.log(tabs[0].className)
 	</script>
