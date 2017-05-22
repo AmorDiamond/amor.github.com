@@ -1997,11 +1997,11 @@
 		leftCate.on("click","li",function () {
 			flag = this.dataset.index == 0 ? false : true; 
 			if (!$(this).hasClass('active')) {
-				console.log(leftCate.find("ul:first-child"));
+				console.log(leftCate.find("li:first-child"));
 				if (flag) {
-					leftCate.find("ul:first-child").css("visibility","visible");
+					leftCate.find("li:first-child").css("visibility","visible");
 				}else{
-					leftCate.find("ul:first-child").css("visibility","hidden");
+					leftCate.find("li:first-child").css("visibility","hidden");
 				}
 				
 				clonShow.html($(this).html()).removeClass("show");
