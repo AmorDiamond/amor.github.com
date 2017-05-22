@@ -21,7 +21,7 @@
 	<div class="cate-clon show">为您推荐</div>
 		<div class="cate-left f-l">
 			<ul>
-			    <li class="active" data-index="0" data-id="176">为您推荐</li>
+			    <li class="active" data-index="0" data-id="176" style="visibility: hidden">为您推荐</li>
 
 			    <li data-index="1" data-id="1495">国际大牌</li>
 
@@ -1999,6 +1999,8 @@
 			if (!$(this).hasClass('active')) {
 				if (flag) {
 					lActive.css("visibility","visible");
+				}else{
+					lActive.css("visibility","hidden");
 				}
 				
 				clonShow.html($(this).html()).removeClass("show");
