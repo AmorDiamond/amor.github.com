@@ -2030,11 +2030,12 @@
 				console.log(lActive[0].dataset);
 				console.log(flag);
 				console.log(lTop);
-
-	      	if (lTop <= 43) {
-				clonShow.addClass('show');
-			}else{
-				clonShow.removeClass('show');
+			if (!flag) {
+				if (lTop <= 43) {
+					clonShow.addClass('show');
+				}else{
+					clonShow.removeClass('show');
+				}
 			}
 		})
 		console.log(tabs[0].className)
