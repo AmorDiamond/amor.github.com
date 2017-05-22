@@ -177,8 +177,10 @@ section{height: 2000px}
     top: 43px;
     bottom: 0;
 	width: 23%;
+    overflow-x: hidden;
 	overflow-y: scroll;
-    /*-webkit-overflow-scrolling : touch;*/
+    /*设置`-webkit-overflow-scrolling: touch`来解决overflow模拟滚动会出现卡顿的情况*/
+    -webkit-overflow-scrolling : touch;
 }
 .cate-left li{
     cursor: pointer;
@@ -200,6 +202,7 @@ section{height: 2000px}
     right: 0;
 	width: 77%;
 	overflow-y: scroll;
+    /*设置`-webkit-overflow-scrolling: touch`来解决overflow模拟滚动会出现卡顿的情况*/
     -webkit-overflow-scrolling : touch;
 /*	margin-right: -20px;
 	padding-right: 20px;可以实现隐藏默认的滚动条*/
