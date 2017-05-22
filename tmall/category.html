@@ -1991,6 +1991,9 @@
 		var leftCate = $(".cate-left");
 		var rightCate = $(".cate-right");
 		var clonShow = $(".cate-clon");
+		var lActive = leftCate.find(".active");
+		var lTop = lActive.offset().top;
+		var flag = null;
 		leftCate.on("click","li",function () {
 			console.log(1111)
 			if (!$(this).hasClass('active')) {
@@ -2000,16 +2003,17 @@
 				rightCate.scrollTop(0);
 				$(tabs[this.dataset.index]).addClass('active').siblings().removeClass('active');
 			}
-			
+			lActive = leftCate.find(".active");
+			lTop = lActive.offset().top;
 		});
 		
 		/*左侧菜单滚动实现固定当前所选项*/
 		leftCate.on("scroll", function () {
-			var lActive = leftCate.find(".active");
-			var lTop = lActive.offset().top;
-			var flag = null;
+			// lActive = leftCate.find(".active");
+			// lTop = lActive.offset().top;
 			// if(lActive.dataset){
 				flag = lActive.dataset.index = 0 ? false : true; 
+				console.log(flag);
 		      // }else{
 		      // 	flag = lActive.getAttribute("data-index") = 0 ? false : true;
 		      // }
