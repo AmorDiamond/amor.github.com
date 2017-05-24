@@ -133,6 +133,18 @@ section{height: 2000px}
 	margin-left: -3px;
 }
 
+/* 首页分类模块 */
+.home-cate .cate-con{
+    float: left;
+    width: 85%;
+}
+.home-cate-right{
+    float: right;
+    background-color: rgba(0,0,0,.7); 
+    width: 15%;
+    height: 100%;
+}
+
 /* 分类导航页 */
 .cate-header{
     position: absolute;
