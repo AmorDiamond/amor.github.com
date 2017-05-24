@@ -2878,9 +2878,26 @@
 	</div>
 </div>
 <!-- 分类模块END -->
-
+<script type="text/javascript" src="js/cate-tab.js"></script>
 	<!-- 头部导航 -->
 	<script type="text/javascript">
+		$(".categoryTrigger").on("click",function () {
+			$(".home-cate").css("left":0);
+		})
+		$(".home-cate-right").on("click",function () {
+			$(".home-cate").css("left":-100%);
+		})
+		/*分类层S*/
+		$(".home-cate").cateTab({
+			leftCate:".cate-left",
+			rightCate:".cate-right",
+			leftTab:"li",
+			rightTab:".tab-ul",
+			clonCate:".cate-clon",
+			clonShow:"show",
+			active:".active"
+		});
+		/*分类层END*/
 
 		var mySwiper = new Swiper('.swiper-container',{
 		pagination : '.swiper-pagination',
