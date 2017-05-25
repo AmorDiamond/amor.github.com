@@ -299,4 +299,137 @@ section{height: 2000px}
     width: 100%;
 }
 
+/* 分类列表 */
+.cate-list-hd{
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #fff;
+    border-bottom: solid 1px #EEE;
+}
+.cate-list-hd input{
+    height: 32px;
+    margin: 8px 4px 0;
+    padding-left: 10px;
+    background-color: #EEE;
+    border-radius: 3px;
+}
+.back-class,.filter-class{
+    display: inline-block;
+    width: 50px;
+    height: 48px;
+    text-align: center;
+    /*line-height: 48px;*/
+}
+.order-list{
+    font-size: 15px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+.order-list li{
+    text-align: center;
+}
+.order-list .show-style{
+    margin: 10px 0;
+    border-left: 1px solid #eee;
+    height: 28px;
+    line-height: 28px;
+}
+.list-con .list-panel1{
+    width: 50%;
+    padding-right: 1.5px;
+}
+.list-con .list-panel2{
+    width: 50%;
+    padding-left: 1.5px;
+}
+.list-con .list-ul>li{
+    margin-top: 3px;
+}
+.list-panel1 .list-ul>li:first-child{
+    padding:  6px 3px 0 0;
+    height: auto;
+    overflow: hidden;
+}
+.navhot li{
+    width: 50%;
+    float: left;
+    text-align: center;
+    border-left: 6px solid #eee;
+    border-bottom: 6px solid #eee;
+}
+.navhot li a{
+    display: block;
+    font-size: 12px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+.tile_item {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+}
+.ti_img_wrap img{
+    width: 100%;
+}
+.ti_info{
+    padding: 9px;
+}
+.ti_info .tii_title h3 {
+    font-size: 12px;
+    line-height: 18px;
+    color: #333;
+    height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ti_info .tii_price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #DD2727;
+    margin-top: 4px;
+    height: 14px;
+    line-height: 14px;
+    margin-right: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.ti_info .tii_price i {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.ti_info .tii_price .tii_small {
+    font-size: 12px;
+}
+.ti_info .tii_price .tii_sold {
+    font-size: 12px;
+    color: #999;
+    height: 14px;
+    line-height: 14px;
+    margin-left: 9px;
+    font-weight: 400;
+}
+.shop_more_btn {
+    font-size: 23px;
+    float: right;
+    color: #9A9A9A;
+    position: absolute;
+    bottom: -1px;
+    right: 2px;
+}
+.shop_more{
+    position: absolute;
+    bottom: -100%;
+}
 
