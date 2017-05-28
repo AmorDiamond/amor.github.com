@@ -348,6 +348,9 @@ section{height: 2000px}
     background-color: #fff;
     border-bottom: 1px solid #ddd;
 }
+.order-list .active{
+    color: #DD2727!important;
+}
 .order-list li{
     text-align: center;
 }
