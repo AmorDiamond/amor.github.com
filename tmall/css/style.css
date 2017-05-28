@@ -459,5 +459,66 @@ section{height: 2000px}
 .shop_more{
     position: absolute;
     bottom: -100%;
+    width: 100%;
+    height: 108px;
+    background-color: #EEE;
+    opacity: .96;
+    transition: all .2s linear 0s;
+}
+.shop_more>span i,.shop_more>span label,.shop_more>span span {
+    float: left;
+}
+.navhot:after,.shop_more>span:after {
+    content: "";
+    clear: both;
+}
+.shop_more>span:after {
+    display: table;
+}
+.shop_more span:first-child {
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+    color: #666;
+    font-size: 14px;
+    padding-left: 9px;
+}
+.shop_more>span{
+    display: block;
+}
+.shop_more>span label {
+    font-size: 12px;
+    color: #999;
+    margin-top: 9px;
+    margin-left: 9px;
+}
+.shop_more>span span {
+    font-size: 12px;
+    color: #DD2727;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.shop_more>span i {
+    width: 16px;
+    height: 16px;
+    background-color: #DD2727;
+    font-size: 12px;
+    line-height: 16px;
+    border-radius: 2px;
+    color: #FFF;
+    font-style: normal;
+    text-align: center;
+    margin-top: 6px;
+    margin-left: 3px;
+}
+.shop_more hr {
+    border: none;
+    border-bottom: solid 1px #999;
+    margin: 0 9px;
+    height: 0;
+}
+
+a, html {
+    -webkit-tap-highlight-color: transparent;/* 给a元素里的元素添加JS点击事件，防止父元素a元素出现朦层 */
 }
 

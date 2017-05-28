@@ -95,7 +95,7 @@
 				<li>
 					<a class="tile_item" href="#">
 					    <div class="ti_img_wrap ">
-					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i1/TB1f64MPXXXXXXwaXXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg_" alt="真丝时尚修身大摆印花裙">
+					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i1/TB1f64MPXXXXXXwaXXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg" alt="真丝时尚修身大摆印花裙">
 					    </div>
 					    <div class="ti_info">
 					        <div class="tii_title">
@@ -139,7 +139,7 @@
 				<li>
 					<a class="tile_item" href="#">
 					    <div class="ti_img_wrap ">
-					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i1/TB1tUSdQXXXXXa0aXXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg_" alt="真丝时尚修身大摆印花裙">
+					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i1/TB1tUSdQXXXXXa0aXXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg" alt="真丝时尚修身大摆印花裙">
 					    </div>
 					    <div class="ti_info">
 					        <div class="tii_title">
@@ -183,7 +183,7 @@
 				<li>
 					<a class="tile_item" href="#">
 					    <div class="ti_img_wrap ">
-					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i4/TB1wG.zRXXXXXanXpXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg_" alt="真丝时尚修身大摆印花裙">
+					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i4/TB1wG.zRXXXXXanXpXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg" alt="真丝时尚修身大摆印花裙">
 					    </div>
 					    <div class="ti_info">
 					        <div class="tii_title">
@@ -275,7 +275,7 @@
 				<li>
 					<a class="tile_item" href="#">
 					    <div class="ti_img_wrap ">
-					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i1/TB1TocOMVXXXXXJXFXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg_" alt="真丝时尚修身大摆印花裙">
+					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i1/TB1TocOMVXXXXXJXFXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg" alt="真丝时尚修身大摆印花裙">
 					    </div>
 					    <div class="ti_info">
 					        <div class="tii_title">
@@ -319,7 +319,7 @@
 				<li>
 					<a class="tile_item" href="#">
 					    <div class="ti_img_wrap ">
-					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i1/TB1X.ZwQVXXXXcAapXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg_" alt="真丝时尚修身大摆印花裙">
+					        <img class="ti_img" src="https://img.alicdn.com/bao/uploaded/i1/TB1X.ZwQVXXXXcAapXXXXXXXXXX_!!0-item_pic.jpg_560x840Q30s50.jpg" alt="真丝时尚修身大摆印花裙">
 					    </div>
 					    <div class="ti_info">
 					        <div class="tii_title">
@@ -452,5 +452,18 @@
 			</ul>
 		</div>
 	</section>
+	<script type="text/javascript">
+		$(".shop_more_btn").on("click",function (e) {
+			e.preventDefault();
+			// e.stopPropagation();
+			$(".shop_more").css("bottom","-100%");
+			$(this).next().css("bottom",0); 
+		})
+		$(".shop_more").on("click",function (e) {
+			e.preventDefault();
+			// e.stopPropagation();
+			$(".shop_more").css("bottom","-100%"); 
+		})
+	</script>
 </body>
 </html>
