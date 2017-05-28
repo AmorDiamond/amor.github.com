@@ -333,6 +333,8 @@ section{height: 2000px}
 }
 .back-class{
     font-family: 'iconfont';
+    font-size: 25px;
+    color: #5F646E;
 }
 .order-list{
     font-size: 15px;
@@ -344,7 +346,12 @@ section{height: 2000px}
 .order-list li{
     text-align: center;
 }
+.order-list .price-icon{
+    font-family: 'iconfont';
+
+}
 .order-list .show-style{
+    font-family: 'iconfont';
     margin: 10px 0;
     border-left: 1px solid #eee;
     height: 28px;
