@@ -331,6 +331,9 @@ section{height: 2000px}
     text-align: center;
     /*line-height: 48px;*/
 }
+.back-class{
+    font-family: 'iconfont';
+}
 .order-list{
     font-size: 15px;
     height: 48px;
