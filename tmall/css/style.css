@@ -839,6 +839,7 @@ a, html {
     border-style: solid none;
     vertical-align: top;
     text-align: center;
+    border-radius: 0;
 }
 .spec-footer{
     position: absolute;
