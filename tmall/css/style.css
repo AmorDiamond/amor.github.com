@@ -730,3 +730,131 @@ a, html {
 .goods-container{
     overflow: hidden;
 }
+
+/* 详情页属性弹窗 */
+.goods-spec-box{
+    width: 100%;
+    opacity: .7;
+    height: 100%;
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9999;
+}
+.goods-spec-con{
+    position: fixed;
+    width: 100%;
+    top: 130%;
+    color: #051b28;
+    background-color: #fff;
+    z-index: 9999;
+    transition: all .3s;
+}
+.spec-info{
+    position: relative;
+    padding: 10px;
+    height: 94px;
+    box-shadow: 0 1px 0 rgba(0,0,0,.05),0 .5px 0 rgba(0,0,0,.09);
+}
+.goods-specs,.goods-num{
+    padding: 0 10px;
+    /*position: absolute;*/
+    width: 100%;
+}
+.spec-info .img{
+    border: 1px solid #ddd;
+    padding: 2px;
+    background: #fff;
+    border-radius: 4px;
+    position: absolute;
+    top: -20px;
+}
+.spec-info .img img{
+    width: 100px;
+    height: 100px;
+}
+.spec-info .main{
+    color: #051b28;
+    font-size: 12px;
+    position: absolute;
+    left: 125px;
+}
+.spec-info .price {
+    color: #DD2727;
+    font-size: 16px;
+}
+.spec-info .stock {
+    font-size: 14px;
+}
+.spec-info .select span {
+    padding-left: 5px;
+}
+.goods-specs li{
+    margin: 10px 0 5px;
+}
+.goods-specs h2{
+    padding: 10px 0;
+    font-size: 12px;
+    color: #666;
+    font-weight: normal;
+}
+.goods-specs .items input[type=radio]{
+    opacity: 0;
+    width: 0;
+}
+.goods-specs .items label{
+    padding: 5px 12px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    font-size: 13px;
+    display: inline-block;
+}
+.goods-num h2{
+    font-size: 12px;
+    color: #666;
+    font-weight: normal;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    margin: 15px 0 0;
+}
+.goods-num button{
+    width: 32px;
+    height: 34px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px 0 0 3px;
+}
+.goods-num .plus{
+    border-radius: 0 3px 3px 0;
+}
+.goods-num input{
+    width: 52px;
+    height: 34px;
+    border: 1px solid #ddd;
+    border-style: solid none;
+    vertical-align: top;
+    text-align: center;
+}
+.spec-footer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.spec-footer button{
+    height: 48px;
+    line-height: 48px;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+}
+.spec-footer .cart{
+    background: #FF9500;
+}
+.spec-footer .buy{
+    background: #DD2727;
+}

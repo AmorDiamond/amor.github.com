@@ -250,6 +250,59 @@
 		<button class="cell cart">加入购物车</button>
 		<button class="cell buy">立即购买</button>
 	</footer>
+	
+	<div class="goods-spec-box"></div>
+	<div class="goods-spec-con">
+		<div class="spec-info">
+			<div class="img f-l">
+				<img src="https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg" alt="">
+			</div>
+			<div class="main f-l">
+				<p class="price">¥248.00</p>
+				<p class="stock">库存<i>155件</i></p>
+				<div class="select">
+					已选择:<span id="spec-size">L</span><span id="spec-color">浅蓝色</span>
+				</div>
+			</div>
+		</div>
+		<ul class="goods-specs">
+			<li>
+				<h2>尺寸</h2>
+				<div class="items">
+					<input type="radio" name="size" id="size1">
+					<label for="size1">S</label>
+					<input type="radio" name="size" id="size2">
+					<label for="size2">M</label>
+					<input type="radio" name="size" id="size3">
+					<label for="size3">L</label>
+					<input type="radio" name="size" id="size4">
+					<label for="size4">XL</label>
+				</div>
+			</li>
+			<li>
+				<h2>颜色分类</h2>
+				<div class="items">
+					<input type="radio" name="color" id="color1">
+					<label for="color1">红色</label>
+					<input type="radio" name="color" id="color2">
+					<label for="color2">蓝色</label>
+					<input type="radio" name="color" id="color3">
+					<label for="color3">绿色</label>
+					<input type="radio" name="color" id="color4">
+					<label for="color4">黄色</label>
+				</div>
+			</li>
+		</ul>
+		<section class="goods-num">
+			<h2>数量</h2>
+			<button class="minus">-</button><input type="text" value="1"><button class="plus">+</button>
+		</section>
+		<section class="flex-ui spec-footer">
+			<button class="cart cell">加入购物车</button>
+			<button class="buy cell">立即购买</button>
+		</section>
+	</div>
+
 	<script type="text/javascript">
 		var mySwiper = new Swiper('.swiper-container',{
 		pagination : '.swiper-pagination',
@@ -273,6 +326,15 @@
 			// <li class="cell">商品详情</li>
 			// <li class="cell">评价457</li>
 		});
+
+		$(".goods-spec").on("click",function () {
+			$(".goods-spec-box").css("display","block");
+			$(".goods-spec-con").css({"top":"20%","bottom":0})
+		})
+		$(".goods-spec-box").on("click",function () {
+			$(".goods-spec-box").css("display","none");
+			$(".goods-spec-con").css({"top":"130%"})
+		})
 	</script>
 </body>
 </html>
