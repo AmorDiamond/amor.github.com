@@ -154,7 +154,7 @@ header .login{
 	display: flex;
     box-sizing: content-box;
     transform: translate3d(0,0,0);
-    transition: transform .3s;
+    
 }
 .seckill-floor .seckill-con li{
 	/*position: relative;*/

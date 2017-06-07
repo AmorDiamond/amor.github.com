@@ -539,7 +539,7 @@
             	$(".swiper-seckill .swiper-scroll").animate(
 				    {
 				        translate3d:'-'+returnPosition+'px,0,0'
-				    },0,"linear",function () {
+				    },300,"linear",function () {
 				    	location.href ="https://www.baidu.com";
 				    }
 				)
@@ -557,13 +557,13 @@
 	            		$(".swiper-seckill .swiper-scroll").animate(
 							    {
 							        translate3d:'0,0,0'
-							    },0
+							    },300
 						)
             		}else{
             			$(".swiper-seckill .swiper-scroll").animate(
 						    {
 						        translate3d:''+(transFormX+endReturnPositon)+'px,0,0'
-						    },0
+						    },300
 						)
             		}
 
@@ -572,7 +572,7 @@
             		$(".swiper-seckill .swiper-scroll").animate(
 					    {
 					        translate3d:''+(transFormX-endReturnPositon)+'px,0,0'
-					    },0
+					    },300
 					)
             	}
             }
