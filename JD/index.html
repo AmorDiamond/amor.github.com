@@ -9,6 +9,8 @@
 	<script src="js/flexible_css.js" type="text/javascript"></script>
 	<script src="js/flexible.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/zepto.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
+	<script type="text/javascript" src="js/fx.js"></script>
 	<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
 </head>
 
@@ -86,8 +88,8 @@
 				<span>1</span>:<span>2</span>:<span>3</span>
 				<a href="#" class="seckill-more">618!惊喜秒杀</a>
 			</div>
-			<div class="seckill-con">
-				<ul>
+			<div class="seckill-con swiper-seckill">
+				<ul class="swiper-scroll">
 					<li>
 						<a href="#">
 							<img src="https://m.360buyimg.com/mobilecms/s220x220_jfs/t3862/186/1502136648/116743/faf586d8/587edeb0N9a342d3e.jpg!q70.jpg" alt="">
@@ -469,8 +471,114 @@
 	<script type="text/javascript">
 		var mySwiper = new Swiper('.swiper-container',{
 		pagination : '.swiper-pagination',
+		autoplay : 3000,
+		loop : true,
+		autoplayDisableOnInteraction : false,
 		//pagination : '#swiper-pagination1',
 		});
+
+
+
+		/*京东秒杀滑动*/
+		(function () {
+        var el = document.querySelector('.swiper-seckill');
+        var startPosition, endPosition, deltaX, deltaY, moveLength,oldPosition,transFormX,lastPosition;
+        var scrollEvent = $('.swiper-scroll').children('li:nth-child(4n)');//最后定位的元素(最大滑动距离处)
+        var scrollEventW = $(scrollEvent).width();//滑动元素子元素的宽度
+        console.log(scrollEventW)
+        var returnPosition = Math.ceil($(scrollEvent[scrollEvent.length-1]).offset().left);//最后定位的元素位置
+
+        el.addEventListener('touchstart', function (e) {
+            var touch = e.touches[0];
+            oldPosition = $(".swiper-seckill .swiper-scroll").css("transform");//滑动前的css里transform值
+            transFormX = parseInt(oldPosition.split("(")[1]);//滑动前的translate3d里X的值
+            // transFormX = parseInt(oldPosition.split("(")[1].split(","));
+            console.log(transFormX)
+            startPosition = {
+                x: touch.pageX,
+                y: touch.pageY
+            }
+            console.log(startPosition)
+        });
+
+        /*滑动跟随滑动*/
+        el.addEventListener('touchmove', function (e) {
+            var touch = e.touches[0];
+            lastPosition = Math.ceil($(scrollEvent[scrollEvent.length-1]).offset().left);//动态获得最后定位元素(最大滑动位置)距离窗口左边的距离。
+	        console.log("last"+lastPosition)
+
+            endPosition = {
+                x: touch.pageX,
+                y: touch.pageY
+            }
+
+            deltaX = endPosition.x - startPosition.x;
+            deltaY = endPosition.y - startPosition.y;
+            // if (transFormX+deltaX <=0 && transFormX+deltaX>=-lastPosition) {
+            if (transFormX+deltaX <=0) {
+
+            	$(".swiper-seckill .swiper-scroll").animate(
+				    {
+				        translate3d:''+(transFormX+deltaX)+'px,0,0'
+				    },0
+				)
+            }
+            	
+            // console.log($(".swiper-seckill .swiper-wrapper"));
+            moveLength = Math.sqrt(Math.pow(Math.abs(deltaX), 2) + Math.pow(Math.abs(deltaY), 2));
+            // console.log(moveLength);
+        });
+
+        /*松开反弹到子元素边界效果*/
+        el.addEventListener('touchend', function (e) {
+            var touch = e.touches[0];
+            
+            
+            /*如果滑动超过了最大距离位置，松手后让其反弹到最大位置处，并且打开更多链接*/
+            if (lastPosition<0) {
+            	$(".swiper-seckill .swiper-scroll").animate(
+				    {
+				        translate3d:'-'+returnPosition+'px,0,0'
+				    },0,"linear",function () {
+				    	location.href ="https://www.baidu.com";
+				    }
+				)
+            }else {
+            	/*
+            	1.Math.abs(deltaX)/scrollEventW  算出滑动的距离是滑动元素子元素宽度的几倍。
+            	2.Math.ceil(Math.abs(deltaX)/scrollEventW)  向上去整，只要有小幅度的移动就让其滑动一个子元素的距离。
+            	3.Math.ceil(Math.abs(deltaX)/scrollEventW)*scrollEventW   使用整数倍数乘以滑动子元素的宽度得到要滑动的所有距离。
+            	*/
+            	var endReturnPositon = Math.ceil(Math.abs(deltaX)/scrollEventW)*scrollEventW;
+
+            	/*向右滑动*/
+            	if (deltaX > 0) {
+            		if (transFormX+endReturnPositon >= 0) {
+	            		$(".swiper-seckill .swiper-scroll").animate(
+							    {
+							        translate3d:'0,0,0'
+							    },0
+						)
+            		}else{
+            			$(".swiper-seckill .swiper-scroll").animate(
+						    {
+						        translate3d:''+(transFormX+endReturnPositon)+'px,0,0'
+						    },0
+						)
+            		}
+
+        		/*向左滑动*/
+            	}else {
+            		$(".swiper-seckill .swiper-scroll").animate(
+					    {
+					        translate3d:''+(transFormX-endReturnPositon)+'px,0,0'
+					    },0
+					)
+            	}
+            }
+            
+        });
+    })();
 	</script>
 </body>
 </html>

@@ -149,13 +149,23 @@ header .login{
 .seckill-floor .seckill-more{
 	float: right;
 	color: #f00;
+}.seckill-floor .seckill-con .swiper-scroll{
+	/*position: relative;*/
+	display: flex;
+    box-sizing: content-box;
+    transform: translate3d(0,0,0);
+    transition: transform .3s;
 }
 .seckill-floor .seckill-con li{
+	/*position: relative;*/
 	float: left;
 	width: 2.933333333333333rem;
+	-webkit-flex-shrink: 0;/* 设置后可以让父元素是display:flex的情况下，实现子元素超出不换行，也不自适应显示。; */
+    -ms-flex: 0 0 auto;
+    flex-shrink: 0;
 }
 .seckill-floor .seckill-con{
-	width: 200%;
+	/*width: 200%;*/
 }
 .seckill-floor .seckill-con li img{
 	width: 100%;
