@@ -220,7 +220,7 @@ header .login{
 	background-color: #fff;
 }
 .floor .floor-con li.br{
-	border-style: none solid solid none;
+	border-right: 1px solid #f5f5f5;
 }
 .floor .floor-con .floor-sm{
 	width: 2.5rem;
