@@ -218,9 +218,11 @@ header .login{
 .floor .floor-con li{
 	border-bottom: 1px solid #f5f5f5;
 	background-color: #fff;
+	padding-right: 1px;
 }
 .floor .floor-con li.br{
 	border-right: 1px solid #f5f5f5;
+	padding-right: 0;
 }
 .floor .floor-con .floor-sm{
 	width: 2.5rem;
