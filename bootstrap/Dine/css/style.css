@@ -1,0 +1,231 @@
+body{
+
+}
+header{
+	background-color: #1F0C07;
+}
+ul,ol{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+img{
+	max-width: 100%;
+}
+.none{
+	display: none;
+}
+section{
+	overflow: hidden;
+}
+/*header .logo{
+	line-height: 66px;
+}
+header li{
+	float: left;
+}
+header li a{
+	padding: 23px 15px;
+	display: inline-block;
+}*/
+.navbar{
+	margin-bottom: 0;
+}
+.navbar-brand {
+    display: inline-block;
+    height: auto;
+}
+.navbar-nav > li.active a {
+    color: #D19A04;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+    background-color: transparent;
+}
+.navbar-toggle{
+/*	background-color: #eee;
+	border-radius: 5px;*/
+	height: 50px;
+
+}
+.banner { position: relative; overflow: auto; }
+.banner li { 
+	list-style: none;
+	height: 600px;
+ }
+.banner ul li { float: left; }
+.banner .dots{
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+.banner .dots li{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 10px;
+	border: 1px solid #eee;
+	border-radius: 50%;
+}
+.banner .dots li.active{
+	background-color: #fff;
+}
+.section,.section-bg{
+	padding-top: 100px;
+}
+.section-bg{
+    background-color: #f6f6f6;
+}
+.section-center{
+	float: none;
+	margin: 0 auto;
+}
+.section-center .section-text{
+	margin-bottom: 50px;
+}
+.section-center .use-step{
+	margin-bottom: 30px;
+}
+.step-text .title{
+	margin-bottom: 30px;
+}
+.step-text .title h2{
+	margin: 0 0 20px;
+}
+
+
+/* desc-banner */
+.desc-banner { position: relative; overflow: auto; }
+.desc-banner li { 
+	list-style: none;
+	height: 600px;
+ }
+.desc-banner ul li { float: left; }
+.desc-banner .dots{
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+.desc-banner .dots li{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 10px;
+	border: 1px solid #eee;
+	border-radius: 50%;
+}
+.desc-banner .dots li.active{
+	background-color: #fff;
+}
+
+
+/* app-banner */
+.app-banner { position: relative; overflow: auto; }
+.app-banner li { 
+	list-style: none;
+	height: 600px;
+ }
+.app-banner ul li { float: left; }
+.app-banner .dots{
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+.app-banner .dots li{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 10px;
+	border: 1px solid #eee;
+	border-radius: 50%;
+}
+.app-banner .dots li.active{
+	background-color: #fff;
+}
+.app-title{
+	text-align: center;
+	margin-bottom: 60px;
+}
+.app-title h2{
+	margin-bottom: 20px;
+}
+
+
+/* down-app */
+.down-app{
+	text-align: center;
+}
+.down-app .down-title{
+	margin-bottom: 60px;
+}
+.app-shop{
+	float: none;
+	margin: 0 auto 40px;
+	overflow: hidden;
+}
+.app-shop img{
+	max-width: none;
+}
+.ios-app a{
+	display: inline-block;
+	width: 100%;
+	height: 54px;
+	background-color: #000;
+	border-radius: 5px;
+}
+.google-app a{
+	display: inline-block;
+	width: 100%;
+	height: 54px;
+	background-color: #eee;
+	border-radius: 5px;
+}
+
+/* footer */
+footer{
+    background-color: #1F0C07;
+    color: #f3f3f3;
+    padding: 40px 0 10px;
+    text-align: center;
+}
+footer .footer-links{
+	margin: 20px;
+}
+footer .footer-links i{
+	color: #fff;
+	margin: 10px;
+}
+
+
+@media screen and (max-width: 991px) and (min-width: 768px){
+.navbar-nav, .navbar-nav > li, .navbar-header, .navbar-brand {
+    float: none;
+}
+.navbar-brand {
+    padding: 15px 15px 5px;
+}
+.navbar {
+    text-align: center;
+}
+.navbar-nav > li {
+    display: inline-block;
+}
+
+}
+@media (min-width: 768px){
+.section-center .section-img img{
+	width: 100%;
+}
+}
+@media (max-width: 768px){
+.section-center{
+	text-align: center;
+}
+}
+@media (min-width: 991px){
+.section-center .section-text{
+	margin-top: 100px;
+}
+}
