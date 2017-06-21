@@ -33,14 +33,14 @@
   	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">HOW TO DINE</a></li>
+        <li><a href="#section-1">ABOUT</a></li>
+        <li><a href="#section-3">HOW TO DINE</a></li>
         <li role="separator" class="divider"></li>
         <li><a href="#">Testimonials</a></li>
         <li role="separator" class="divider"></li>
         <li><a href="#">Inside Dine</a></li>
         <li><a href="#">Download</a></li>
-        <li class="dropdown">
+        <li class="dropdown" style="display: none;">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">HOME</a></li>
@@ -58,13 +58,47 @@
   </nav>
   
   </header>
-  <section>
+  <section class="banner-box">
 	<div class="banner">
 		<ul>
 		    <li style="background: url(http://dinewith.co/static/lp/images/slide_img01.jpg) no-repeat top center"></li>
-		    <li style="background: url(http://dinewith.co/static/lp/images/slide_img02.jpg) no-repeat top center">This is another slide.</li>
-		    <li style="background: url(http://dinewith.co/static/lp/images/slide_img01.jpg) no-repeat top center">This is a final slide.</li>
+		    <li style="background: url(http://dinewith.co/static/lp/images/slide_img02.jpg) no-repeat top center"></li>
+		    <!-- <li style="background: url(http://dinewith.co/static/lp/images/slide_img01.jpg) no-repeat top center">This is a final slide.</li> -->
 		</ul>
+	</div>
+	<div class="coniatner banner-inner">
+		<div class="site-brand">
+			<a href="#" class="banner-logo">
+				<img src="http://dinewith.co/static/lp/images/logo_white2.png" alt="">
+			</a>
+			<div class="banner-links">
+				<span>FOLLOW US</span>
+				<div class="links">
+					<a href="#"><i class="icon-facebook"></i></a>
+					<a href="#"><i class="icon-twitter"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="banner-content">
+			<div class="col-md-8 clear-float">
+				<h2>More Dates, Not Swipes.</h2>
+				<div class="banner-down">
+					<p>Get <strong>Dine</strong> Dating App Free Now!</p>
+					<div class="down-btn">
+						<a href="#">
+							<img src="http://dinewith.co/static/lp/images/app_store_btn.png" alt="">
+						</a>
+						<a href="#">
+							<img src="http://dinewith.co/static/lp/images/play_store_btn.png" alt="">
+						</a>
+					</div>
+					<span>Available in USA and Canada</span>
+				</div>
+				<span class="slide-page">
+					<i class="icon-double-angle-down"></i>
+				</span>
+			</div>
+		</div>
 	</div>	
   </section>
   <div id="section-1" class="brief">
@@ -185,11 +219,11 @@
 		  	<h2>Download the App</h2>
 		  	<p>Forget all the back and forth texting and just go on a date already!</p>
 		  </div>
-		  <div class="col-sm-5 app-shop" id="app-shop">
-			  <div class="col-xs-6 col-sm-6 ios-app">
+		  <div class="pp-shop" id="app-shop">
+			  <div class="ios-app">
 				<a href="#"><img src="http://dinewith.co/static/lp/images/app_store_btn.png" alt=""></a>
 			  </div>
-			  <div class="col-xs-6 col-sm-6 google-app">
+			  <div class="google-app">
 				  <a href="#"><img src="http://dinewith.co/static/lp/images/play_store_btn.png" alt=""></a>
 			  </div>
 		  </div>
@@ -231,7 +265,7 @@
 		delay: 3000,              //  The delay between slide animations (in milliseconds)
 		complete: function() {},  //  A function that gets called after every slide animation
 		keys: true,               //  Enable keyboard (left, right) arrow shortcuts
-		dots: true,               //  Display dot navigation
+		// dots: true,               //  Display dot navigation
 		fluid: true              //  Support responsive design. May break non-responsive designs
 	});
 	$('.desc-banner').unslider({
