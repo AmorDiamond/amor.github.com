@@ -344,6 +344,9 @@ footer .footer-links i{
 .section-center{
 	text-align: center;
 }
+.banner-inner .banner-down{
+    margin-bottom: 0px;
+}
 }
 @media (min-width: 991px){
 .section-center .section-text{
