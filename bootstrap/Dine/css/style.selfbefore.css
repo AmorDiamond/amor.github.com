@@ -27,7 +27,16 @@ section{
 .animated{
 	animation-delay: .5s;
 }
-
+/*header .logo{
+	line-height: 66px;
+}
+header li{
+	float: left;
+}
+header li a{
+	padding: 23px 15px;
+	display: inline-block;
+}*/
 .navbar{
 	text-transform:uppercase;
 	margin-bottom: 0;
@@ -48,8 +57,134 @@ section{
     color: #D19A04;
 }
 .navbar-toggle{
+/*	background-color: #eee;
+	border-radius: 5px;*/
 	height: 50px;
 
+}
+.banner { position: relative; overflow: auto; }
+.banner li { 
+	list-style: none;
+	height: 600px;
+ }
+.banner ul li { float: left; }
+.banner .dots{
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+.banner .dots li{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 10px;
+	border: 1px solid #eee;
+	border-radius: 50%;
+}
+.banner .dots li.active{
+	background-color: #fff;
+}
+.banner-box{
+	position: relative;
+}
+.banner-inner{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top:0;
+	left: 0;
+	padding: 65px 0 90px;
+	text-align: center;
+	color: #fff;
+	background-color: rgba(16, 16, 16, 0.4);
+}
+.banner-inner .clear-float{
+	margin: 0 auto;
+}
+.site-brand{
+    display: inline-block;
+    margin-bottom: 60px;
+    width: 100%;
+}
+.site-brand .banner-logo{
+	display: inline-block;
+    margin-right: 11px;
+    vertical-align: bottom;
+}
+.site-brand .banner-logo img{
+	display: inline-block;
+	width: 80px;
+	height: 50px;
+}
+.site-brand .banner-links{
+	display: inline-block;
+    border-left: 1px solid;
+    border-left-color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    padding-top: 21px;
+    padding-left: 15px;
+    text-align: left;
+    color: #fff;
+}
+.site-brand .banner-links span{
+	display: block;
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+.site-brand .banner-links a {
+    color: #FFFFFF;
+    font-size: 1.5em;
+    padding: 0;
+    margin-right: 8px;
+    opacity: .8;
+}
+.banner-inner h2{
+    font-weight: 900;
+	margin-bottom: 60px;
+}
+.banner-inner .banner-down{
+    margin-bottom: 40px;
+}
+.banner-down p{
+	margin-bottom: 15px;
+}
+.banner-down .down-btn a{
+    display: inline-block;
+    margin-right: 11px;
+    margin-bottom: 15px;
+}
+.banner-down .down-btn a:last-child{
+    margin-right: 0px;
+}
+.slide-page{
+	position: relative;
+}
+.slide-page i{
+	position: absolute;
+	left: 50%;
+	bottom: -70px;
+    font-size: 22px;
+	animation: scrollDown 1s linear 1s infinite alternate;
+	-webkit-animation: scrollDown 1s linear 1s infinite alternate;
+	-moz-animation: scrollDown 1s linear 1s infinite alternate;
+	-o-animation: scrollDown 1s linear 1s infinite alternate;
+}
+@keyframes scrollDown{
+	from{bottom: -70px;}
+	to{bottom: -50px;}
+}
+@-webkit-keyframes scrollDown{
+	from{bottom: -70px;}
+	to{bottom: -50px;}
+}
+@-moz-keyframes scrollDown{
+	from{bottom: -70px;}
+	to{bottom: -50px;}
+}
+@-o-keyframes scrollDown{
+	from{bottom: -70px;}
+	to{bottom: -50px;}
 }
 
 
@@ -80,7 +215,7 @@ section{
     margin-bottom: 80px;
 }
 .intro-section .intro-title {
-    font-size: 40px;
+    font-size: 3em;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 60px;
@@ -124,38 +259,6 @@ section{
     margin-right: 11px;
     margin-bottom: 15px;
 }
-.slide-page{
-	position: relative;
-}
-.slide-page i{
-	position: absolute;
-	left: 50%;
-	bottom: -70px;
-    font-size: 22px;
-	animation: scrollDown 1s linear 1s infinite alternate;
-	-webkit-animation: scrollDown 1s linear 1s infinite alternate;
-	-moz-animation: scrollDown 1s linear 1s infinite alternate;
-	-o-animation: scrollDown 1s linear 1s infinite alternate;
-}
-@keyframes scrollDown{
-	from{bottom: -70px;}
-	to{bottom: -50px;}
-}
-@-webkit-keyframes scrollDown{
-	from{bottom: -70px;}
-	to{bottom: -50px;}
-}
-@-moz-keyframes scrollDown{
-	from{bottom: -70px;}
-	to{bottom: -50px;}
-}
-@-o-keyframes scrollDown{
-	from{bottom: -70px;}
-	to{bottom: -50px;}
-}
-
-
-
 
 
 /* section */
@@ -410,31 +513,6 @@ footer .footer-links i{
 @media (min-width: 768px){
 .section-center .section-img img{
 	width: 100%;
-}
-.intro-section .overlay-inner {
-    padding: 100px 0 140px;
-}
-}
-@media (max-width: 600px){
-.intro-section .intro-title {
-    font-size: 30px;
-}
-.intro-section .site-brand {
-    margin-bottom: 45px;
-}
-}
-@media (max-width: 432px){
-.intro-section .intro-title {
-    font-size: 25px;
-}
-.intro-section .site-brand {
-    margin-bottom: 10px;
-}
-.intro-section .intro-title{
-	margin-bottom: 30px;
-}
-.intro-section .overlay-inner {
-    padding: 50px 0 140px;
 }
 }
 @media (max-width: 768px){
