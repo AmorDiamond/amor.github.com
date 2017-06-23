@@ -130,7 +130,7 @@ section{
 .slide-page i{
 	position: absolute;
 	left: 50%;
-	bottom: -70px;
+	top: 70px;
     font-size: 22px;
 	animation: scrollDown 1s linear 1s infinite alternate;
 	-webkit-animation: scrollDown 1s linear 1s infinite alternate;
@@ -138,20 +138,20 @@ section{
 	-o-animation: scrollDown 1s linear 1s infinite alternate;
 }
 @keyframes scrollDown{
-	from{bottom: -70px;}
-	to{bottom: -50px;}
+	from{top: 70px;}
+	to{top: 50px;}
 }
 @-webkit-keyframes scrollDown{
-	from{bottom: -70px;}
-	to{bottom: -50px;}
+	from{top: 70px;}
+	to{top: 50px;}
 }
 @-moz-keyframes scrollDown{
-	from{bottom: -70px;}
-	to{bottom: -50px;}
+	from{top: 70px;}
+	to{top: 50px;}
 }
 @-o-keyframes scrollDown{
-	from{bottom: -70px;}
-	to{bottom: -50px;}
+	from{top: 70px;}
+	to{top: 50px;}
 }
 
 
@@ -412,10 +412,13 @@ footer .footer-links i{
 	width: 100%;
 }
 .intro-section .overlay-inner {
-    padding: 100px 0 140px;
+    padding: 100px 0 0px;
 }
 }
 @media (max-width: 600px){
+.intro-section .overlay-inner {
+    padding: 100px 0 0px;
+}
 .intro-section .intro-title {
     font-size: 30px;
 }
@@ -424,14 +427,12 @@ footer .footer-links i{
 }
 }
 @media (max-width: 432px){
-.intro-section .intro-title {
-    font-size: 25px;
-}
+
 .intro-section .site-brand {
     margin-bottom: 10px;
 }
 .intro-section .intro-title{
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 }
 .intro-section .overlay-inner {
     padding: 50px 0 140px;
