@@ -250,59 +250,68 @@
 		<button class="cell cart">加入购物车</button>
 		<button class="cell buy">立即购买</button>
 	</footer>
-	
-	<div class="goods-spec-box"></div>
-	<div class="goods-spec-con">
-		<div class="spec-info">
-			<div class="img f-l">
-				<img src="https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg" alt="">
-			</div>
-			<div class="main f-l">
-				<p class="price">¥248.00</p>
-				<p class="stock">库存<i>155件</i></p>
-				<div class="select">
-					已选择:<span id="spec-size">L</span><span id="spec-color">浅蓝色</span>
-				</div>
-			</div>
-		</div>
-		<ul class="goods-specs">
-			<li>
-				<h2>尺寸</h2>
-				<div class="items">
-					<input type="radio" name="size" id="size1">
-					<label for="size1">S</label>
-					<input type="radio" name="size" id="size2">
-					<label for="size2">M</label>
-					<input type="radio" name="size" id="size3">
-					<label for="size3">L</label>
-					<input type="radio" name="size" id="size4">
-					<label for="size4">XL</label>
-				</div>
-			</li>
-			<li>
-				<h2>颜色分类</h2>
-				<div class="items">
-					<input type="radio" name="color" id="color1">
-					<label for="color1">红色</label>
-					<input type="radio" name="color" id="color2">
-					<label for="color2">蓝色</label>
-					<input type="radio" name="color" id="color3">
-					<label for="color3">绿色</label>
-					<input type="radio" name="color" id="color4">
-					<label for="color4">黄色</label>
-				</div>
-			</li>
-		</ul>
-		<section class="goods-num">
-			<h2>数量</h2>
-			<button class="minus">-</button><input type="text" value="1"><button class="plus">+</button>
-		</section>
-		<section class="flex-ui spec-footer">
-			<button class="cart cell">加入购物车</button>
-			<button class="buy cell">立即购买</button>
-		</section>
+	<div class="cart-icon icon-font">
+		<a href="#"><i>&#xe61b;</i></a>
 	</div>
 
+
+	<div class="goods-spec-box"></div>
+	<div class="goods-spec-con">
+	<form id="goods-speces">
+		<span class="close-slect"><i class="icon-font">&#xe614;</i></span>
+			<div class="spec-info">
+				<div class="img f-l">
+					<img src="https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg" alt="">
+				</div>
+				<div class="main f-l">
+					<p class="price">¥248.00</p>
+					<p class="stock">库存<i>155件</i></p>
+					<div class="select">
+						已选择:<div class="select-spec"><span id="spec-size">L</span><span id="spec-color">蓝色</span></div>
+					</div>
+				</div>
+			</div>
+			<ul class="goods-specs">
+				<li>
+					<h2>尺寸</h2>
+					<div class="items">
+						<input type="radio" name="size" value="S" id="size1">
+						<label for="size1">S</label>
+						<input type="radio" name="size" value="M" id="size2">
+						<label for="size2">M</label>
+						<input type="radio" name="size" value="L" id="size3" checked="checked">
+						<label for="size3">L</label>
+						<input type="radio" name="size" value="XL" id="size4">
+						<label for="size4">XL</label>
+					</div>
+				</li>
+				<li>
+					<h2>颜色分类</h2>
+					<div class="items">
+						<input type="radio" name="color" value="红色" id="color1">
+						<label for="color1">红色</label>
+						<input type="radio" name="color" value="蓝色" id="color2" checked="checked">
+						<label for="color2">蓝色</label>
+						<input type="radio" name="color" value="绿色" id="color3">
+						<label for="color3">绿色</label>
+						<input type="radio" name="color" value="黄色" id="color4">
+						<label for="color4">黄色</label>
+					</div>
+				</li>
+			</ul>
+			<section class="goods-num">
+				<h2>数量</h2>
+				<button class="minus" type="button">-</button><input id="num" type="text" value="1"><button class="plus" type="button">+</button>
+			</section>
+			<section class="flex-ui spec-footer">
+				<button class="cart cell" type="button">加入购物车</button>
+				<button class="buy cell" type="button">立即购买</button>
+			</section>
+		</form>
+	</div>
+<style>
+
+</style>
 	<script type="text/javascript">
 		var mySwiper = new Swiper('.swiper-container',{
 		pagination : '.swiper-pagination',
@@ -331,10 +340,74 @@
 			$(".goods-spec-box").css("display","block");
 			$(".goods-spec-con").css({"top":"20%","bottom":0})
 		})
-		$(".goods-spec-box").on("click",function () {
+		$(".goods-spec-box, .close-slect").on("click",function () {
 			$(".goods-spec-box").css("display","none");
 			$(".goods-spec-con").css({"top":"130%"})
 		})
+
+
+		$(".minus").on("click",function() {
+			 $("#num").val() == 1 ? 1 : $("#num").val(Number($("#num").val())-1);
+		})
+		$(".plus").on("click",function() {
+			 $("#num").val(Number($("#num").val())+1);
+		})
+
+
+		/*序列化*/
+		$(function() {
+		$(".buy").click(function() {
+			    var params = $("#goods-speces").serializeObject(); //将表单序列化为JSON对象 
+				console.info(params);
+			})
+		})
+
+		$.fn.serializeObject = function() {
+			var o = {};
+			var a = this.serializeArray();
+			// console.log(a);
+			$.each(a, function() {
+				// console.log(o);
+				/*如果o对象里已经存在了这个input的name,那么说明这个是多选框的数据*/
+				if (o[this.name]) {
+
+					if (!o[this.name].push) {
+						/*复选框选中项两个以上需要将这个name处理成数组，将值保存进去,把复选框选的第一个放数组第一个，然后后面追加(如果不把第一个数据放数组第一个，直接push会导致第一个复选框无数据。)*/
+						o[this.name] = [ o[this.name] ];
+
+					}
+
+					o[this.name].push(this.value || '');
+					// console.log(o[this.name].push);
+				} else {
+					/*将a的name值添加为o对象的属性，然后将name对应的value赋值给该属性。*/
+					o[this.name] = this.value || '';
+				}
+
+			});
+			return o;
+		}
+
+		/*加载页面先获得商品所有属性*/
+		var params = $("#goods-speces").serializeObject(); //将表单序列化为JSON对象 
+		console.info(params);
+		changeSpec(params);
+
+		/*切换属性动态变动已选择数据*/
+		$(".items input").on("change",function() {
+			params = $("#goods-speces").serializeObject();
+			changeSpec(params);
+		})
+
+		function changeSpec (serializeForm) {
+			var con="";
+			$.each(params,function(index,value) {
+				console.log('value'+value);
+				con += "<span>"+value+"</span>"; 
+			});
+			$(".select-spec").html(con);
+		}
+		
 	</script>
 </body>
 </html>
