@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/common.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script src="js/zepto.js" type="text/javascript"></script>
+	<style>
+		.login-head{
+			height: 45px;
+			line-height: 45px;
+		    border-bottom: 1px solid #c8c8c8;
+	        color: #6c6c6c;
+		    text-align: center;
+		    font-size: 18px;
+		    font-weight: bold;
+		    background-color: #f7f7f8;
+		}
+		.login-box{
+			margin-top: 20px;
+		}
+		.login-box .label{
+			width: 90px;
+			float: left;
+			font-size: 16px;
+			color: #6c6c6c;
+		}
+		.user-name,.user-password{
+			padding: 15px 10px;
+			border-bottom: 1px solid #ddd;
+		    color: #6c6c6c;
+		    background-color: #fff;
+		}
+		.user-name .flex-input{
+			position: relative;
+		}
+		.login-box .flex-input input{
+			width: 100%;
+		    background-color: transparent;
+		}
+		.user-name .flex-input .remove-name{
+			position: absolute;
+			top: 2px;
+			right: 5px;
+		}
+		.login-bottom{
+			margin: 20px 10px;
+			font-size: 16px;
+			text-align: center;
+		}
+		.login-bottom a{
+			color: #ff0036;
+		}
+		.login-bottom .login-btn{
+			width: 100%;
+			height: 40px;
+		    color: #d4d4d4;
+		    border: none;
+		    background-color: #ff0036;
+		    border-radius: 3px;
+		}
+		.login-bottom .other-link{
+			margin: 20px 0;
+			overflow: hidden;
+		}
+		.login-bottom .register{
+			float: left;
+		}
+		.login-bottom .forget-password{
+			float: right;
+		}
+		.msg-login .msg{
+			padding: 5px;
+			border: 1px solid #ff0036;
+			border-radius: 3px;
+		}
+		.hide{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<header class="login-head">帐号登录</header>
+	<section>
+		<div class="login-box">
+			<form action="#" id="login-form">
+				<div class="user-name flex-ui">
+					<div class="label">帐号</div>
+					<div class="flex-input cell">
+						<input class="user" type="text" placeholder="手机号/邮箱/会员名">
+						<span class="remove-name hide icon-font">&#xe614;</span>
+					</div>
+				</div>
+				<div class="user-password flex-ui">
+					<div class="label">登录密码</div>
+					<div class="flex-input cell">
+						<input class="password" type="password" placeholder="请输入密码">
+					</div>
+				</div>
+
+				<div class="login-bottom">
+					<button class="login-btn">登录</button>
+					<div class="other-link">
+						<a href="#" class="register">免费注册</a>
+						<a href="#" class="forget-password">忘记密码</a>
+					</div>
+					<div class="msg-login">
+						<a href="#" class="msg">短信校验码登录</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		$(".user").on("focus keyup",function() {
+			if($(this).val()){
+				$(".remove-name").removeClass('hide');
+			}
+		})
+		$(".user").on("blur",function() {
+			// if($(this).val()){
+				$(".remove-name").addClass('hide');
+			// }
+		})
+	</script>
+</body>
+</html>

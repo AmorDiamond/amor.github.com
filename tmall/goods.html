@@ -301,12 +301,13 @@
 			</ul>
 			<section class="goods-num">
 				<h2>数量</h2>
-				<button class="minus" type="button">-</button><input id="num" type="text" value="1"><button class="plus" type="button">+</button>
+				<button class="minus" type="button">-</button><input name="number" id="num" type="text" value="1"><button class="plus" type="button">+</button>
 			</section>
 			<section class="flex-ui spec-footer">
 				<button class="cart cell" type="button">加入购物车</button>
 				<button class="buy cell" type="button">立即购买</button>
 			</section>
+			<input name="goodsId" type="hidden" value="100">
 		</form>
 	</div>
 <style>
@@ -329,11 +330,7 @@
 			}else if (index == 2) {
 				return '<li class="cell '+className+'">评价457</li>';
 			}
-     //  			return '<span class="' + className + '">' + (index + 1) + '</span>';
-  			}
-  	// 		<li class="cell active">基本信息</li>
-			// <li class="cell">商品详情</li>
-			// <li class="cell">评价457</li>
+		}
 		});
 
 		$(".goods-spec").on("click",function () {
@@ -359,6 +356,8 @@
 		$(".buy").click(function() {
 			    var params = $("#goods-speces").serializeObject(); //将表单序列化为JSON对象 
 				console.info(params);
+
+				localProduct(params);
 			})
 		})
 
@@ -393,6 +392,7 @@
 		console.info(params);
 		changeSpec(params);
 
+
 		/*切换属性动态变动已选择数据*/
 		$(".items input").on("change",function() {
 			params = $("#goods-speces").serializeObject();
@@ -408,6 +408,91 @@
 			$(".select-spec").html(con);
 		}
 		
+
+		var cartList =[];
+
+		/*长久储存购物车商品*/
+		function localProduct (spec) {
+			
+			cartList = localStorage.getItem("cartList") ? JSON.parse(localStorage.getItem("cartList")) : cartList;  //从本地取出 cartList这个数组
+			
+
+			/*判断购物车是否已经存在商品，若存在判断是否已有当前购买的该商品，若不存在直接加入购物车*/
+			if (cartList) {
+				
+				/*获取spec对象和cartList[goodsIdIndex]对象的属性长度，对象直接spec.length无法获得长度的*/
+				var propsSpec = Object.getOwnPropertyNames(spec);
+				// var propsSelfCartList = Object.getOwnPropertyNames(cartList[goodsIdIndex]);
+				var propsSelfCartList = null;
+
+				/*specFlag用于判断是否直接添加到购物车*/
+				var specFlag = true;
+
+				/*specIndex用于属性完全相同直接增加数量的时候判断增加cartList里哪个商品的数量*/
+				var specIndex = null;
+
+				for(var i=0;i<cartList.length;i++){
+
+					/*获取spec对象和cartList[goodsIdIndex]对象的属性长度，对象直接spec.length无法获得长度的*/
+					propsSelfCartList = Object.getOwnPropertyNames(cartList[i]);
+
+					/*如果属性的数量不同，则说明商品不同，直接新添加到购物车*/
+					if(propsSpec.length != propsSelfCartList.length){
+						// cartList.push(spec);
+						specFlag = true;
+					
+					}else{/*判断是否存在不同的属性*/
+
+						/*specFlag为true时(说明添加商品的所有属性都与cartList里第i个的商品属性不同)继续判断后面剩下的商品，如果所有匹配完cartList里都没有一个商品和添加的商品属性完全相同，则添加到购物车*/
+						if(specFlag){
+							specFlag = false;
+							for(var item in cartList[i]){
+
+								/*如果specFlag不是false(说明已经匹配到cartList[i]商品的item属性值和当前添加的商品的item属性值相同)则继续往下匹配cartList[i]商品后面的属性值是否相同，如果全都相同(for in 里全返回false)只需增加该商品的数量*/
+								if(!specFlag){
+
+									/*如果有一个对应属性的对应值不相等，则直接添加到购物车，否则继续判断剩余的属性*/
+									if(spec[item] != cartList[i][item] && item != "number"){
+										specFlag = true;
+										
+									}else{
+										specFlag = false;
+										specIndex = i;
+									}
+								}
+							}
+						}
+					}
+					
+				}
+
+				if(specFlag){/*如果属性有一个不相同，直接增加商品*/
+				 
+				    cartList.push(spec);
+				        
+				}else{/*如果属性都相同，直接增加商品数量*/
+				    cartList[specIndex].number = Number(cartList[specIndex].number) + Number($("#num").val());
+				}
+				console.log('spec.length:'+propsSpec.length);
+				
+			}else{/*不存在商品直接加入购物车*/
+				cartList.push(spec);
+			}
+			
+
+			// if (spec.goodsId != cartList[i].goodsId) {
+			// 	// statement
+			// }
+			
+			console.log(cartList);
+			/*HTML5本地存储只能存字符串，任何格式存储的时候都会被自动转为字符串，所以在存和读取的时候，需要自己进行类型的转换，目前javascript使用非常多的json格式，可以直接调用JSON.stringify()将其转为字符串。读取出来后调用JSON.parse()将字符串转为json格式*/
+			localStorage.setItem("cartList",JSON.stringify(cartList)); //往本地存cartList这个数组(先将其转为字符串)  
+			cartList=JSON.parse(localStorage.getItem("cartList"));  //从本地取出 cartList这个数组并转为对象 
+			// console.log(typeof cartList);
+			console.log(cartList);
+			// localStorage.removeItem("cartList");//清除cartList的值
+		}
+		  
 	</script>
 </body>
 </html>
