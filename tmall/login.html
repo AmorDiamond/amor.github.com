@@ -85,23 +85,23 @@
 	<header class="login-head">帐号登录</header>
 	<section>
 		<div class="login-box">
-			<form action="#" id="login-form">
+			<form action="#" id="login-form" name="formLogin" method="post" onSubmit="return checkLogin()">
 				<div class="user-name flex-ui">
 					<div class="label">帐号</div>
 					<div class="flex-input cell">
-						<input class="user" type="text" placeholder="手机号/邮箱/会员名">
+						<input name="username" class="user" type="text" placeholder="手机号/邮箱/会员名">
 						<span class="remove-name hide icon-font">&#xe614;</span>
 					</div>
 				</div>
 				<div class="user-password flex-ui">
 					<div class="label">登录密码</div>
 					<div class="flex-input cell">
-						<input class="password" type="password" placeholder="请输入密码">
+						<input name="password" class="password" type="password" placeholder="请输入密码">
 					</div>
 				</div>
 
 				<div class="login-bottom">
-					<button class="login-btn">登录</button>
+					<button class="login-btn" type="submit" name="submit">登录</button>
 					<div class="other-link">
 						<a href="#" class="register">免费注册</a>
 						<a href="#" class="forget-password">忘记密码</a>
@@ -115,6 +115,23 @@
 	</section>
 
 	<script type="text/javascript">
+
+		$(function () {
+			var userInfo = getLocalMsg("userName");
+			var backUrl = GetQueryString("back");
+		  	console.log(backUrl)
+		  	if(backUrl && userInfo){
+		  		console.log(111)
+		  		location.href = "goods.html";
+		  	}else if (userInfo) {
+		  		location.href = "user.html"
+		  	}
+			// if (userInfo) {
+			// 	location.href = "goods.html"
+			// }
+		})()
+
+
 		$(".user").on("focus keyup",function() {
 			if($(this).val()){
 				$(".remove-name").removeClass('hide');
@@ -125,6 +142,84 @@
 				$(".remove-name").addClass('hide');
 			// }
 		})
+
+
+		function checkLogin () {
+		  var frm = document.forms['formLogin'];
+		  var username = frm.elements['username'].value;
+		  var password = frm.elements['password'].value;
+		  var msg = '';
+
+		  if (username.length == 0)
+		  {
+		    msg += "用户名不能为空！" + '\n';
+		  }
+
+		  if (password.length == 0)
+		  {
+		    msg += "密码不能为空！" + '\n';
+		  }
+
+		  if (msg.length > 0)
+		  {
+		    alert(msg);
+		    return false;
+		  }
+		  else
+		  {
+		  	console.log(username)
+		  	setLocalMsg("userName",username);
+		  	// var backUrl = GetQueryString("back");
+		  	// console.log(backUrl)
+		  	// if(backUrl){
+		  	// 	console.log(111)
+		  	// 	location.href = "http:baidu.com?login.html";
+		  	// }
+		    return true;
+		  }
+		}
+
+
+		/*
+		储存信息到localStorage：
+		localName:储存在localStorage里的名称
+		obj:要储存的数据
+		*/
+		function setLocalMsg(localName,obj) {
+			localStorage.setItem(localName,JSON.stringify(obj)); //往本地存cartList这个数组(先将其转为字符串)  
+			userName=JSON.parse(localStorage.getItem(localName));  //从本地取出 cartList这个数组并转为对象 
+			// console.log(typeof cartList);
+			console.log(userName);
+			console.log(localStorage);
+			// alert(localStorage.userName)
+			// localStorage.removeItem("userName");//清除userName的值
+			// localStorage.clear(); //批量删除数据
+		}
+
+		/*
+		获得储存的localStorage：
+		localName:储存在localStorage里的名称
+		*/
+		function getLocalMsg(localName) {
+		 	// localStorage.clear(); //批量删除数据
+			return JSON.parse(localStorage.getItem(localName));  //从本地取出 cartList这个数组并转为对象 
+			
+			// localStorage.removeItem("userName");//清除userName的值
+			// localStorage.clear(); //批量删除数据
+		}
+
+
+
+
+		/*判断是否从商品页过来*/
+		function GetQueryString(name)
+		{
+
+		     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+		     var r = window.location.search.substr(1).match(reg);
+		     // alert(unescape(r[2]))
+		     if(r!=null)return  unescape(r[2]); return null;
+		}
 	</script>
 </body>
 </html>

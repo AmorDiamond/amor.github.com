@@ -890,3 +890,77 @@ a, html {
     font-size: 24px;
     color: #fff;
 }
+
+
+/* 登录页面 */
+.login-head{
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #c8c8c8;
+    color: #6c6c6c;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f7f7f8;
+}
+.login-box{
+    margin-top: 20px;
+}
+.login-box .label{
+    width: 90px;
+    float: left;
+    font-size: 16px;
+    color: #6c6c6c;
+}
+.user-name,.user-password{
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd;
+    color: #6c6c6c;
+    background-color: #fff;
+}
+.user-name .flex-input{
+    position: relative;
+}
+.login-box .flex-input input{
+    width: 100%;
+    background-color: transparent;
+}
+.user-name .flex-input .remove-name{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+.login-bottom{
+    margin: 20px 10px;
+    font-size: 16px;
+    text-align: center;
+}
+.login-bottom a{
+    color: #ff0036;
+}
+.login-bottom .login-btn{
+    width: 100%;
+    height: 40px;
+    color: #d4d4d4;
+    border: none;
+    background-color: #ff0036;
+    border-radius: 3px;
+}
+.login-bottom .other-link{
+    margin: 20px 0;
+    overflow: hidden;
+}
+.login-bottom .register{
+    float: left;
+}
+.login-bottom .forget-password{
+    float: right;
+}
+.msg-login .msg{
+    padding: 5px;
+    border: 1px solid #ff0036;
+    border-radius: 3px;
+}
+.hide{
+    display: none;
+}

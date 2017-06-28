@@ -251,7 +251,7 @@
 		<button class="cell buy">立即购买</button>
 	</footer>
 	<div class="cart-icon icon-font">
-		<a href="#"><i>&#xe61b;</i></a>
+		<a href="cart.html"><i>&#xe61b;</i></a>
 	</div>
 
 
@@ -353,11 +353,31 @@
 
 		/*序列化*/
 		$(function() {
+
+		/*立即购买*/
 		$(".buy").click(function() {
 			    var params = $("#goods-speces").serializeObject(); //将表单序列化为JSON对象 
 				console.info(params);
+				if (checkUser("userName")) {
+					localProduct(params);
+					// location.href = "cart.html";
+				}else{
+					location.href = "login.html?back=true";
+				}
+				
+			})
 
-				localProduct(params);
+			/*加入购物车*/
+			$(".cart").click(function() {
+			    var params = $("#goods-speces").serializeObject(); //将表单序列化为JSON对象 
+				console.info(params);
+				if (checkUser("userName")) {
+					localProduct(params);
+					// location.href = "cart.html";
+				}else{
+					location.href = "login.html?back=true";
+				}
+				
 			})
 		})
 
@@ -493,6 +513,11 @@
 			// localStorage.removeItem("cartList");//清除cartList的值
 		}
 		  
+
+		/*检测是否登陆*/
+		function checkUser(localName) {
+			return JSON.parse(localStorage.getItem(localName));
+		}
 	</script>
 </body>
 </html>
