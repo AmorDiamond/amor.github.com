@@ -7,9 +7,107 @@
 	<link rel="stylesheet" href="css/common.css" type="text/css">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<script src="js/zepto.js" type="text/javascript"></script>
+	<style>
+		.goods-list li{
+			margin-top: 10px;
+			background-color: #fff;
+		}
+		.cart-footer{
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 10px;
+			background-color: #fff;
+			text-align: right;
+		}
+		.cart-footer .sub-cart{
+		    display: inline-block;
+			padding: 10px;
+			background-color: #f00;
+			border-radius: 5px;
+			color: #fff;
+		    font-size: 16px;
+		    font-weight: bold;
+		}
+	</style>
 </head>
 <body>
 <header class="login-head">购物车</header>
-	
+	<ul class="goods-list">
+		
+	</ul>
+<div class="login-out">
+	退出登录
+</div>
+<footer class="cart-footer"><a href="#"><span class="sub-cart">提交订单</span></a></footer>
+	<script type="text/javascript">
+	$(function(){
+		getCartList();
+		$(".login-out").on('click',function() {
+			event.preventDefault();
+			localStorage.clear(); //批量删除数据
+			location.href = "index.html";
+		});
+	})
+	var cartList;
+	function getCartList () {
+		 cartList = getLocalMsg("cartList");
+		 var cartCon = $(".goods-list");
+		 var tml="";
+		 console.log(cartList)
+		 $.each(cartList,function (index,value) {
+		 	console.log(index+":"+value); 
+		 	tml +="<li><img src='https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg' width='100px' height='100px'>"+value.goodsId+"<span>"+value.color+"</span><span>"+value.size+"</span><span>数量："+value.number+"</span><span class='remove-goods icon-font' id='"+index+"'>删除</span></li>"
+		 })
+
+		 cartCon.html(tml);
+	}
+
+		$(".goods-list").on("click", ".remove-goods", function(event) {
+			// event.preventDefault();
+			// alert(this)
+			var indexId = $(this).attr("id");
+			console.log(indexId);
+			cartList.splice(indexId,1);
+			console.log(cartList);
+			setLocalMsg("cartList",cartList);
+
+			/*删除后同时更新页面的获得商品数据*/
+			getCartList();
+		});
+
+		/*
+		储存信息到localStorage：
+		localName:储存在localStorage里的名称
+		obj:要储存的数据
+		*/
+		function setLocalMsg(localName,obj) {
+			localStorage.setItem(localName,JSON.stringify(obj)); //往本地存cartList这个数组(先将其转为字符串)  
+			userName=JSON.parse(localStorage.getItem(localName));  //从本地取出 cartList这个数组并转为对象 
+			// console.log(typeof cartList);
+			console.log(userName);
+			console.log(localStorage);
+			// alert(localStorage.userName)
+			// localStorage.removeItem("userName");//清除userName的值
+			// localStorage.clear(); //批量删除数据
+		}
+
+
+
+		/*
+		获得储存的localStorage：
+		localName:储存在localStorage里的名称
+		*/
+		function getLocalMsg(localName) {
+		 	// localStorage.clear(); //批量删除数据
+			return JSON.parse(localStorage.getItem(localName));  //从本地取出 cartList这个数组并转为对象 
+			
+			// localStorage.removeItem("userName");//清除userName的值
+			// localStorage.clear(); //批量删除数据
+		}
+
+		// getCartList();
+	</script>
 </body>
 </html>
