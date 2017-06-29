@@ -9,23 +9,45 @@
 	<script src="js/zepto.js" type="text/javascript"></script>
 	<style>
 		.goods-list li{
+			position: relative;
 			margin-top: 10px;
 			background-color: #fff;
+		}
+		.cart-list-left{
+			position: relative;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 2;
+			background-color: #fff;
+			transition: transform .3s;
+		}
+		.cart-list-right{
+			position: absolute;
+			top: 0;
+			right: 0;
+
+			z-index: 1;
+			background-color: #f00;
+		}
+		.remove-goods{
+			height: 100px;
+			line-height: 100px;
+			padding: 0 10px;
+			color: #fff;
 		}
 		.cart-footer{
 			position: fixed;
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			padding: 10px;
 			background-color: #fff;
 			text-align: right;
 		}
 		.cart-footer .sub-cart{
 		    display: inline-block;
-			padding: 10px;
+			padding: 15px;
 			background-color: #f00;
-			border-radius: 5px;
 			color: #fff;
 		    font-size: 16px;
 		    font-weight: bold;
@@ -40,7 +62,7 @@
 <div class="login-out">
 	退出登录
 </div>
-<footer class="cart-footer"><a href="#"><span class="sub-cart">提交订单</span></a></footer>
+<footer class="cart-footer"><a href="flow.html"><span class="sub-cart">去结算</span></a></footer>
 	<script type="text/javascript">
 	$(function(){
 		getCartList();
@@ -49,7 +71,53 @@
 			localStorage.clear(); //批量删除数据
 			location.href = "index.html";
 		});
+
+		slideRemove();
+
 	})
+
+	/*左滑动删除*/
+	function slideRemove() {
+		var startX;
+		var endX;
+		var moveRange;
+		var canMove;
+		var rightE = $(".cart-list-right");
+		var rightW = rightE.width();
+		$(".cart-list-left").on("touchstart",function (e) {
+			console.log(e.changedTouches[0].pageX)
+			startX = e.changedTouches[0].pageX;
+			canMove = $(this).offset().left == 0 ? true :false;
+
+		}).on("touchmove",function (e) {
+			endX = e.changedTouches[0].pageX;
+			
+			moveRange = Math.ceil(endX-startX);
+			console.log(moveRange);
+			if (moveRange < 0 && canMove) {
+				// $(this).css("left",moveRange);
+				$(this).css("transform","translate3d("+(moveRange)+"px,0,0)");
+			}else if(moveRange>0 && (moveRange-rightW)<=0 && !canMove){
+				console.log('nimeimei')
+				$(this).css("transform","translate3d("+(moveRange-rightW)+"px,0,0)");
+			}
+		}).on("touchend",function () {
+			
+			moveRange = endX-startX;
+			if (moveRange < -rightW/2) {
+				$(this).css("transform","translate3d("+(-rightW)+"px,0,0)");
+				
+			}else{
+				$(this).css("transform","translate3d(0,0,0)");
+				
+			}
+			
+		})
+	}
+	
+
+
+
 	var cartList;
 	function getCartList () {
 		 cartList = getLocalMsg("cartList");
@@ -58,7 +126,7 @@
 		 console.log(cartList)
 		 $.each(cartList,function (index,value) {
 		 	console.log(index+":"+value); 
-		 	tml +="<li><img src='https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg' width='100px' height='100px'>"+value.goodsId+"<span>"+value.color+"</span><span>"+value.size+"</span><span>数量："+value.number+"</span><span class='remove-goods icon-font' id='"+index+"'>删除</span></li>"
+		 	tml +="<li><div class='cart-list-left'><img src='https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg' width='100px' height='100px'>"+value.goodsId+"<span>"+value.color+"</span><span>"+value.size+"</span><span>数量："+value.number+"</span></div><div class='cart-list-right'><span class='remove-goods icon-font' id='"+index+"'>删除</span></div></li>"
 		 })
 
 		 cartCon.html(tml);
@@ -75,6 +143,7 @@
 
 			/*删除后同时更新页面的获得商品数据*/
 			getCartList();
+			slideRemove();
 		});
 
 		/*
