@@ -85,18 +85,21 @@
 		var rightE = $(".cart-list-right");
 		var rightW = rightE.width();
 		$(".cart-list-left").on("touchstart",function (e) {
-			console.log(e.changedTouches[0].pageX)
+			// console.log(e.changedTouches[0].pageX)
 			startX = e.changedTouches[0].pageX;
+			startY = e.changedTouches[0].pageY;
 			canMove = $(this).offset().left == 0 ? true :false;
 
 		}).on("touchmove",function (e) {
 			endX = e.changedTouches[0].pageX;
 			endY = e.changedTouches[0].pageY;
-			if(endX > endY) {
+
+			if(Math.abs(endX-startX) > Math.abs(endY-startY)) {
 				e.preventDefault();
+				console.log("y"+endY)
 			}
 			moveRange = Math.ceil(endX-startX);
-			console.log(moveRange);
+			// console.log(moveRange);
 			if (moveRange < 0 && canMove) {
 				// $(this).css("left",moveRange);
 				$(this).css("transform","translate3d("+(moveRange)+"px,0,0)");
