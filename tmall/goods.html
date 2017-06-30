@@ -197,10 +197,10 @@
 				</div>
 			</section>
 			<section class="goods-title">
-				<h1>2017夏季新款女装雪纺碎花连衣裙中长款修身大码印花短袖裙子夏装</h1>
+				<h1 class="goods-name">2017夏季新款女装雪纺碎花连衣裙中长款修身大码印花短袖裙子夏装</h1>
 			</section>
 			<section class="goods-price">
-				<div class="price"><i class="rmb">￥</i>248.00</div><i class="tag">春季焕新价</i>
+				<div class="price"><i class="rmb">￥</i><span class="price-number">248.00</span></div><i class="tag">春季焕新价</i>
 				<div class="origin-price">价格<del>￥456.00</del></div>
 			</section>
 			<section class="goods-add flex-ui">
@@ -264,8 +264,8 @@
 					<img src="https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg" alt="">
 				</div>
 				<div class="main f-l">
-					<p class="price">¥248.00</p>
-					<p class="stock">库存<i>155件</i></p>
+					<p class="price">¥<span class="price-number">248.00</span></p>
+					<p class="stock">库存<i class="stock-number">155</i>件</p>
 					<div class="select">
 						已选择:<div class="select-spec"><span id="spec-size">L</span><span id="spec-color">蓝色</span></div>
 					</div>
@@ -308,6 +308,8 @@
 				<button class="buy cell" type="button">立即购买</button>
 			</section>
 			<input name="goodsId" type="hidden" value="100">
+			<input name="price" type="hidden" value="248.00">
+			<input name="goodsName" type="hidden" value="2017夏季新款女装雪纺碎花连衣裙中长款修身大码印花短袖裙子夏装">
 		</form>
 	</div>
 <style>
@@ -407,23 +409,44 @@
 			return o;
 		}
 
+		/*使用ajax获取json里的信息*/
+		getGoodsInfo (100);
+
+
 		/*加载页面先获得商品所有属性*/
 		var params = $("#goods-speces").serializeObject(); //将表单序列化为JSON对象 
 		console.info(params);
-		changeSpec(params);
+		// changeSpec(params);
 
 
 		/*切换属性动态变动已选择数据*/
+		function initChangeSpec (params) {
+
+			changeSpec(params);
+
+			$(".items input").on("change",function() {
+				params = $("#goods-speces").serializeObject();
+				changeSpec(params);
+			})
+		}
+		/*如果使用的ajax动态更新页面，需把更新地点的元素的操作放在success之后,否则无效*/
 		$(".items input").on("change",function() {
 			params = $("#goods-speces").serializeObject();
 			changeSpec(params);
 		})
+		changeSpec(params);
+		console.log($(".items input"));
 
-		function changeSpec (serializeForm) {
+		function changeSpec(params) {
 			var con="";
+			console.log(params)
 			$.each(params,function(index,value) {
-				console.log('value'+value);
-				con += "<span>"+value+"</span>"; 
+
+				if(index != "number" && index != "goodsId" && index != "goodsName" && index != "price"){
+					con += "<span>"+value+"</span>";
+					console.log('value'+value);
+				}
+				 
 			});
 			$(".select-spec").html(con);
 		}
@@ -472,7 +495,7 @@
 								if(!specFlag){
 
 									/*如果有一个对应属性的对应值不相等，则直接添加到购物车，否则继续判断剩余的属性*/
-									if(spec[item] != cartList[i][item] && item != "number"){
+									if(spec[item] != cartList[i][item] && item != "number" && item != "goodsName"){
 										specFlag = true;
 										
 									}else{
@@ -512,11 +535,65 @@
 			console.log(cartList);
 			// localStorage.removeItem("cartList");//清除cartList的值
 		}
-		  
 
 		/*检测是否登陆*/
 		function checkUser(localName) {
 			return JSON.parse(localStorage.getItem(localName));
+		}
+
+
+		function getGoodsInfo (id) {
+			$.ajax({
+				type:"GET",
+				// data:{goodsId:id},
+				dataType:"json",
+				url:"goods_list.json",
+				success:function (data) {
+					console.log(111)
+					$.each(data.list,function () {
+						if(this.goodsId == id){
+							console.log(this.goodsId);
+							$(".goods-name").html(this.goodsName); 
+							$(".spec-info .price-number,.goods-price .goods-price").html(this.price); 
+							$(".spec-info .stock-number").html(this.stock);
+							var tml="";
+							
+							$.each(this.specs,function (index,value) {
+								var self = this;
+								var inputTml="";
+								console.log(self);
+
+								/*先获得当前属性类型的属性值*/
+								$.each(this.specValue,function (index,value) {
+									if(index == 2){
+										inputTml +=`<input type="radio" name="`+self.specType+`" value="`+this+`" id="`+(self.specType+index)+`" checked="checked">
+										<label for="`+(self.specType+index)+`">`+this+`</label>`
+									}else{
+										inputTml +=`<input type="radio" name="`+self.specType+`" value="`+this+`" id="`+(self.specType+index)+`">
+										<label for="`+(self.specType+index)+`">`+this+`</label>`
+									}
+									
+								});
+								
+								tml += `<li>
+											<h2>`+this.specName+`</h2>
+											<div class="items">`+inputTml+`</div>
+										</li>
+										`;
+							})
+							
+							$(".goods-specs").html(tml);
+							params = $("#goods-speces").serializeObject(); //将表单序列化为JSON对象
+							// changeSpec(params);
+							initChangeSpec(params);
+						}
+						
+					})
+				},
+				error:function (data) {
+					console.log(data.responseText);
+				}
+			})
 		}
 	</script>
 </body>

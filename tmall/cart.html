@@ -21,6 +21,61 @@
 			z-index: 2;
 			background-color: #fff;
 			transition: transform .3s;
+			overflow: hidden;
+		}
+		.cart-list-left .select-input{
+			width: 0;
+			opacity: 0;
+			float: left;
+		}
+		.cart-list-left .select-box{
+			float: left;
+			height: 100px;
+			line-height: 100px;
+			margin: 0 6px;
+		}
+		.cart-list-left .select{
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			background-color: #eee;
+		    display: inline-block;
+		}
+		.cart-list-left .select:after{
+			content: "";
+			font-family: 'iconfont';
+		    font-size: 16px;
+		    -webkit-font-smoothing: antialiased;
+		    -webkit-text-stroke-width: .2px;
+			width: 18px;
+			height: 18px;
+			background-color: #f00;
+			border-radius: 50%;
+		    display: inline-block;
+		}
+		.cart-list-left input.select-input+.select-box .select:after{
+			display: none;
+		}
+		.cart-list-left input:checked+.select-box .select:after{
+			display: block;
+		}
+		.cart-list-left img{
+			float: left;
+		    margin-right: 10px;
+		}
+		.cart-list-left .title{
+			color: #000;
+			margin: 10px;
+		}
+		.cart-list-left .price{
+			display: inline-block;
+			margin-top: 5px;
+			color: #f00;
+		}
+		.cart-list-left .number{
+			float: right;
+		    margin-right: 15px;
+		    margin-top: -5px;
 		}
 		.cart-list-right{
 			position: absolute;
@@ -56,9 +111,11 @@
 </head>
 <body>
 <header class="login-head">购物车</header>
-	<ul class="goods-list">
-		
-	</ul>
+	<form action="#" id="cart-form">
+		<ul class="goods-list">
+			
+		</ul>
+	</form>
 <div class="login-out">
 	退出登录
 </div>
@@ -86,20 +143,30 @@
 		var rightW = rightE.width();
 		$(".cart-list-left").on("touchstart",function (e) {
 			// console.log(e.changedTouches[0].pageX)
+			
+			/*touch事件需要e.changedTouches[0].pageX才能获得点击的位置等。*/
 			startX = e.changedTouches[0].pageX;
 			startY = e.changedTouches[0].pageY;
 			canMove = $(this).offset().left == 0 ? true :false;
+
+			/*控制只显示一个删除*/
+			if(canMove){
+				$(".cart-list-left").css("transform","translate3d(0,0,0)");
+			}
 
 		}).on("touchmove",function (e) {
 			endX = e.changedTouches[0].pageX;
 			endY = e.changedTouches[0].pageY;
 
+			/*左右滑动禁止默认的页面滚动*/
 			if(Math.abs(endX-startX) > Math.abs(endY-startY)) {
 				e.preventDefault();
 				console.log("y"+endY)
 			}
 			moveRange = Math.ceil(endX-startX);
 			// console.log(moveRange);
+
+			/*判断是否向左滑动，并且当前元素是否处于原始位置*/
 			if (moveRange < 0 && canMove) {
 				// $(this).css("left",moveRange);
 				$(this).css("transform","translate3d("+(moveRange)+"px,0,0)");
@@ -132,7 +199,24 @@
 		 console.log(cartList)
 		 $.each(cartList,function (index,value) {
 		 	console.log(index+":"+value); 
-		 	tml +="<li><div class='cart-list-left'><img src='https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg' width='100px' height='100px'>"+value.goodsId+"<span>"+value.color+"</span><span>"+value.size+"</span><span>数量："+value.number+"</span></div><div class='cart-list-right'><span class='remove-goods icon-font' id='"+index+"'>删除</span></div></li>"
+		 	tml +=`<li>
+		 			<div class='cart-list-left'>
+		 				<input class='select-input' name='goods' type='checkbox' id='order-goods`+index+`' value='`+index+`'>
+		 				<div class='select-box'>
+		 					<label class='select' for='order-goods`+index+`'>
+		 						
+		 					</label>
+		 				</div>
+		 				<img src='https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg' width='100px' height='100px'>
+		 					<h6 class='title'>`+value.goodsName+`</h6><span>`+value.color+`</span><span>;`+value.size+`</span>
+		 				<div>
+		 					<span class='price'>￥`+value.price+`</span><span class='number'>数量：`+value.number+`</span>
+		 				</div>
+		 			</div>
+		 			<div class='cart-list-right'>
+		 				<span class='remove-goods icon-font' id='`+index+`'>删除</span>
+		 			</div>
+		 			</li>`
 		 })
 
 		 cartCon.html(tml);
@@ -149,6 +233,7 @@
 
 			/*删除后同时更新页面的获得商品数据*/
 			getCartList();
+			/*删除后同时更新页面元素绑定的方法*/
 			slideRemove();
 		});
 
