@@ -8,6 +8,71 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<script src="js/zepto.js" type="text/javascript"></script>
 	<style>
+		.product-list li{
+			position: relative;
+			margin-top: 10px;
+			background-color: #fff;
+			overflow: hidden;
+		}
+		.product-list li .edit{
+			height: 25px;
+			line-height: 25px;
+			padding: 0 10px;
+			color: #f00;
+			background-color: #ddd;
+			text-align: right;
+		}
+		.product-con img{
+			float: left;
+			height: 100px;
+		    margin-right: 10px;
+		}
+		.product-con .title{
+			color: #000;
+			margin: 10px;
+		}
+		.product-con .price{
+			display: inline-block;
+			margin-top: 5px;
+			color: #f00;
+		}
+		.product-con .number{
+			float: right;
+		    margin-right: 15px;
+		    margin-top: -5px;
+		}
+		.pay-way{
+			margin-top: 20px;
+		}
+		.pay-way li{
+			height: 40px;
+			line-height: 40px;
+			padding: 0 10px;
+			border-top: 1px solid #000;
+			background-color: #fff;
+		}
+		.pay-way li:first-child{
+			border-top: none;
+		}
+		.pay-way .right-tag{
+			position: relative;
+			float: right;
+			top: 5px;
+			width: 50px;
+			height: 30px;
+			background-color: green;
+			border-radius: 43%;
+		}
+		.pay-way .right-tag .tag-icon{
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: #eee;
+		}
+
 		.cart-footer{
 			position: fixed;
 			bottom: 0;
@@ -28,6 +93,69 @@
 </head>
 <body>
 	<header class="login-head">提交订单</header>
+	<ul class="product-list">
+		<li>
+			<div class="edit">编辑</div>
+			<div class="product-con">
+				<img src="https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg" alt="">
+				<h6 class="title">名字</h6>
+				<span>属性</span>
+				<div>
+					<span class="price">价格</span><span class="number">数量</span>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<section>
+		<ul class="pay-way">
+			<li>
+				<label for="alipay">支付宝</label><input type="radio" name="payWay" value="alipay" id="alipay"><span class="right-tag"><i class="tag-icon"></i></span>
+			</li>
+			<li>
+				<label for="wxpay">微信</label><input type="radio" name="payWay" value="wxpay" id="wxpay"><span class="right-tag"><i class="tag-icon"></i></span>
+			</li>
+		</ul>
+	</section>
 	<footer class="cart-footer"><a href="flow.html"><span class="sub-cart">提交订单</span></a></footer>
+	<script type="text/javascript">
+		getOrderList();
+		var orderList;
+		function getOrderList() {
+			 orderList = getLocalMsg("orderList");
+			 var orderCon = $(".product-list");
+			 var tml="";
+			 console.log(orderList)
+			 $.each(orderList,function (index,value) {
+			 	console.log(index+":"+value); 
+			 	tml +=`<li>
+						<div class="edit">编辑</div>
+						<div class="product-con">
+							<img src="https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg" alt="">
+							<h6 class="title">`+value.goodsName+`</h6>
+							<span>`+value.color+`</span><span>;`+value.size+`</span>
+			 				<div>
+			 					<span class='price'>￥`+value.price+`</span><span class='number'>数量：`+value.number+`</span>
+			 				</div>
+						</div>
+					</li>`
+			 })
+
+			 orderCon.html(tml);
+		}
+
+
+		/*
+		获得储存的localStorage：
+		localName:储存在localStorage里的名称
+		*/
+		function getLocalMsg(localName) {
+		 	// localStorage.clear(); //批量删除数据
+			return JSON.parse(localStorage.getItem(localName));  //从本地取出 cartList这个数组并转为对象 
+			
+			// localStorage.removeItem("userName");//清除userName的值
+			// localStorage.clear(); //批量删除数据
+		}
+
+	</script>
 </body>
 </html>

@@ -107,6 +107,41 @@
 		    font-size: 16px;
 		    font-weight: bold;
 		}
+		.all-select input{
+			width: 0;
+			height: 0;
+			opacity: 0;
+		}
+		.all-select{
+			float: left;
+			height: 49px;
+			line-height: 49px;
+		}
+		.select-icon{
+			display: inline-block;
+			position: relative;
+			width: 18px;
+			height: 18px;
+			border: 1px solid #ddd;
+			border-radius: 50%;
+			background-color: #eee;
+		    margin: 0 5px -3px;
+		}
+		.select-icon:after{
+			display: none;
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 18px;
+			height: 18px;
+			border-radius: 50%;
+			background-color: #f00;
+
+		}
+		.all-select input:checked+.select-icon:after{
+			display: block;
+		}
 	</style>
 </head>
 <body>
@@ -119,7 +154,10 @@
 <div class="login-out">
 	退出登录
 </div>
-<footer class="cart-footer"><a href="flow.html"><span class="sub-cart">去结算</span></a></footer>
+<footer class="cart-footer">
+	<label class="all-select" for="all-select"><input type="checkbox" id="all-select"><span class="select-icon"></span>全选</label>
+	<a href="javascript:void(0)"><span class="sub-cart">去结算</span></a>
+</footer>
 	<script type="text/javascript">
 	$(function(){
 		getCartList();
@@ -130,8 +168,85 @@
 		});
 
 		slideRemove();
-
+		allSelect ();
+		isSlect ();
+		goCheckOut ();
 	})
+
+
+	function goCheckOut () {
+		var inputs = $(".select-input");
+		var inputArr;
+		var orderProduct;
+		$(".sub-cart").on("click",function () {
+			 inputArr=[];
+			 orderProduct=[];
+			 // console.log(inputs)
+			 $.each(inputs,function (index,value) {
+
+			 	if($(this).prop("checked")){
+			 		inputArr.push(index);
+			 	}
+			 })
+			 // console.log(inputArr);
+			 $.each(inputArr,function (index,value) {
+			 	
+			 	orderProduct.push(cartList[value]);
+			 	
+			 })
+			 
+			 if(orderProduct.length>0){
+			 	console.log(orderProduct);
+			 	setLocalMsg("orderList",orderProduct)
+			 	location.href = "flow.html";
+			 }
+			 
+		}) 
+	}
+
+
+	/*判断是否去掉全选按钮选中状态*/
+	function isSlect () {
+		var inputs,flag = true;
+		$(".select-input").on("change",function () {
+			// console.log($(".select-input").attr("checked"))
+			/*如果这里使用1.6.1版本前的attr方法，获取不到通过for绑定的元素点击选中input的checked属性状态(通过for和id绑定的选中后的input标签无checked属性在元素上)，也无法通过removeAttr()去掉通过for和id绑定实现的选中状态。所以这里使用1.6.1版本后的新方法prop()*/
+			inputs = $(".select-input");
+			flag = true;
+			console.log(inputs)
+
+			/*循环判断所有的input是否都选中，如果有一个没选择，则去掉全选按钮的选中状态*/
+			$.each(inputs,function () {
+				console.log($(this).prop("checked"))
+				if(flag){
+					if(!$(this).prop("checked")){
+						flag = false;
+					}else{
+						flag = true;
+					}
+				} 
+				
+			})
+
+			/*判断是否去掉全选按钮选中状态*/
+			if(flag){
+				$("#all-select").prop("checked",true)
+			}else{
+				$("#all-select").prop("checked",false)
+			}
+		})
+	}
+
+	function allSelect () {
+		$("#all-select").on("change",function () {
+			console.log($(this).attr())
+			 if($("#all-select").attr()[0].checked){
+			 	$(".select-input").prop("checked",true)
+			 }else{
+			 	$(".select-input").prop("checked",false)
+			 }
+		})
+	}
 
 	/*左滑动删除*/
 	function slideRemove() {
