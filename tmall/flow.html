@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 	<script src="js/zepto.js" type="text/javascript"></script>
 	<style>
+		body{
+			padding-bottom: 50px;
+		}
 		.product-list li{
 			position: relative;
 			margin-top: 10px;
@@ -21,6 +24,9 @@
 			color: #f00;
 			background-color: #ddd;
 			text-align: right;
+		}
+		.product-con{
+			overflow: hidden;
 		}
 		.product-con img{
 			float: left;
@@ -41,29 +47,67 @@
 		    margin-right: 15px;
 		    margin-top: -5px;
 		}
-		.pay-way{
+		.pay-way,.pay-insurance,.count-money{
 			margin-top: 20px;
 		}
-		.pay-way li{
+		.pay-way li,.pay-insurance li{
+			position: relative;
 			height: 40px;
 			line-height: 40px;
 			padding: 0 10px;
 			border-top: 1px solid #000;
 			background-color: #fff;
 		}
-		.pay-way li:first-child{
+		.pay-way li label{
+			display: inline-block;
+			width: 100%;
+		}
+		.pay-way li:first-child,.pay-insurance li:first-child{
 			border-top: none;
 		}
-		.pay-way .right-tag{
-			position: relative;
+		.pay-way input[type=radio],.pay-insurance input[type=checkbox]{
+			width: 0;
+			height: 0;
+		}
+		.pay-way .right-select{
+			position: absolute;
+			top: 5px;
+			right: 0;
+			width: 30px;
+			height: 30px;
+			display: none;
+		}
+		.pay-way .right-select:after{
+			content: "\e624";
+			position: absolute;
+			left: 0;
+			top: -5px;
+			width: 0;
+		    font-weight: bold;
+		    font-size: 20px;
+		    color: #000;
+		}
+		.pay-way input:checked+.right-select{
+			display: block;
+		}
+		.pay-insurance{
+
+		}
+		.pay-insurance .right-tag{
+			position: absolute;
 			float: right;
 			top: 5px;
+			right: 10px;
 			width: 50px;
 			height: 30px;
-			background-color: green;
-			border-radius: 43%;
+			background-color: #ddd;
+			border-radius: 15px;
 		}
-		.pay-way .right-tag .tag-icon{
+		.pay-insurance li .title span{
+			margin: 0 10px;
+			color: #f00;
+		}
+		.pay-insurance .right-tag .tag-icon{
 			position: absolute;
 			left: 0;
 			top: 0;
@@ -72,6 +116,30 @@
 			border-radius: 50%;
 			background-color: #eee;
 		}
+		.pay-insurance input[type=checkbox]:checked+.right-tag .tag-icon{
+			left: calc(100% - 30px);
+		}
+		.pay-insurance input[type=checkbox]:checked+.right-tag{
+			background-color: green;
+		}
+		.count-money li{
+			height: 40px;
+			line-height: 40px;
+			border-top: 1px solid #eee;
+			background-color: #fff;
+			padding: 0 10px;
+		}
+		.count-money li .title{
+			float: left;
+		}
+		.count-money li .price{
+			float: right;
+			color: #f00;
+		}
+		.count-money .insurance-money{
+			display: none;
+		}
+
 
 		.cart-footer{
 			position: fixed;
@@ -109,10 +177,33 @@
 	<section>
 		<ul class="pay-way">
 			<li>
-				<label for="alipay">支付宝</label><input type="radio" name="payWay" value="alipay" id="alipay"><span class="right-tag"><i class="tag-icon"></i></span>
+				<label for="alipay">支付宝</label><input type="radio" name="payWay" value="alipay" checked="checked" id="alipay"><span class="right-select icon-font"></span>
 			</li>
 			<li>
-				<label for="wxpay">微信</label><input type="radio" name="payWay" value="wxpay" id="wxpay"><span class="right-tag"><i class="tag-icon"></i></span>
+				<label for="wxpay">微信</label><input type="radio" name="payWay" value="wxpay" id="wxpay"><span class="right-select icon-font"></span>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<ul class="pay-insurance">
+			<li>
+				<label class="title">运费险<span>￥2.00</span></label><input type="checkbox" name="insurance" value="insurance" id="insurance"><label  for="insurance" class="right-tag"><i class="tag-icon"></i></label>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<ul class="count-money">
+			<li class="product-money">
+				<span class="title">商品总价:</span><span class="price">￥<i class="number">2.00</i></span>
+			</li>
+			<li>
+				<span class="title">运费:</span><span class="price">￥<i class="number">20.00</i></span>
+			</li>
+			<li class="insurance-money">
+				<span class="title">运费险:</span><span class="price">￥<i class="number">2.00</i></span>
+			</li>
+			<li class="total-money">
+				<span class="title">总计:</span><span class="price">￥<i class="number">2.00</i></span>
 			</li>
 		</ul>
 	</section>
@@ -123,10 +214,14 @@
 		function getOrderList() {
 			 orderList = getLocalMsg("orderList");
 			 var orderCon = $(".product-list");
+			 var pMoneyCon = $(".product-money .number");
+			 var tMoneyCon = $(".total-money .number");
+			 var pMoney=0,tMoney=0;
 			 var tml="";
 			 console.log(orderList)
 			 $.each(orderList,function (index,value) {
-			 	console.log(index+":"+value); 
+			 	console.log(index+":"+value);
+			 	pMoney += Number(value.price)*Number(value.number);
 			 	tml +=`<li>
 						<div class="edit">编辑</div>
 						<div class="product-con">
@@ -141,7 +236,36 @@
 			 })
 
 			 orderCon.html(tml);
+
+			 console.log(pMoney)
+			 pMoney = pMoney.toFixed(2);
+			 pMoneyCon.html(pMoney);
+			 tMoney = (Number(pMoney)+20).toFixed(2);
+			 tMoneyCon.html(tMoney);
+			 
 		}
+
+
+		selectInsurance();
+		function selectInsurance() {
+			var flag;
+			var tMoneyCon = $(".total-money .number");
+			var nsuranceE = $(".count-money .insurance-money");
+			var tMoney=0;
+			$("#insurance").on("change",function () {
+				flag = $(this).prop("checked") ? true : false;
+				if(flag){
+					nsuranceE.css("display","block")
+					tMoney = (Number($(".total-money .number").text())+2).toFixed(2);
+					tMoneyCon.html(tMoney);
+				}else{
+					nsuranceE.css("display","none")
+					tMoney = (Number($(".total-money .number").text())-2).toFixed(2);
+					tMoneyCon.html(tMoney);
+				}
+			})
+		}
+
 
 
 		/*
