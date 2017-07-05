@@ -29,6 +29,9 @@ background-size: cover;}
     background-color: #fff;
     text-indent: -1000em;
 }
+.loginHome a{
+    color: #fff;
+}
 
 /* banner */
 .banner-home{width: 100%;background-color: #ddd;}
@@ -893,7 +896,7 @@ a, html {
 
 
 /* 登录页面 */
-.login-head{
+.head{
     height: 45px;
     line-height: 45px;
     border-bottom: 1px solid #c8c8c8;

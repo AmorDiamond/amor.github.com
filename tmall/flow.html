@@ -96,12 +96,14 @@
 		.pay-insurance .right-tag{
 			position: absolute;
 			float: right;
-			top: 5px;
+			top: 4px;
 			right: 10px;
 			width: 50px;
-			height: 30px;
+			height: 32px;
+		    border: 1px solid #eee;
 			background-color: #ddd;
-			border-radius: 15px;
+			border-radius: 16px;
+		    transition: all .5s;
 		}
 		.pay-insurance li .title span{
 			margin: 0 10px;
@@ -114,13 +116,15 @@
 			width: 30px;
 			height: 30px;
 			border-radius: 50%;
-			background-color: #eee;
+			background-color: #fff;
+			transition: left .2s;
 		}
 		.pay-insurance input[type=checkbox]:checked+.right-tag .tag-icon{
 			left: calc(100% - 30px);
 		}
 		.pay-insurance input[type=checkbox]:checked+.right-tag{
 			background-color: green;
+			border-color: green;
 		}
 		.count-money li{
 			height: 40px;
@@ -146,6 +150,7 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
+			border-top: 1px solid #ddd;
 			background-color: #fff;
 			text-align: right;
 		}
@@ -160,7 +165,7 @@
 	</style>
 </head>
 <body>
-	<header class="login-head">提交订单</header>
+	<header class="head">提交订单</header>
 	<ul class="product-list">
 		<li>
 			<div class="edit">编辑</div>
@@ -223,7 +228,6 @@
 			 	console.log(index+":"+value);
 			 	pMoney += Number(value.price)*Number(value.number);
 			 	tml +=`<li>
-						<div class="edit">编辑</div>
 						<div class="product-con">
 							<img src="https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg" alt="">
 							<h6 class="title">`+value.goodsName+`</h6>

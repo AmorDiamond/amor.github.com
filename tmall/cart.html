@@ -9,9 +9,21 @@
 	<script src="js/zepto.js" type="text/javascript"></script>
 	<style>
 		.goods-list li{
-			position: relative;
+			
 			margin-top: 10px;
 			background-color: #fff;
+		}
+		.goods-list .cart-list-con{
+			position: relative;
+
+		}
+		.goods-list .edit{
+			height: 30px;
+			line-height: 30px;
+			text-align: right;
+			padding: 0 10px;
+			color: #000;
+			border-bottom: 1px solid #ddd;
 		}
 		.cart-list-left{
 			position: relative;
@@ -25,6 +37,7 @@
 		}
 		.cart-list-left .select-input{
 			width: 0;
+			height: 0;
 			opacity: 0;
 			float: left;
 		}
@@ -101,6 +114,7 @@
 			bottom: 0;
 			left: 0;
 			width: 100%;
+			border-top: 1px solid #ddd;
 			background-color: #fff;
 			text-align: right;
 		}
@@ -131,7 +145,7 @@
 			border: 1px solid #ddd;
 			border-radius: 50%;
 			background-color: #eee;
-		    margin: 0 5px -3px;
+		    margin: 0 5px -4px;
 		}
 		.select-icon:after{
 			display: none;
@@ -154,7 +168,7 @@
 	</style>
 </head>
 <body>
-<header class="login-head">购物车</header>
+<header class="head">购物车</header>
 	<form action="#" id="cart-form">
 		<ul class="goods-list">
 			
@@ -324,21 +338,24 @@
 		 $.each(cartList,function (index,value) {
 		 	console.log(index+":"+value); 
 		 	tml +=`<li>
-		 			<div class='cart-list-left'>
-		 				<input class='select-input' name='goods' type='checkbox' id='order-goods`+index+`' value='`+index+`'>
-		 				<div class='select-box'>
-		 					<label class='select' for='order-goods`+index+`'>
-		 						
-		 					</label>
-		 				</div>
-		 				<img src='https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg' width='100px' height='100px'>
-		 					<h6 class='title'>`+value.goodsName+`</h6><span>`+value.color+`</span><span>;`+value.size+`</span>
-		 				<div>
-		 					<span class='price'>￥`+value.price+`</span><span class='number'>数量：`+value.number+`</span>
-		 				</div>
-		 			</div>
-		 			<div class='cart-list-right'>
-		 				<span class='remove-goods icon-font' id='`+index+`'>删除</span>
+		 			<div class='edit'>编辑</div>
+		 			<div class='cart-list-con'>
+			 			<div class='cart-list-left'>
+			 				<input class='select-input' name='goods' type='checkbox' id='order-goods`+index+`' value='`+index+`'>
+			 				<div class='select-box'>
+			 					<label class='select' for='order-goods`+index+`'>
+			 						
+			 					</label>
+			 				</div>
+			 				<img src='https://img.alicdn.com/bao/uploaded/i1/1831112293/TB240znrrBnpuFjSZFGXXX51pXa_!!1831112293.jpg_300x1000Q50s50.jpg' width='100px' height='100px'>
+			 					<h6 class='title'>`+value.goodsName+`</h6><span>`+value.color+`</span><span>;`+value.size+`</span>
+			 				<div>
+			 					<span class='price'>￥`+value.price+`</span><span class='number'>数量：`+value.number+`</span>
+			 				</div>
+			 			</div>
+			 			<div class='cart-list-right'>
+			 				<span class='remove-goods icon-font' id='`+index+`'>删除</span>
+			 			</div>
 		 			</div>
 		 			</li>`
 		 })
