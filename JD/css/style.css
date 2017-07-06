@@ -22,7 +22,7 @@ header{
 	top: 0;
 	left: 0;
 	width: 10.0rem;
-	height: 1.04rem;
+	height: 40px;
 	padding: 0 10px;
 	background:-webkit-linear-gradient(top,rgba(0,0,0,.7),rgba(0,0,0,0));
 	z-index: 10;
@@ -90,15 +90,31 @@ header .login{
 /* 菜单 */
 .home-menu{
 	overflow: hidden;
+	padding: 0.2666666666666667rem 0;
+	margin-bottom: 0.2666666666666667rem;
+	background-color: #fff;
 }
 .home-menu li{
 	float: left;
 	width: 2.0rem;
 	height: 2.0rem;
-	line-height: 2.0rem;
 	text-align: center;
-	border: 1px solid #000;
+/*	border: 1px solid #000;*/
 }
+.home-menu li a{
+	display: block;
+	overflow: hidden;
+	margin: 0.2133333333333333rem 0;
+	color: #000;
+
+}
+.home-menu li img{
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin: 0 auto;
+}
+
 .home-tips{
 	margin: 0 8px 8px;
 	border-radius: 6px;
@@ -248,6 +264,10 @@ header .login{
 	background-color: #ff4a7d;
 	font-size: 12px;
 	color: #fff;
+	height: 18px;
+    /* line-height: 12px; */
+    overflow: hidden;
+    display: inline-block;
 }
 .floor .floor-con .img{
 	width: 45%;
@@ -271,15 +291,15 @@ header .login{
 	bottom: 0;
 	left: 0;
 	width: 10.0rem;
-	height: 1.3333333333333333rem;
+	height: 50px;
 	background-color: #fff;
     -webkit-box-shadow: 0 0 10px 0 rgba(155,143,143,0.6);
 }
 .footer .tab li{
 	float: left;
 	width: 2.0rem;
-	height: 1.3333333333333333rem;
-	line-height: 1.3333333333333333rem;
+	height: 50px;
+	line-height: 50px;
 	text-align: center;
 }
 .footer .tab img{
