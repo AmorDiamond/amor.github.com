@@ -30,12 +30,21 @@
 .top-nav .sub-site:hover .drop-down{
 	display: block;
 }
+.top-nav .city-icon{
+	position: absolute;
+	left: 5px;
+	top: 10px;
+	width: 15px;
+	height: 15px;
+	background: url(http://www.68dsw.com/images/change_city.gif) -85px 0 no-repeat;
+	z-index: 10;
+}
 .top-nav .sub-site .city-site{
 	position: relative;
 	display: inline-block;
 	height: 36px;
-	padding: 0 15px;
-	z-index: 99;
+	padding: 0 15px 0 25px;
+    z-index: 9;
 }
 .top-nav .sub-site:hover .city-site{
     background: #fff;
@@ -81,6 +90,101 @@
 .right-menu li a{
 	padding: 0 5px;
 }
+.right-menu li a i{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin-right: 5px;
+	background: url(http://www.68dsw.com/images/common-icon.png) no-repeat;
+	vertical-align: middle;
+}
+/*.right-menu li a:hover{
+	background: #fff;
+}*/
+.right-menu .home a i{
+    background-position: -260px -185px;
+}
+.right-menu .user a i{
+    background-position: -260px -207px;
+}
+.right-menu .cart a i{
+    background-position: -292px -3px;
+}
+.right-menu .cart .cart-num{
+	margin-left: 4px;
+    color: #E31939;
+}
+
+.right-menu .we-chat a i{
+	background-position: -292px -184px;
+}
+.right-menu li a .bot-arrow{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background: url(http://www.68dsw.com/images/common-icon.png) no-repeat;
+    background-position: 3px -75px;
+	vertical-align: middle;
+	transition: transform .3s;
+}
+.right-menu li:hover .bot-arrow{
+	transform: rotate(-180deg);
+}
+.right-menu li.user,.right-menu li.we-chat,.right-menu li.cart{
+	position: relative;
+	width: 94px;
+}
+.right-menu li .user-sub,.right-menu li .cart-info,.right-menu li .qr-code,.right-menu li .support-sub{
+	display: none;
+	position: absolute;
+	width: 100%;
+	padding: 5px 0 10px;
+	background: #fff;
+	box-shadow: 0 4px 8px #ccc;	
+	text-align: center;
+    line-height: 20px;
+}
+.right-menu li .user-sub a{
+	line-height: 16px;
+}
+.right-menu li.user:hover,.right-menu li.cart:hover,.right-menu li.we-chat:hover,.right-menu li.site-nav:hover{
+	background: #fff;
+	box-shadow: 5px 0px 5px -3px #ccc,-5px 0px 5px -3px #ccc;
+}
+.right-menu li:hover .user-sub,.right-menu li:hover .cart-info,.right-menu li:hover .qr-code,.right-menu li:hover .support-sub{
+	display: block;
+}
+.right-menu li .cart-info{
+	width: 280px;
+	padding: 20px 0;
+	z-index: 9;
+}
+.right-menu li .cart-info .no-product{
+	display: block;
+    width: 200px;
+    height: 150px;
+    margin: 0 auto;
+    background: url(http://www.68dsw.com/images/cart-loading.gif) no-repeat 0 0;
+}
+.right-menu li .qr-code{
+	width: 140%;
+	right: 0;
+}
+.right-menu li .qr-code img{
+	width: 100%;
+}
+.right-menu li.site-nav{
+	position: relative;
+	width: 73px;
+}
+.right-menu li .support-sub{
+	width: 130px;
+    height: auto;
+    line-height: 24px;
+	right: 0;
+}
+
+
 
 
 .head-con{
@@ -1395,4 +1499,38 @@
 	border-color: #E31939;
 	background: #E31939;
 	color: #fff;
+}
+
+
+
+/* 商品详情页 */
+.goods-box{
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.goods-img{
+	width: 420px;
+	height: 540px;
+	background: #ddd;
+}
+.goods-info{
+	width: 520px;
+	height: 540px;
+	margin-left: 20px;
+	background: #eee;
+}
+.brand-info{
+	width: 220px;
+	height: 300px;
+	background: #ddd;
+}
+.goods-bot .service{
+	width: 220px;
+	height: 200px;
+	background: #eee;
+}
+.goods-bot .goods-con{
+	width: 960px;
+	height: 300px;
+	background: #ddd;
 }

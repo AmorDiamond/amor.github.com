@@ -29,6 +29,9 @@ function srollToPosition(target) {
 
 		if (speed > 0) {
 
+			/*返回指定位置过程中禁止鼠标滚动*/
+			wheelScroll();
+
 			/*判断range的正负(如果是正，说明往上滚动，否则往下滚动)*/
 			if(range > 0){
 				$(document).scrollTop((returnTopP-speed));
@@ -39,6 +42,9 @@ function srollToPosition(target) {
 		}else{
 			// $("body").scrollTop(0);
 			clearInterval(scrollTimer);
+			
+			/*返回指定位置后解除鼠标滚动*/
+			$(document).unbind("mousewheel DOMMouseScroll")
 		}
 	},20)
 };
@@ -95,4 +101,16 @@ function returnTopAnimate(){
 		},500)
 
 	})
+}
+
+
+/*监听鼠标滚动*/
+function wheelScroll(){
+	$(document).on("mousewheel DOMMouseScroll", function(e){
+			e.preventDefault();
+			
+			// var delta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
+			// console.log(delta)
+			
+	});
 }

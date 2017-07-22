@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品</title>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/jquery.fly.js"></script>
+	<!-- IE10以下需要添加该JS实现抛物线 -->
+	<!--[if lte IE 9]>
+	<script src="js/requestAnimationFrame.js"></script>
+	<![endif]-->
+
+	<style>
+		body{background-color: #fff}
+		.head{
+			border-bottom: 2px solid #e2283d;
+		}
+	</style>
+</head>
+<body>
+	<div class="head">
+		<div class="top-nav">
+			<div class="top-con">
+				<div class="sub-site fl">
+					<i class="city-icon"></i>
+					<span class="city-site">四川站</span>
+					<div class="drop-down hide">
+						<dl>
+							<dt>站点</dt>
+							<dd><a href="#">北京</a></dd>
+							<dd><a href="#">上海</a></dd>
+							<dd><a href="#">四川</a></dd>
+						</dl>
+					</div>
+				</div>
+				<div class="login-box fl">
+					<a href="#" class="login">请登录</a>
+					<a href="#" class="register">免费注册</a>
+				</div>
+				<div class="right-menu fr">
+					<ul>
+						<li class="home"><a href="#"><i></i>商城首页</a></li>
+						<li class="user">
+							<a href="#"><i></i>个人中心<font class="bot-arrow"></font></a>
+							<div class="user-sub">
+								<a href="#">已买到的宝贝</a>
+								<a href="#">我的地址管理</a>
+								<a href="#">我收藏的宝贝</a>
+								<a href="#">我的账户管理</a>
+							</div>
+						</li>
+						<li class="cart"><a href="#"><i></i>购物车<span class="cart-num">0</span><font class="bot-arrow"></font></a>
+							<div class="cart-info">
+								<div class="no-product"></div>
+								<div class="cart-text">您的购物车什么都没有哦</div>
+							</div>
+						</li>
+						<li class="shoper"><a href="#">卖家中心</a></li>
+						<li class="we-chat"><a href="#"><i></i>关注商城<font class="bot-arrow"></font></a>
+							<div class="qr-code">
+								<img src="https://img.alicdn.com/tfs/TB1GPVXRpXXXXXsapXXXXXXXXXX-175-175.jpg" alt="">
+							</div>
+						</li>
+						<li class="site-nav"><a href="#">商家支持<font class="bot-arrow"></font></a>
+							<div class="support-sub">
+								<a href="#">新手上路</a>
+								<a href="#">配送服务</a>
+								<a href="#">商家合作</a>
+								<a href="#">投诉建议</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="head-con">
+			<div class="logo fl">
+				<a href="#"><img src="images/57p58PICJxm.jpg" alt="" height="100%"></a>
+			</div>
+			<div class="search fl">
+				<form action="#">
+					<div class="search-type-box fl">
+						<ul class="search-type">
+							<li class="search-li curr">宝贝</li>
+							<li class="search-li">店铺</li>
+						</ul>
+						<i class=""></i>
+					</div>
+					<div class="search-input fl">
+						<input type="text" placeholder="请输入关键词">
+					</div>
+					<button type="submit">搜索</button>
+					
+				</form>
+			</div>
+			<div class="right-icon fr">
+				<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/system/config/mall_top_ad/mall_search_right_da_image_0.png" alt="">
+			</div>
+		</div>
+		<div class="middle-nav">
+			<div class="all-cat fl"><span></span>全部商品分类</div>
+			<div class="dropdown-box">
+				<div class="dropdown-menu hide">
+					<ul>
+						<li>
+							<i class="icon-font"></i>
+							<a href="#">家用电器</a>
+							<i class="right-arrow">></i>
+							<div class="sub-menu hide">
+								<div class="left-sub fl">
+									<div class="hot-cat">
+										<a href="#">家电城</a>
+										<a href="#">品牌日</a>
+										<a href="#">智能生活馆</a>
+									</div>
+									<dl>
+										<dt><a href="#">大家电</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">平板电视</a>
+											<a href="#">空调</a>
+											<a href="#">冰箱</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">厨卫大电</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">油烟机</a>
+											<a href="#">煤气灶</a>
+											<a href="#">消毒柜</a>
+											<a href="#">洗碗机</a>
+											<a href="#">电热水器</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">生活电器</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">生活电器</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+										</dd>
+									</dl>
+
+								</div>
+								<div class="right-sub fr">
+									<div class="banner-con">
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652968057260.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652966601116.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652967491457.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652968848233.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652971958181.png" alt="">
+										</a>
+									</div>
+									<div class="cate-adv">
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/adimages/2016/08/16/14713487694880.jpg" alt="">
+										</a>
+									</div>
+									
+								</div>
+								
+							</div>
+						</li>
+						<li>
+							<i class="icon-font"></i>
+							<a href="#">手机、数码</a>
+							<i class="right-arrow">></i>
+							<div class="sub-menu hide">
+								<div class="left-sub fl">
+									<div class="hot-cat">
+										<a href="#">家电城2</a>
+										<a href="#">品牌日2</a>
+										<a href="#">智能生活馆2</a>
+									</div>
+									<dl>
+										<dt><a href="#">大家电</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">平板电视</a>
+											<a href="#">空调</a>
+											<a href="#">冰箱</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">厨卫大电</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">油烟机</a>
+											<a href="#">煤气灶</a>
+											<a href="#">消毒柜</a>
+											<a href="#">洗碗机</a>
+											<a href="#">电热水器</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">生活电器</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">生活电器</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+										</dd>
+									</dl>
+
+								</div>
+								<div class="right-sub fr">
+									<div class="banner-con">
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652968057260.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652966601116.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652967491457.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652968848233.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652971958181.png" alt="">
+										</a>
+									</div>
+									<div class="cate-adv">
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/adimages/2016/08/16/14713487694880.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								
+							</div>
+						</li>
+						<li>
+							<i class="icon-font"></i>
+							<a href="#">电脑、办公</a>
+							<i class="right-arrow">></i>
+							<div class="sub-menu hide">
+								<div class="left-sub fl">
+									<div class="hot-cat">
+										<a href="#">家电城3</a>
+										<a href="#">品牌日3</a>
+										<a href="#">智能生活馆3</a>
+									</div>
+									<dl>
+										<dt><a href="#">大家电</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">平板电视</a>
+											<a href="#">空调</a>
+											<a href="#">冰箱</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">厨卫大电</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">油烟机</a>
+											<a href="#">煤气灶</a>
+											<a href="#">消毒柜</a>
+											<a href="#">洗碗机</a>
+											<a href="#">电热水器</a>
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">生活电器</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+											
+										</dd>
+									</dl>
+									<dl>
+										<dt><a href="#">生活电器</a><i class="right-icon">></i></dt>
+										<dd>
+											<a href="#">电风扇</a>
+											<a href="#">冷风扇</a>
+											<a href="#">吸尘器</a>
+											<a href="#">净化器</a>
+											<a href="#">扫地机器人</a>
+											<a href="#">挂烫机</a>
+										</dd>
+									</dl>
+
+								</div>
+								<div class="right-sub fr">
+									<div class="banner-con">
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652968057260.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652966601116.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652967491457.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652968848233.png" alt="">
+										</a>
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/brandlogos/2016/06/07/14652971958181.png" alt="">
+										</a>
+									</div>
+									<div class="cate-adv">
+										<a href="#">
+											<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/adimages/2016/08/16/14713487694880.jpg" alt="">
+										</a>
+									</div>
+								</div>
+								
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+				<ul class="nav">
+					<li class="curr"><a href="#">首页</a></li>
+					<li><a href="#">大家电</a></li>
+					<li><a href="#">店铺街</a></li>
+					<li><a href="#">团购</a></li>
+					<li><a href="#">品牌专区</a></li>
+					<li><a href="#">圣诞狂欢</a></li>
+					<li><a href="#">国际大牌</a></li>
+					<li><a href="#">今日头条</a></li>
+					<li><a href="#">批发市场</li>
+					<li class="help-more"><a href="javascript:vovi(0)">帮助中心</a></li>
+				</ul>
+				<span class="line-bar"></span>
+			<div class="help-more fr">
+				<a href="javascript:vovi(0)"></a>
+			</div>
+		</div>
+	</div>
+
+	
+	<!-- 详情页内容 -->
+	<div class="container">
+		<!-- 当前位置 -->
+		<div class="position-nav">
+			<a href="#">首页</a><span>></span><a href="#">分类页</a><span>></span><a href="#">商品名</a>
+		</div>
+		
+		<div class="goods-box">
+			<div class="goods-img fl">
+				<div class="big-img">
+					商品相册
+				</div>
+				<div class="photo-img"></div>
+			</div>
+			<div class="goods-info fl">
+				<h2>名字</h2>
+
+			</div>
+			<div class="brand-info fr">
+				品牌介绍
+			</div>
+
+		</div>
+
+		<div class="goods-bot">
+			<div class="service fl">
+				客服、分类
+			</div>
+			<div class="goods-con fr">
+				商品详情
+			</div>
+		</div>
+
+
+	</div>
+	
+
+
+	<!-- 侧边栏 -->
+	<div class="side-bar">
+		<div class="side-con">
+			<div class="side-info user-info">
+				<a href="#">
+					<span class="side-bar-icon user-icon"></span>
+				</a>
+				
+				<div class="user-tip">
+					<div class="user-img">
+						<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/system/config/default_image/default_user_portrait_0.png" alt="">
+					</div>
+					<div class="user-login">
+						您好！请<a href="#">登录</a>|<a href="#">注册</a>
+					</div>
+					<i class="right-arrow"></i>
+				</div>
+			</div>
+			<div class="side-info cart-info">
+				<span class="side-bar-icon cart-icon"></span>
+				<span class="cart-text">购物车</span>
+				<i class="cart-num">0</i>
+			</div>
+			<div class="side-info history-info">
+				<a href="#">
+					<span class="side-bar-icon history-icon"></span>
+				</a>
+				<div class="tip-pop">
+					<i class="history-tip">我的足迹</i>
+					<i class="right-arrow"></i>
+				</div>
+				
+			</div>
+			<div class="side-info compare-info">
+				<a href="#">
+					<span class="side-bar-icon compare-icon"></span>
+				</a>
+				<div class="tip-pop">
+					<i class="compare-tip">我的对比</i>
+					<i class="right-arrow"></i>
+				</div>
+				
+			</div>
+			<div class="side-info collect-info">
+				<a href="#">
+					<span class="side-bar-icon collect-icon"></span>
+				</a>
+				<div class="tip-pop">
+					<i class="collect-tip">我的收藏</i>
+					<i class="right-arrow"></i>
+				</div>
+				
+			</div>
+
+			<div class="side-bot">
+				<div class="side-info service-info">
+					<a href="#">
+						<span class="side-bar-icon service-icon"></span>
+					</a>
+					
+					<div class="service-tip">
+						<div><span class="qq-icon"></span>QQ</div>
+						<div><span class="ww-icon"></span>旺旺</div>
+						<div><span class="kf-icon"></span>在线客服</div>
+						<i class="right-arrow"></i>
+					</div>
+				</div>
+				<div class="side-info code-info">
+					<a href="#">
+						<span class="side-bar-icon code-icon"></span>
+					</a>
+					
+					<div class="code-tip">
+						<img src="https://img.alicdn.com/tfs/TB1GPVXRpXXXXXsapXXXXXXXXXX-175-175.jpg" alt="" width="100%">
+						<i class="right-arrow"></i>
+					</div>
+				</div>
+				<div class="side-info return-top">
+					<a href="javascript:void(0)">
+						<span class="side-bar-icon return-icon"></span>
+					</a>
+					<div class="tip-pop">
+						<i class="collect-tip">返回顶部</i>
+						<i class="right-arrow"></i>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+
+
+	<script type="text/javascript">
+		navLineBar();
+		var scrollTimer=null;
+		returnTop();
+		// returnTopAnimate();
+		srollToPosition();
+	</script>
+</body>
+</html>
