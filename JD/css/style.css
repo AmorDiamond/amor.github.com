@@ -8,7 +8,7 @@ body{
     background: #f5f5f5;
     padding-bottom: 1.3333333333333333rem !important;
     max-width: 768px;
-    margin: 0 auto;
+    margin: 0 auto !important;
 }
 .f-l{
 	float: left;
