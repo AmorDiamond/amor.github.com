@@ -447,13 +447,13 @@
 
 							</div>
 							<div class="cart-goods-price">
-								19
+								20
 							</div>
 							<div class="cart-goods-num">
 								<span class="num-minus">-</span><input class="number" type="text" name="number" value="1"><span class="num-plus">+</span>
 							</div>
 							<div class="cart-tab4">
-								￥<span class="goods-total-price">19.00</span>元
+								￥<span class="goods-total-price">20.00</span>元
 							</div>
 							<div class="cart-tab5">
 								<span class="edit icon-font">&#xe615;</span>
@@ -601,6 +601,17 @@
 		deleteGoods();
 		getTotalMoney();
 
+		// $(".number").focusout(function() {
+		// 	 changePrice($(this));
+		// });
+		$(".number").on("keyup",function() {
+			if($(this).val() <= 0){
+				$(this).val(1);
+				changePrice($(this));
+			}else{
+				changePrice($(this));
+			}
+		});
 
 		function allSelectFn() {
 			var flag,inputs;
@@ -657,11 +668,11 @@
 		function handleNumber() {
 			$(".num-minus").on("click",function() {
 				changeNumber(-1,this);
-				changePrice(this);
+				changePrice($(this).parent().find(".number"));
 			})
 			$(".num-plus").on("click",function() {
 				changeNumber(1,this);
-				changePrice(this);
+				changePrice($(this).parent().find(".number"));
 			})
 		}
 		function changeNumber(num,obj) {
@@ -677,8 +688,8 @@
 		}
 
 		function changePrice(obj) {
-			var numO = $(obj).parent().find(".number");
-			var price = Number(numO.val())*Number($(".cart-goods-price").html());
+			var numO = obj;
+			var price = Number(numO.val())*Number(numO.parent().siblings(".cart-goods-price").html());
 			$(obj).parent().siblings(".cart-tab4").find(".goods-total-price").html(price.toFixed(2));
 
 			getTotalMoney();
@@ -699,6 +710,7 @@
 				getTotalMoney();
 			})
 		}
+
 	</script>
 </body>
 </html>
