@@ -407,7 +407,8 @@
 						<li>
 							<div class="cart-tab1">
 								<div class="goods-check">
-									<label><input type="checkbox" name="goodsId" value="1"></label>
+									<input type="checkbox" class="select-input" id="goodsId1" name="goodsId" value="1">
+									<label class="select-label" for="goodsId1"></label>
 								</div>
 								<div class="goods-pic">
 									<img src="http://68products.oss-cn-beijing.aliyuncs.com/taobao-yun-images/540181673135/TB11M0hNVXXXXbsXFXXXXXXXXXX_!!0-item_pic.jpg?x-oss-process=image/resize,m_pad,limit_0,h_80,w_80" alt="">
@@ -427,14 +428,15 @@
 								￥<span class="goods-total-price">19.00</span>元
 							</div>
 							<div class="cart-tab5">
-								<span class="edit"></span>
+								<span class="edit icon-font">&#xe615;</span>
 							</div>
 						</li>
 
 						<li>
 							<div class="cart-tab1">
 								<div class="goods-check">
-									<label><input type="checkbox" name="goodsId" value="1"></label>
+									<input type="checkbox" class="select-input" id="goodsId2" name="goodsId" value="1">
+									<label class="select-label" for="goodsId2"></label>
 								</div>
 								<div class="goods-pic">
 									<img src="http://68products.oss-cn-beijing.aliyuncs.com/taobao-yun-images/540181673135/TB11M0hNVXXXXbsXFXXXXXXXXXX_!!0-item_pic.jpg?x-oss-process=image/resize,m_pad,limit_0,h_80,w_80" alt="">
@@ -454,14 +456,15 @@
 								￥<span class="goods-total-price">19.00</span>元
 							</div>
 							<div class="cart-tab5">
-								<span class="edit"></span>
+								<span class="edit icon-font">&#xe615;</span>
 							</div>
 						</li>
 					</ul>
 				</div>
 				<div class="cart-bt">
 					<div class="goods-check">
-						<label><input type="checkbox"></label>
+						<input type="checkbox" id="all-check">
+						<label for="all-check"></label>
 					</div>
 					<div class="all-select fl">
 						<span class="all-check">全选</span>
@@ -593,6 +596,109 @@
 		returnTop();
 		// returnTopAnimate();
 		srollToPosition();
+		allSelectFn();
+		handleNumber();
+		deleteGoods();
+		getTotalMoney();
+
+
+		function allSelectFn() {
+			var flag,inputs;
+			$(".select-input").on("change",function() {
+				inputs = $(".select-input");
+				flag=true;
+				$.each(inputs,function () {
+					// console.log($(this).prop("checked"))
+					if(flag){
+
+						if($(this).prop("checked")){
+							flag = true;
+						}else{
+							flag = false;
+						}   
+					}
+				})
+				
+				if(flag){
+					$("#all-check").prop("checked",true);
+				}else{
+					$("#all-check").prop("checked",false);
+				}
+
+				getTotalMoney();
+			})
+
+			$("#all-check").on("change",function() {
+				if($(this).prop("checked")){
+					$(".select-input").prop("checked",true)
+				}else{
+					$(".select-input").prop("checked",false)
+				}
+
+				getTotalMoney();
+			})
+
+			$(".all-check").on("click",function() {
+				 $("#all-check").prop("checked",true)
+				 $(".select-input").prop("checked",true)
+
+				 getTotalMoney();
+			})
+
+			$(".all-uncheck").on("click",function() {
+				 $("#all-check").prop("checked",false)
+				 $(".select-input").prop("checked",false)
+
+				 getTotalMoney();
+			})
+
+		}
+
+		function handleNumber() {
+			$(".num-minus").on("click",function() {
+				changeNumber(-1,this);
+				changePrice(this);
+			})
+			$(".num-plus").on("click",function() {
+				changeNumber(1,this);
+				changePrice(this);
+			})
+		}
+		function changeNumber(num,obj) {
+
+			var numO = $(obj).parent().find(".number");
+			if(num > 0){
+				numO.val(Number(numO.val())+1);
+			}else{
+				if(numO.val() > 1){
+					numO.val(Number(numO.val())-1);
+				}				
+			}
+		}
+
+		function changePrice(obj) {
+			var numO = $(obj).parent().find(".number");
+			var price = Number(numO.val())*Number($(".cart-goods-price").html());
+			$(obj).parent().siblings(".cart-tab4").find(".goods-total-price").html(price.toFixed(2));
+
+			getTotalMoney();
+		}
+
+		function getTotalMoney() {
+			var total = 0,prices = $(".select-input:checked").closest("li").find(".goods-total-price");
+			$.each(prices,function() {
+				total +=Number($(this).html());
+			})
+			$(".total-money").html(total.toFixed(2)); 
+		}
+
+		function deleteGoods() {
+			$(".edit").on("click",function() {
+				$(this).closest("li").remove(); 
+
+				getTotalMoney();
+			})
+		}
 	</script>
 </body>
 </html>

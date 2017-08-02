@@ -1,3 +1,14 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 313915 */
+  src: url('https://at.alicdn.com/t/font_qujahb89zqs8xgvi.eot');
+  src: url('https://at.alicdn.com/t/font_qujahb89zqs8xgvi.eot?#iefix') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_qujahb89zqs8xgvi.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_qujahb89zqs8xgvi.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_qujahb89zqs8xgvi.svg#iconfont') format('svg');
+}
+.icon-font{
+	font-family: "iconfont";
+}
 .tips-adv{
 	height: 100px;
 	background-color: #e2283d;
@@ -2031,12 +2042,30 @@
 
 }
 .cart-bd .goods-check label,.cart-bt .goods-check label{
+	position: relative;
 	display: inline-block;
 	width: 20px;
 	height: 20px;
 	background: #ddd;
 	border-radius: 10px;
+    vertical-align: middle;
 	cursor: pointer;
+}
+.cart-bd .goods-check input:checked+label::after,.cart-bt .goods-check input:checked+label::after{
+	position: absolute;
+	content: "\e61f";
+	top: 0;
+	left: 0;
+	font-family: "iconfont";
+	color: #EE7A23;
+    font-size: 20px;
+
+}
+.cart-bd .goods-check input,.cart-bt .goods-check input{
+	width: 0;
+	height: 0;
+	opacity: 0;
+    position: absolute;
 }
 .cart-bd .goods-pic{
 	float: left;
@@ -2072,7 +2101,10 @@
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-	background-color: #ddd;
+	line-height: 20px;
+	/*background-color: #ddd;*/
+	font-size: 22px;
+	cursor: pointer;
 }
 .cart-con .all-select,.cart-con .cart-total,.cart-con .go-checkout{
 	line-height: 100px;
