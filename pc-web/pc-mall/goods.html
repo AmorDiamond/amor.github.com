@@ -489,7 +489,7 @@
 
 				
 				<div class="action">
-					<div class="btn-buy now-buy">立即购买</div>
+					<a href="cart.html"><div class="btn-buy now-buy">立即购买</div></a>
 					<div class="btn-buy add-cart">加入购物车</div>
 				</div>
 
@@ -737,6 +737,7 @@
 		tabsSwitch();
 		tabBoxFixed();
 		MagicZoomFn("goods-img","big-img","MagicZoomPup","MagicZoom");
+		addCart();
 
 
 		function changeNumber(obj) {
@@ -758,6 +759,14 @@
 				 $(".big-img").find("img").attr("src",src);
 			})
 		}
+
+
+		function addCart() {
+			$(".add-cart").on("click",function() {
+				if(confirm("已成功加入购物车，是否立即结算？"))location.href = "cart.html"; 
+			}) 
+		}
+
 
 		function tabsSwitch() {
 			var targetP;
