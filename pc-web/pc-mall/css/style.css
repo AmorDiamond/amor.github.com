@@ -110,7 +110,7 @@
 .right-menu .cart a i{
     background-position: -292px -3px;
 }
-.right-menu .cart .cart-num{
+.right-menu .cart .num{
 	margin-left: 4px;
     color: #E31939;
 }
@@ -1166,6 +1166,7 @@
 .container{
 	width: 1200px;
 	margin: 20px auto 0;
+	overflow: hidden;
 }
 
 /* 分类页热卖推荐 */
@@ -1511,18 +1512,237 @@
 .goods-img{
 	width: 420px;
 	height: 540px;
-	background: #ddd;
+	
+
+}
+.goods-img .img{
+	width: 100%;
+}
+.goods-img .big-box{
+	padding: 10px;
+	border: 1px solid #eee;
+}
+.photo-img .prev,.photo-img .next{
+	width: 15px;
+	height: 68px;
+    margin: 13px 0;
+	background: url(http://qhd.68dsw.com/images/goods-icon.png) no-repeat;
+	cursor: pointer;
+}
+.photo-img .prev{
+	margin-right: 12px;
+	background-position: -384px 0px;
+}
+.photo-img .next{
+	margin-left: 12px;
+	    background-position: -399px 0px;
+}
+.scroll-photo ul{
+	overflow: hidden;
+	margin: 10px 0;
+}
+.scroll-photo li{
+	float: left;
+	width: 63px;
+	height: 63px;
+	margin: 3px;
+	padding: 1px;
+	border: 1px solid #eee;
+	cursor: pointer;
+}
+.scroll-photo li img{
+	width: 100%;
+}
+.scroll-photo li:hover,.scroll-photo li.curr{
+	padding: 0px;
+	border: 2px solid #E31939;
 }
 .goods-info{
 	width: 520px;
 	height: 540px;
 	margin-left: 20px;
-	background: #eee;
 }
+.goods-info h2{
+    font-size: 16px;
+}
+.goods-price{
+	margin: 10px 0;
+	padding: 10px;
+    background: #F5F5F5;
+    color: #999;
+}
+.goods-price .other-info .sale-count,.goods-price .other-info .comments{
+	float: left;
+	padding: 0 10px;
+	border-right: 1px solid #e5dfda;
+	text-align: center;
+}
+.goods-price .other-info .comments{
+	border: none;
+}
+.goods-price .other-info span{
+	display: block;
+	color: #E31939;
+}
+.goods-price .price{
+	clear: both;
+}
+.goods-price .price span{
+	color: #E31939;
+	font-size: 22px;
+	font-weight: bold;
+}
+.goods-attr{
+	padding: 0 10px;
+	color: #999;
+}
+.goods-attr dl{
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.goods-attr dt{
+	float: left;
+    width: 69px;
+    color: #999;
+    margin-top: 5px;
+}
+.goods-attr dd{
+	float: left;
+	width: 430px;
+	vertical-align: middle;
+}
+.attr dd input{
+	opacity: 0;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+.attr dd label{
+	position: relative;
+	display: inline-block;
+	padding: 5px 10px;
+    border: 1px solid #b8b7bd;
+    color: #666;
+	text-align: center;
+	background-color: #fff;
+	cursor: pointer;
+}
+.attr.color dd label{
+	padding: 3px 5px;
+}
+.attr dd label:hover,.attr dd input:checked+label{
+	border-color: #E31939;
+}
+.attr dd input:checked+label i{
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	right: 0;
+	bottom: 0;
+	display: block;
+    background: url(http://qhd.68dsw.com/images/goods-icon.png) no-repeat;
+    background-position: 0px -20px;
+}
+.attr dd label img{
+	height: 30px;
+	margin-right: 3px;
+}
+/*.goods-amount{
+	overflow: hidden;
+}*/
+.amont-num input{
+	width: 40px;
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #b8b7bd;
+	text-align: center;
+}
+.amont-num span{
+	vertical-align: middle;
+}
+.amont-num .amont-btn{
+	display: inline-block;
+	width: 15px;
+	height: 30px;
+	margin: 0 3px;
+	
+}
+.amont-num .plus,.amont-num .minus{
+	display: block;
+	width: 13px;
+	height: 12px;
+	line-height: 12px;
+	border: 1px solid #b8b7bd;
+	text-align: center;
+	cursor: pointer;
+}
+.amont-num .plus{
+	margin-bottom: 2px;
+}
+.amont-num .unit{
+	/*display: inline-block;
+	height: 30px;*/
+	line-height: 30px;
+}
+.goods-stock{
+	height: 30px;
+	line-height: 30px;
+	margin-left: 20px;
+}
+
+.action{
+	padding-left: 80px;
+	margin-top: 20px;
+	overflow: hidden;
+}
+.action .btn-buy{
+	float: left;
+	width: 150px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #E31939;
+	border-radius: 3px;
+	background: #E31939;
+	margin-right: 10px;
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+.action .now-buy{
+	color: #E31939;
+	border-color: #E31939;
+	background-color: #ffeded;
+}
+.promise{
+	margin-top: 40px;
+	padding-left: 20px;
+}
+.promise span{
+    color: #999;
+}
+.promise a{ 
+	margin: 0 20px;
+}
+
 .brand-info{
-	width: 220px;
-	height: 300px;
-	background: #ddd;
+	width: 200px;
+	padding: 10px;
+	border: solid 1px #eee;
+	text-align: center;
+}
+.brand-info h3{
+	font-weight: normal;
+	padding: 10px 0;
+    border-bottom: 1px dotted #e5e5e5;
+}
+.brand-info .brand-text{
+	margin-top: 15px;
+	text-align: left;
+}
+.goods-bot{
+	overflow: hidden;
 }
 .goods-bot .service{
 	width: 220px;
@@ -1531,6 +1751,361 @@
 }
 .goods-bot .goods-con{
 	width: 960px;
-	height: 300px;
+	/*height: 300px;*/
+	/*background: #ddd;*/
+}
+
+.tab-box{
+    width: 958px;
+	height: 40px;
+	line-height: 39px;
+	font-size: 14px;
+	background: #fafafa;
+    border: 1px solid #e5e5e5;
+}
+.tab-box.fixed-tabs{
+	position: fixed;
+	top: 0;
+}
+.tab-box li{
+	float: left;
+	margin-left: -1px;
+	padding: 0 25px;
+	padding-top: 1px;
+	cursor: pointer;
+}
+.tab-box .current{
+	height: 40px;
+	margin-top: -1px;
+	padding-top: 0;
+	border-top: 2px solid #E31939;
+	border-right: 1px solid #e5e5e5;
+	border-left: 1px solid #e5e5e5;
+	background-color: #fff;
+}
+.tab-box li span{
+	color: #E31939;
+}
+.attr-list{
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+	border-top: none;
+	overflow: hidden;
+}
+.attr-list li{
+	float: left;
+	width: 305px;
+	margin-right: 7px;
+	line-height: 30px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.detail-content{
+	padding: 10px;
+	border: 1px solid #e5e5e5;
+	border-top: none;
+	overflow: hidden;
+}
+.detail-content img{
+	width: 100%;
+}
+
+
+
+.detail-tabs .title{
+	margin: 20px;
+	color: #E31939;
+	font-size: 20px;
+}
+.comments-info{
+    border: 1px solid #e5e5e5;
+    padding: 20px 0px;
+	overflow: hidden;
+}
+.comments-level{
+	width: 163px;
+    height: 110px;
+    border-right: 1px dotted #e5e5e5;
+    text-align: center;
+}
+.comments-level p{
+    height: 40px;
+    line-height: 40px;
+}
+.comments-level .level-num{
+	font-size: 32px;
+	font-weight: bold;
+    color: #f60;
+}
+.comments-level .star-bg,.comments-level .star-bg em,.comments-rate .comments-level-bar{
+	background: url(http://qhd.68dsw.com/images/goods-icon.png) no-repeat;
+}
+.comments-level .star-bg{
+    display: block;
+    width: 65px;
+    height: 13px;
+    overflow: hidden;
+    background-position: 0px -95px;
+    margin: 0 auto;
+}
+.comments-level .star-bg em{
+    display: block;
+    height: 13px;
+    overflow: hidden;
+    background-position: 0 -82px;
+}
+.comments-rate ul{
+	padding-left: 35px;
+	overflow: hidden;
+	clear: both;
+}
+.comments-rate li{
+	float: left;
+	width: 80px;
+    text-align: center;
+    color: #999;
+}
+.comments-rate{
+    padding-left: 25px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+.comments-rate .comments-level-bar{
+	width: 400px;
+    height: 16px;
+    text-align: left;
+    position: relative;
+    background-position: 0px -135px;
+}
+.comments-rate .comments-level-bar span {
+    position: absolute;
+    height: 22px;
+    top: -28px;
+    left: 13px;
+}
+.comments-rate .comments-level-bar em {
+    width: 35px;
+    height: 20px;
+    line-height: 19px;
+    background: #f60;
+    color: #fff;
+    display: block;
+    float: right;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.comments-rate .comments-level-bar .arrow-bot {
+    position: absolute;
+    left: 10px;
+    bottom: -9px;
+    font: 16px/16px Simsun;
+    color: #f60;
+    z-index: 1;
+}
+
+
+
+.comments-list .comments-item{
+	margin-top: 10px;
+	padding: 10px;
+	border: 1px solid #eee;
+	overflow: hidden;
+}
+.comments-item .comments-user{
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+.comments-list .comments-item .comments-content{
+	padding-top: 10px;
+	border-top:  1px dotted #e5e5e5;
+	clear: both;
+}
+.comments-list .comments-pages{
+	overflow: hidden;
+	margin-top: 20px;
+	text-align: right;
+}
+.comments-list .comments-pages li{
+	display: inline-block;
+}
+.comments-list .comments-pages li a{
+	display: inline-block;
+	padding: 3px 6px;
+	border: 1px solid #e5e5e5;
+}
+.comments-list .comments-pages li .current{
+	border-color: #E31939;
+	background-color: #E31939;
+	color: #fff;
+}
+
+
+/* 放大镜样式 */
+.big-img,.goods-img{
+	position: relative;
+}
+.big-img{
+	width: 398px;
+	height: 398px;
+}
+.MagicZoomPup {
+	display: none;
+	position: absolute;
+    width: 210px;
+    height: 210px;
+	top: 0;
+	left: 0;
+    border: 1px solid #eee;
+    background: url(http://qhd.68dsw.com/images/point.png);
+    cursor: move;
+}
+.MagicZoom{
+	display: none;
+	position: absolute;
+	left: 430px;
+	top: -10px;
+	width: 423px;
+	height: 423px;
+	border: 1px solid #eee;
+	z-index: 9;
+	overflow: hidden;
+}
+.MagicZoom img{
+	position: relative;
+	left: 0;
+	top: 0;
+}
+
+/* 购物车 */
+.cart-con .title{
+	position: relative;
+	font-size: 22px;
+	margin: 30px 0;
+	text-align: center;
+}
+.cart-con .title:before,.cart-con .title:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	width: 45%;
+	border: 1px solid #eee;
+}
+.cart-con .title:before{
+	left: 0;
+}
+.cart-con .title:after{
+	right: 0;
+
+}
+.cart-hd ul,.cart-bd li{
+	overflow: hidden;
+}
+.cart-hd li{
+	float: left;
+	width: 165px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	background: #eee;
+	text-align: center;
+}
+.cart-bd li{
+	padding: 20px 0;
+	border-bottom: 1px solid #eee;
+}
+.cart-bd .cart-goods-price,.cart-bd .cart-goods-num,.cart-bd .cart-tab4,.cart-bd .cart-tab5{
+	float: left;
+	width: 165px;
+	line-height: 100px;
+	text-align: center;
+}
+.cart-con .cart-tab1{
+	float: left;
+	width: 540px;
+}
+.cart-bd .goods-check,.cart-bt .goods-check{
+	float: left;
+	padding: 40px 20px;
+
+}
+.cart-bd .goods-check label,.cart-bt .goods-check label{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
 	background: #ddd;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.cart-bd .goods-pic{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+.cart-bd .goods-pic img{
+	width: 100px;
+}
+.cart-bd .cart-goods-name{
+	font-size: 14px;
+	height: 60px;
+	padding: 0 0 0 170px;
+}
+.cart-bd .cart-goods-attr{
+	padding: 0 0 0 170px;
+}
+
+.cart-goods-num .number{
+	width: 40px;
+	height: 20px;
+	text-align: center;
+}
+.cart-goods-num .num-minus,.cart-goods-num .num-plus{
+	padding: 0 10px;
+	/*text-align: center;*/
+	cursor: pointer;
+}
+.cart-bd .cart-tab4{
+	color: #E31939;
+}
+.cart-bd .edit{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-color: #ddd;
+}
+.cart-con .all-select,.cart-con .cart-total,.cart-con .go-checkout{
+	line-height: 100px;
+}
+.cart-con .all-select{
+	font-size: 14px;
+}
+.cart-con .all-check{
+	display: inline-block;
+	color: #EE7A23;
+	margin: 0 10px;
+}
+.cart-con .all-check,.cart-con .all-uncheck{
+	cursor: pointer;
+}
+.cart-total{
+	font-size: 16px;
+}
+.cart-total .total{
+	color: #E31939;
+	padding: 0 20px;
+}
+.cart-con .go-checkout{
+	float: right;
+	margin-left: 30px;
+}
+.cart-con .go-checkout a{
+	display: inline-block;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	background-color: #E31939;
+	text-align: center;
+	color: #fff; 
 }
