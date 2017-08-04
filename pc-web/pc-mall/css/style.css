@@ -473,7 +473,6 @@
 .banner{
 	position: relative;
 	height: 443px;
-	background-color: #ddd;
 }
 .banner .banner-con{
 	position: absolute;
@@ -481,12 +480,12 @@
 	top: 0;
 	left: 0;
 	height: 443px;
-	opacity: 0;
-	transition: opacity .3s;
+	/*opacity: 0;
+	transition: opacity .3s;*/
 }
-.banner .banner-con.curr{
+/*.banner .banner-con.curr{
 	opacity: 1;
-}
+}*/
 .banner .slide-pagination{
 	position: absolute;
 	width: 100%;

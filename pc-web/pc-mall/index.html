@@ -986,23 +986,6 @@
 			srollToPosition();
 		})
 
-		// function navLineBar() {
-		// 	var lineBar = $(".line-bar"),leftP,barW;
-		// 	var hasCurr = $(".nav .curr");
-		// 	var resetP = hasCurr.position().left;
-		// 	var resetW = hasCurr.outerWidth();
-		// 	lineBar.css({"left":resetP,"width":resetW});
-
-		// 	$(".nav").on("mouseenter","li",function () {
-		// 		leftP = $(this).position().left;
-		// 		barW = $(this).outerWidth();
-		// 		lineBar.css({"left":leftP,"width":barW});
-		// 		// console.log(leftP)  
-		// 		// console.log(lineBar)  
-		// 	}).on("mouseleave","li",function () {
-		// 		lineBar.css({"left":resetP,"width":resetW}); 
-		// 	})
-		// }
 
 
 		function bannerSlide() {
@@ -1034,8 +1017,10 @@
 			clearInterval(timer);
 			current.siblings().removeClass("current");
 			current.addClass("current");
-			bannerNum.css({"opacity":0,"display":"none"});
-			bannerNum.eq(current.index()).css({"opacity":1,"display":"block"});
+			// bannerNum.css({"opacity":0,"display":"none"});
+			// bannerNum.fadeOut();
+			// bannerNum.eq(current.index()).css({"opacity":1,"display":"block"});
+			bannerNum.eq(current.index()).fadeIn().siblings(".banner-con").fadeOut();
 		}
 
 		function autoPlayBanner () {
@@ -1048,62 +1033,13 @@
 				currentIndex = currentIndex == bannerNum-1 ? 0 : currentIndex+1;
 				current.removeClass("current");
 				current.eq(currentIndex).addClass("current");
-				bannerSlide.css({"opacity":0,"display":"none"});
-				bannerSlide.eq(currentIndex).css({"opacity":1,"display":"block"});
+				// bannerSlide.css({"opacity":0,"display":"none"});
+				// bannerSlide.fadeOut();
+				// bannerSlide.eq(currentIndex).css({"opacity":1,"display":"block"});
+				bannerSlide.eq(currentIndex).fadeIn().siblings(".banner-con").fadeOut();
 			},2000);
 		}
 
-
-		// function returnTop(){
-		// 	var returnTopP;
-		// 	var speed;
-		// 	// var timer;
-		// 	$(document).on("scroll",function () {
-		// 		returnTopP = $("body").scrollTop();
-		// 		if(returnTopP > 300) {
-
-		// 			$(".fixed-head").slideDown("fast");
-
-		// 			// $(".return-top").css({"display":"block"});
-		// 			$(".return-top").slideDown("fast");
-		// 		}else{
-
-		// 			$(".fixed-head").slideUp("fast");
-
-		// 			$(".return-top").slideUp("fast");
-		// 		}
-		// 	})
-		// 	$(".return-top").on("click",function () {
-				
-		// 		srollToPosition(0)
-		// 		// timer = setInterval(function(){
-
-		// 		// 	/*实时获得滚动条位置*/
-		// 		// 	returnTopP = $("body").scrollTop();
-		// 		// 	/*计算滚动到最终位置的总距离*/
-		// 		// 	range = returnTopP-target;
-		// 		// 	/*设置滚动步长speed*/
-		// 		// 	speed =  Math.ceil(range/10);
-
-		// 		// 	if (speed > 0) {
-		// 		// 		$("body").scrollTop((returnTopP-speed));
-		// 		// 	}else{
-		// 		// 		// $("body").scrollTop(0);
-		// 		// 		clearInterval(timer);
-		// 		// 	}
-		// 		// },30)
-		// 	})
-		// }
-
-		// function returnTopAnimate(){
-				
-		// 	$(".return-top").on("click",function(){
-		// 		$("body").animate({
-		// 			scrollTop:0
-		// 		},500)
-
-		// 	})
-		// }
 
 
 		function showLeftNav(){
@@ -1166,32 +1102,6 @@
 		}
 
 
-		// function srollToPosition(target) {
-
-		// 	scrollTimer = setInterval(function(){
-
-		// 		/*实时获得滚动条位置*/
-		// 		returnTopP = $("body").scrollTop();
-		// 		/*计算滚动到最终位置的总距离*/
-		// 		range = returnTopP-target;
-		// 		/*设置滚动步长speed*/
-		// 		speed =  Math.ceil(Math.abs(range)/10);
-
-		// 		if (speed > 0) {
-
-		// 			/*判断range的正负(如果是正，说明往上滚动，否则往下滚动)*/
-		// 			if(range > 0){
-		// 				$("body").scrollTop((returnTopP-speed));
-		// 			}else{
-		// 				$("body").scrollTop((returnTopP+speed));
-		// 			}
-					
-		// 		}else{
-		// 			// $("body").scrollTop(0);
-		// 			clearInterval(scrollTimer);
-		// 		}
-		// 	},20)
-		// }
 	</script>
 </body>
 </html>
