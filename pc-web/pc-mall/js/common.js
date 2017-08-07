@@ -23,7 +23,8 @@ function srollToPosition(target) {
 		/*实时获得滚动条位置*/
 		returnTopP = $(document).scrollTop();/*火狐不支持$("body")*/
 		/*计算滚动到最终位置的总距离*/
-		range = returnTopP-target;
+		range = returnTopP-Math.ceil(target);/*避免IE下获得的位置不是整数*/
+		
 		/*设置滚动步长speed*/
 		speed =  Math.ceil(Math.abs(range)/10);
 

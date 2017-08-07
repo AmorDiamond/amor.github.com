@@ -402,8 +402,8 @@
 						<div class="tel">12345678901</div>
 						<div class="address-set-default hide">设为默认</div>
 						<div class="address-default">默认地址</div>
-						<div class="address-edit icon-font"></div>
-						<div class="address-del icon-font"></div>
+						<div class="address-edit icon-font">&#xe612;</div>
+						<div class="address-del icon-font">&#xe615;</div>
 					</li>
 					<li>
 						<div class="name">JackBean</div>
@@ -411,8 +411,8 @@
 						<div class="tel">12345678901</div>
 						<div class="address-set-default hide">设为默认</div>
 						<div class="address-default hide">默认地址</div>
-						<div class="address-edit icon-font"></div>
-						<div class="address-del icon-font"></div>
+						<div class="address-edit icon-font">&#xe612;</div>
+						<div class="address-del icon-font">&#xe615;</div>
 					</li>
 
 					<li>
@@ -421,8 +421,8 @@
 						<div class="tel">12345678901</div>
 						<div class="address-set-default hide">设为默认</div>
 						<div class="address-default hide">默认地址</div>
-						<div class="address-edit icon-font"></div>
-						<div class="address-del icon-font"></div>
+						<div class="address-edit icon-font">&#xe612;</div>
+						<div class="address-del icon-font">&#xe615;</div>
 					</li>
 					<li class="last">
 						<div class="name">JackBean</div>
@@ -430,8 +430,8 @@
 						<div class="tel">12345678901</div>
 						<div class="address-set-default hide">设为默认</div>
 						<div class="address-default hide">默认地址</div>
-						<div class="address-edit icon-font"></div>
-						<div class="address-del icon-font"></div>
+						<div class="address-edit icon-font">&#xe612;</div>
+						<div class="address-del icon-font">&#xe615;</div>
 					</li>
 					<li>
 						<div class="name">JackBean</div>
@@ -439,8 +439,8 @@
 						<div class="tel">12345678901</div>
 						<div class="address-set-default hide">设为默认</div>
 						<div class="address-default hide">默认地址</div>
-						<div class="address-edit icon-font"></div>
-						<div class="address-del icon-font"></div>
+						<div class="address-edit icon-font">&#xe612;</div>
+						<div class="address-del icon-font">&#xe615;</div>
 					</li>
 					<li>
 						<div class="name">JackBean</div>
@@ -448,11 +448,11 @@
 						<div class="tel">12345678901</div>
 						<div class="address-set-default hide">设为默认</div>
 						<div class="address-default hide">默认地址</div>
-						<div class="address-edit icon-font"></div>
-						<div class="address-del icon-font"></div>
+						<div class="address-edit icon-font">&#xe612;</div>
+						<div class="address-del icon-font">&#xe615;</div>
 					</li>
 					<li class="addr-new">
-						<div class="icon-font">+</div>
+						<div class="icon-font add-new">&#xe616;</div>
 						<div class="tel">添加新地址</div>
 					</li>
 				</ul>
@@ -609,11 +609,11 @@
 
 
 		<!-- 价格明细 -->
-		<div>
+		<div class="order-total">
 			<ul>
-				<li>商品总价：￥<span class="price-total">200.00</span>元</li>
-				<li>配送价格：￥<span class="price-total">10.00</span>元</li>
-				<li>总计：￥<span class="price-total">210.00</span>元</li>
+				<li>商品总价：<div class="fr">￥<span class="price-total">200.00</span>元</div></li>
+				<li>配送价格：<div class="fr">￥<span class="price-total">10.00</span>元</div></li>
+				<li>总计：<div class="fr">￥<span class="price-total">210.00</span>元</div></li>
 			</ul>
 		</div>
 		<div class="sub-order">
@@ -763,7 +763,7 @@
 
 
 		function postWayChange() {
-			$(".post-con").on("click","li",function(){
+			$(".post-con,.pay-con").on("click","li",function(){
 				$(this).addClass("active").siblings().removeClass("active");
 			})
 		}

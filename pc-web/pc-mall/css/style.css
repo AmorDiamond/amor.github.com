@@ -2238,13 +2238,26 @@ i{
 	right: 10px;
 	width: 20px;
 	height: 20px;
-	background: #ddd;
 }
 .address-list li .address-edit{
 	top: 10px;
+	font-size: 20px;
 }
 .address-list li .address-del{
 	bottom: 10px; 
+	font-size: 20px;
+}
+.address-list li .address-edit:hover,.address-list li .address-del:hover{
+	color: #EE7A23;
+}
+.address-list li.addr-new{
+	text-align: center;
+    font-size: 16px;
+}
+.addr-new .add-new{
+    font-size: 50px;
+    margin-top: 15px;
+
 }
 
 .address-more{
@@ -2255,11 +2268,11 @@ i{
 }
 
 /* 配送方式 */
-.post-con ul{
+.post-con ul,.pay-con ul{
 	overflow: hidden;
 	text-align: center;
 }
-.post-con li{
+.post-con li,.pay-con li{
 	display: inline-block;
 	/*float: left;*/
 	margin-right: 20px;
@@ -2268,21 +2281,46 @@ i{
 	border: 2px solid #ddd;
 	
 }
-.post-con li.last{
+.post-con li.last,.pay-con li.last{
 	margin-right: 0;
 }
-.post-con li:hover,.post-con li.active{
+.post-con li:hover,.post-con li.active,.pay-con li:hover,.pay-con li.active{
 	border-color: #EE7A23;
 	color: #333;
 }
-.post-con li label{
+.post-con li label,.pay-con li label{
 	display: inline-block;
 	padding: 10px 20px;
 	cursor: pointer;
 }
-.post-con li input{
+.post-con li input,.pay-con li input{
 	position: absolute;
 	width: 0;
 	height: 0;
 	opacity: 0;
+}
+
+
+/* 价格明显 */
+.order-total li{
+ text-align: right;
+ font-size: 14px;
+ line-height: 30px;
+}
+.order-total li div{
+	width: 100px;
+	text-align: left;
+	color: #e2283d;
+}
+.sub-order{
+	text-align: right;
+}
+.sub-order button{
+	width: 150px;
+	height: 40px;
+	margin: 20px;
+	color: #fff;
+	background-color: #e2283d;
+	border: none;
+	cursor: pointer;
 }
