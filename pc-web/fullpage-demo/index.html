@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>fullPage.js — 基本演示</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<style>
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+</style>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function(){
+	$('#fullpage').fullpage({
+		// sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+		navigation: true,
+		anchors: ['target1','target2','target3','target4'],
+		// menu: true,
+		navigationTooltips: ['一页','二页','三页','四页']
+	});
+});
+</script>
+<style>
+	body {
+	    font: 16px/1.8 "Microsoft Yahei",verdana;
+	}
+	h2,h3{
+		font-weight: normal;
+		margin: 0;
+		padding: 0;
+	}
+	/*#fp-nav li a {
+	    float: right;
+	    width: 21px;
+	    height: 21px;
+	    color: #8F9DA4;
+	    text-decoration: none;
+	    text-align: right;
+	    background: url(http://www.dowebok.com/demo/2014/97/images/dot.png) 5px 5px no-repeat;
+	}
+	#fp-nav li .active {
+	    background-position: 0 bottom;
+	}*/
+	#fp-nav ul li .fp-tooltip{
+		color: #8F9DA4;
+	}
+	#fp-nav ul li a span, .fp-slidesNav ul li a span {
+	    top: 2px;
+	    left: 2px;
+	    width: 20px;
+	    height: 20px;
+	    border: none;
+	    /*background: rgba(0, 0, 0, 0);*/
+	    background: url(http://www.dowebok.com/demo/2014/97/images/dot.png) 5px 5px no-repeat !important;
+	    border-radius: 50%;
+	    position: absolute;
+	    z-index: 1;
+	}	
+	#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
+	    /*background: #8F9DA4;*/
+	    background-position: 0 bottom !important;
+	}
+	.bg{
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.bg img{
+		width: 100%;
+		height: 100%;
+	}
+	.mail{
+		position: absolute;
+		width: 375px;
+		height: 26px;
+		top: 0;
+		left: 50%;
+		margin-top: 20px;
+		margin-left: -188px;
+		background: url(http://www.dowebok.com/demo/2014/97/images/logo.png) no-repeat;
+	}
+	.mail a{
+		float: left;
+		width: 107px;
+		height: 100%;
+	}
+	.mail .mail-126,.mail .mail-yeah{
+		margin-left: 23px;
+	}
+	.section1 .des-title{
+		position: absolute;
+		width: 554px;
+		top: 20%;
+		left: 50%;
+		margin-left: -277px;
+		text-align: center;
+		
+	}
+	.section1 .des-title .title-bg{
+		background: url(http://www.dowebok.com/demo/2014/97/images/slogan.png) no-repeat;
+	}
+	.des-title h2,.des-title h3{
+		text-indent: -9999px;
+	    height: 90px;
+	}
+	.section .des-title p{
+		font-size: 16px;
+		line-height: 28px;
+	}
+	.section1 .des-title p{
+		width: 535px;
+		color: #94a7c6;
+	}
+	.section1 .face-mail-bg{
+		position: absolute;
+		width: 100%;
+		height: 377px;
+		left: 0;
+		bottom: 0;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg13.png) center top no-repeat;
+	}
+	.section1 .back-mail-bg{
+		position: absolute;
+		width: 100%;
+		height: 392px;
+		bottom: 90px;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg12.png) center top no-repeat;
+	}
+	.section2 .des-title h3{
+	    background: url(http://www.dowebok.com/demo/2014/97/images/t2.png) no-repeat;
+	}
+	.section2 .des-title,.section4 .des-title{
+		position: absolute;
+		width: 512px;
+		top: 15%;
+		left: 50%;
+		margin-left: -256px;
+	}
+	.section .des-title strong{
+	    font-size: 24px;
+	    font-weight: 500;
+	    color: #748A9E;
+	}
+	.section .des-title{
+		text-align: left;
+	}
+	.section2 .des-title p,.section4 .des-title p{
+	    color: #727F8C;
+	}
+	.section2 .face-bg{
+		position: absolute;
+		width: 819px;
+		height: 325px;
+		left: 50%;
+		margin-left: -410px;
+		bottom: 15%;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg23.png) no-repeat;
+	}
+	.section2 .back-bg-left{
+		position: absolute;
+		width: 233px;
+		height: 250px;
+		left: 0;
+		bottom: 15%;
+	    margin-left: -60px;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg21.png) no-repeat;
+	}
+
+	.section2 .back-bg-right{
+		position: absolute;
+		width: 211px;
+		height: 299px;
+		right: 0;
+		bottom: 27%;
+	    margin-right: -25px;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg22.png) no-repeat;
+	}
+
+	.section3 .des-title{
+		position: absolute;
+		width: 513px;
+		top: 15%;
+		left: 50%;
+		margin-left: -256px;
+	}
+	.section3 .des-title h3{
+	    background: url(http://www.dowebok.com/demo/2014/97/images/t3.png) no-repeat;
+	}
+	.section3 .face-bg{
+		position: absolute;
+		width: 441px;
+		height: 380px;
+		left: 50%;
+		margin-left: -120px;
+		bottom: 0;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg33.png) no-repeat;
+	}
+	.section3 .back-bg-left{
+		position: absolute;
+		width: 892px;
+		height: 472px;
+		left: 50%;
+		bottom: 80px;
+		margin-left: -395px;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg31.png) no-repeat;
+	}
+	.section3 .back-bg-right{
+		position: absolute;
+		width: 322px;
+		height: 143px;
+		left: 50%;
+		bottom: 0;
+		margin-left: 90px;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg32.png) no-repeat;
+	}
+	.section3 .p3{
+		position: absolute;
+		width: 430px;
+		top: 50%;
+		left: 50%;
+		margin-top: 170px;
+		margin-left: -480px;
+	}
+	.section4 .des-title h3{
+		background: url(http://www.dowebok.com/demo/2014/97/images/t4.png) no-repeat;
+	}
+	.section4 .face-bg,.section4 .back-bg{
+		position: absolute;
+		width: 100%;
+		height: 449px;
+		bottom: 15%;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg42.png) center top no-repeat;
+	}
+	.section4 .back-bg{
+		position: absolute;
+		width: 100%;
+		height: 449px;
+		bottom: 15%;
+	    margin-bottom: -130px;
+		background: url(http://www.dowebok.com/demo/2014/97/images/bg43.png) center top no-repeat;
+	}
+</style>
+</head>
+
+<body>
+
+<div id="fullpage">
+	<div class="section section1">
+		<div class="bg"><img src="http://www.dowebok.com/demo/2014/97/images/section1.jpg" alt=""></div>
+		<div class="mail">
+			<a class="mail-163" href="#"></a><a class="mail-126" href="#"></a><a class="mail-yeah" href="#"></a>
+		</div>
+		
+		<div class="face-mail-bg"></div>
+		<div class="back-mail-bg"></div>
+		<div class="des-title">
+			<div class="title-bg">
+				<h2>网易邮箱</h2>
+				<h3>改变，不知见</h3>
+			</div>
+			
+			<p>网易邮箱6.0版——2014年最具创意气质的重量级新邮箱，重生光华，为之瞩目。唯美的视觉设计和视觉化交互，无可替代的独创动态情景皮肤，多项国内创意产品专利技术，成就无与伦比的出众品味，无可比拟的美妙体验。</p>
+			
+		</div>
+	</div>
+	<div class="section section2">
+		<div class="bg"><img src="http://www.dowebok.com/demo/2014/97/images/section2.jpg" alt=""></div>
+		<div class="back-bg">
+			<div class="back-bg-left"></div>
+			<div class="back-bg-right"></div>
+		</div>
+		<div class="face-bg"></div>
+
+		<div class="des-title">
+			<div class="title-bg">
+				<strong>[ 视觉·简 ]</strong>
+				<h3>华丽蜕变，尽享愉悦之美</h3>
+			</div>
+			<p>秉承网易邮箱经典的清新简洁的设计风格，邮箱 6.0 版带来全新一代的设计理念，更追求极致唯美的视觉设计、传承更多人文和艺术底蕴，华丽蜕变，带来更舒服更爽心悦目的视觉享受。</p>
+		</div>
+		
+	</div>
+	<div class="section section3">
+		<div class="bg"><img src="http://www.dowebok.com/demo/2014/97/images/section3.jpg" alt=""></div>
+		<div class="back-bg">
+			<div class="back-bg-left"></div>
+			<div class="back-bg-right"></div>
+		</div>
+		<div class="face-bg"></div>
+		<div class="des-title">
+			<div class="title-bg">
+				<strong>[ 视觉化交互设计 ]</strong>
+				<h3>心随眼动，感官直接体验</h3>
+			</div>
+			<p class="p3">邮箱 6.0 版采用了全新的视觉化交互设计，通过对界面的整体风格设计、重要信息的视觉化处理以及元素本身的视觉传达优化，来实现产品流程设计和交互行为塑造。从视觉的角度出发，让用户无需多想，直接通过感官与产品进行交互。</p>
+		</div>
+	</div>
+	<div class="section section4">
+		<div class="bg"><img src="http://www.dowebok.com/demo/2014/97/images/section4.jpg" alt=""></div>
+		<div class="back-bg"></div>
+		<div class="face-bg"></div>
+		<div class="des-title">
+			<div class="title-bg">
+				<strong>[ 动态情景皮肤 ]</strong>
+				<h3>美轮美奂，百变尽随你心</h3>
+			</div>
+			<p>国内首创动态情景皮肤，可以随着早晚时光，季节主题的变幻而自动切换，实现了在邮箱里也能感受天气和心情的变化，带来完全不同的页面体验并且呈现最佳视觉感受，还特别针对原有邮箱皮肤的对比度和色彩进行了微调，减少视觉疲劳感。</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
