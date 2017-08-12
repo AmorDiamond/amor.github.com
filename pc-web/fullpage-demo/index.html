@@ -8,6 +8,7 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
+
 <script>
 $(function(){
 	$('#fullpage').fullpage({
@@ -28,6 +29,7 @@ $(function(){
 			
 			if(count >=len-1){
 				$('.cover').hide();
+				$('.rates').css('animation','none');
 			}
 
 			 count++;
@@ -113,6 +115,7 @@ $(function(){
 	<div class="tips">
 		<!-- <p>载入中，请稍等……</p> -->
 		<span class="rate">0%</span>
+		<div class="loading-icon"><span class="rates rate1"></span><span class="rates rate2"></span><span class="rates rate3"></span><span class="rates rate4"></span></div>
 	</div>
 	
 </div>

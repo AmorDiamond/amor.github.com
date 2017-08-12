@@ -2,23 +2,6 @@ body {
     font: 16px/1.8 "Microsoft Yahei",verdana;
 }
 .section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
-.cover{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	background: #fff;
-	color: #000;
-	text-align: center;
-	font-size: 26px;
-}
-.cover .tips{
-	position: absolute;
-	width: 200px;
-	top: 50%;
-	left: 50%;
-	margin-left: -100px;
-}
 h2,h3{
 	font-weight: normal;
 	margin: 0;
@@ -285,3 +268,102 @@ h2,h3{
 .section4.active .back-bg{
 	transition-delay: .3s;
 }
+
+/* 加载进度 */
+.cover{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background: #fff;
+	color: #000;
+	text-align: center;
+	font-size: 26px;
+	z-index: 999;
+}
+.cover .tips{
+	position: absolute;
+	width: 200px;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+}
+
+.rates{
+	display: inline-block;
+	width: 5px;
+	height: 10px;
+	background: #94a7c6;
+	margin-right: 5px;
+	-webkit-animation: ratemove .8s infinite;
+	animation: ratemove .8s infinite;
+}
+.rate2{
+	-webkit-animation-delay: .2s;
+	animation-delay: .2s;
+}
+.rate3{
+	-webkit-animation-delay: .4s;
+	animation-delay: .4s;
+}
+.rate4{
+	margin:0;
+	-webkit-animation-delay: .6s;
+	animation-delay: .6s;
+}
+@-webkit-keyframes ratemove{
+	0%,100%{
+		-webkit-transform: scaleY(1.0);
+		-moz-transform: scaleY(1.0);
+		-o-transform: scaleY(1.0);
+		-ms-transform: scaleY(1.0);
+		transform: scaleY(1.0);
+	}
+	50%{
+		-webkit-transform: scaleY(2.0);
+		-moz-transform: scaleY(2.0);
+		-o-transform: scaleY(2.0);
+		-ms-transform: scaleY(2.0);
+		transform: scaleY(2.0);
+	}
+}
+@-moz-keyframes ratemove{
+	0%,100%{
+		-webkit-transform: scaleY(1.0);
+		-moz-transform: scaleY(1.0);
+		-o-transform: scaleY(1.0);
+		-ms-transform: scaleY(1.0);
+		transform: scaleY(1.0);
+	}
+	50%{
+		-webkit-transform: scaleY(2.0);
+		-moz-transform: scaleY(2.0);
+		-o-transform: scaleY(2.0);
+		-ms-transform: scaleY(2.0);
+		transform: scaleY(2.0);
+	}
+} 
+@-o-keyframes ratemove{
+	0%,100%{
+		-webkit-transform: scaleY(1.0);
+		-moz-transform: scaleY(1.0);
+		-o-transform: scaleY(1.0);
+		-ms-transform: scaleY(1.0);
+		transform: scaleY(1.0);
+	}
+	50%{
+		-webkit-transform: scaleY(2.0);
+		-moz-transform: scaleY(2.0);
+		-o-transform: scaleY(2.0);
+		-ms-transform: scaleY(2.0);
+		transform: scaleY(2.0);
+	}
+}  
+@keyframes ratemove{
+	0%,100%{
+		transform: scaleY(1.0);
+	}
+	50%{
+		transform: scaleY(2.0);
+	}
+} 
