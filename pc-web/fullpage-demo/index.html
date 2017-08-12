@@ -2,8 +2,9 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>fullPage.js — 基本演示</title>
+<title>fullPageDemo</title>
 <link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/style.css">
 <style>
 .section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
 </style>
@@ -20,293 +21,14 @@ $(function(){
 	});
 });
 </script>
-<style>
-	body {
-	    font: 16px/1.8 "Microsoft Yahei",verdana;
-	}
-	h2,h3{
-		font-weight: normal;
-		margin: 0;
-		padding: 0;
-	}
-	/*#fp-nav li a {
-	    float: right;
-	    width: 21px;
-	    height: 21px;
-	    color: #8F9DA4;
-	    text-decoration: none;
-	    text-align: right;
-	    background: url(http://www.dowebok.com/demo/2014/97/images/dot.png) 5px 5px no-repeat;
-	}
-	#fp-nav li .active {
-	    background-position: 0 bottom;
-	}*/
-	#fp-nav ul li .fp-tooltip{
-		color: #8F9DA4;
-	}
-	#fp-nav ul li a span, .fp-slidesNav ul li a span {
-	    top: 2px;
-	    left: 2px;
-	    width: 20px;
-	    height: 20px;
-	    border: none;
-	    /*background: rgba(0, 0, 0, 0);*/
-	    background: url(http://www.dowebok.com/demo/2014/97/images/dot.png) 5px 5px no-repeat !important;
-	    border-radius: 50%;
-	    position: absolute;
-	    z-index: 1;
-	}	
-	#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span {
-	    /*background: #8F9DA4;*/
-	    background-position: 0 bottom !important;
-	}
-	.bg{
-		position: absolute;
-		top: 0;
-		width: 100%;
-		height: 100%;
-	}
-	.bg img{
-		width: 100%;
-		height: 100%;
-	}
-	.mail{
-		position: absolute;
-		width: 375px;
-		height: 26px;
-		top: -100%;
-		left: 50%;
-		margin-top: 20px;
-		margin-left: -188px;
-		background: url(http://www.dowebok.com/demo/2014/97/images/logo.png) no-repeat;
-		transition: all 1.5s;
-	}
-	.active .mail{
-		top: 0;
-	}
-	.mail a{
-		float: left;
-		width: 107px;
-		height: 100%;
-	}
-	.mail .mail-126,.mail .mail-yeah{
-		margin-left: 23px;
-	}
-	.section1 .des-title{
-		position: absolute;
-		width: 554px;
-		top: 20%;
-		left: 50%;
-		margin-left: -277px;
-		text-align: center;
-		
-	}
-	.section .des-title{
-		transform: scale(0);
-		transition: all 1.8s;
-	}
-	.section .des-title p{
-		opacity: 0;
-		transition: all 1s;
-	}
-	.active .des-title{
-		transform: scale(1.0);
-	}
-	.active .des-title p{
-		opacity: 1;
-		transition-delay: 1.8s;
-	}
-	.section1 .des-title .title-bg{
-		background: url(http://www.dowebok.com/demo/2014/97/images/slogan.png) no-repeat;
-	}
-	.des-title h2,.des-title h3{
-		text-indent: -9999px;
-	    height: 90px;
-	}
-	.section .des-title p{
-		font-size: 16px;
-		line-height: 28px;
-	}
-	.section1 .des-title p{
-		width: 535px;
-		color: #94a7c6;
-	}
-	.section1 .face-bg{
-		position: absolute;
-		width: 100%;
-		height: 377px;
-		left: 0;
-		bottom: -100%;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg13.png) center top no-repeat;
-		transition: all 1.5s;
-	}
-	.section1 .back-bg{
-		position: absolute;
-		width: 100%;
-		height: 392px;
-		bottom: -100%;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg12.png) center top no-repeat;
-		transition: all 2s;
-	}
 
-	.section1.active .face-bg{
-		bottom: 0;
-	}
-	.section1.active .back-bg{
-		bottom: 90px;
-		transition-delay: .2s;
-	}
-	.section2 .des-title h3{
-	    background: url(http://www.dowebok.com/demo/2014/97/images/t2.png) no-repeat;
-	}
-	.section2 .des-title,.section4 .des-title{
-		position: absolute;
-		width: 512px;
-		top: 15%;
-		left: 50%;
-		margin-left: -256px;
-	}
-	.section .des-title strong{
-	    font-size: 24px;
-	    font-weight: 500;
-	    color: #748A9E;
-	}
-	.section .des-title{
-		text-align: left;
-	}
-	.section2 .des-title p,.section4 .des-title p{
-	    color: #727F8C;
-	}
-	.section2 .face-bg{
-		position: absolute;
-		width: 819px;
-		height: 325px;
-		left: 50%;
-		margin-left: -410px;
-		bottom: -100%;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg23.png) no-repeat;
-		transition: all 1.5s;
-	}
-	.section2 .back-bg-left{
-		position: absolute;
-		width: 233px;
-		height: 250px;
-		left: -100%;
-		bottom: 15%;
-	    margin-left: -60px;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg21.png) no-repeat;
-		transition: all 1.5s;
-	}
-
-	.section2 .back-bg-right{
-		position: absolute;
-		width: 211px;
-		height: 299px;
-		right: -100%;
-		bottom: 27%;
-	    margin-right: -25px;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg22.png) no-repeat;
-		transition: all 1.5s;
-	}
-
-	.section2.active .face-bg,.section4.active .face-bg,.section4.active .back-bg{
-		bottom: 15%;
-	}
-	.section2.active .back-bg-left{
-		left: 0;
-		transition-delay: .2s;
-	}
-	.section2.active .back-bg-right{
-		right: 0;
-		transition-delay: .2s;
-	}
-
-	.section3 .des-title{
-		position: absolute;
-		width: 513px;
-		top: 15%;
-		left: 50%;
-		margin-left: -256px;
-	}
-	.section3 .des-title h3{
-	    background: url(http://www.dowebok.com/demo/2014/97/images/t3.png) no-repeat;
-	}
-	.section3 .face-bg{
-		position: absolute;
-		width: 441px;
-		height: 380px;
-		left: 100%;
-		margin-left: -120px;
-		bottom: 0;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg33.png) no-repeat;
-		transition: all 2s;
-	}
-	.section3 .back-bg-left{
-		position: absolute;
-		width: 892px;
-		height: 472px;
-		left: 50%;
-		bottom: 80px;
-		margin-left: -395px;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg31.png) no-repeat;
-	}
-	.section3 .back-bg-right{
-		position: absolute;
-		width: 322px;
-		height: 143px;
-		left: 50%;
-		bottom: 0;
-		margin-left: 90px;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg32.png) no-repeat;
-	}
-	.section3 .p3{
-		position: absolute;
-		width: 430px;
-		top: 50%;
-		left: 50%;
-		margin-top: 170px;
-		margin-left: -480px;
-	}
-	.section3 .back-bg{
-		opacity: 0;
-		transition: all 1.5s;
-	}
-	.section3.active .face-bg{
-		left: 50%;
-	}
-	.section3.active .back-bg{
-		opacity: 1;
-		transition-delay: .5s;
-	}
-
-	.section4 .des-title h3{
-		background: url(http://www.dowebok.com/demo/2014/97/images/t4.png) no-repeat;
-	}
-	.section4 .face-bg,.section4 .back-bg{
-		position: absolute;
-		width: 100%;
-		height: 449px;
-		bottom: -100%;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg42.png) center top no-repeat;
-		transition: all 1.5s;
-	}
-	.section4 .back-bg{
-		position: absolute;
-		width: 100%;
-		height: 449px;
-		bottom: -100%;
-	    margin-bottom: -130px;
-		background: url(http://www.dowebok.com/demo/2014/97/images/bg43.png) center top no-repeat;
-		transition: all 1.5s;
-	}
-</style>
 </head>
 
 <body>
 
 <div id="fullpage">
 	<div class="section section1">
-		<div class="bg"><img src="http://www.dowebok.com/demo/2014/97/images/section1.jpg" alt=""></div>
+		<div class="bg"><img src="images/section1.jpg" alt=""></div>
 		<div class="mail">
 			<a class="mail-163" href="#"></a><a class="mail-126" href="#"></a><a class="mail-yeah" href="#"></a>
 		</div>
@@ -324,7 +46,7 @@ $(function(){
 		</div>
 	</div>
 	<div class="section section2">
-		<div class="bg"><img src="http://www.dowebok.com/demo/2014/97/images/section2.jpg" alt=""></div>
+		<div class="bg"><img src="images/section2.jpg" alt=""></div>
 		<div class="back-bg">
 			<div class="back-bg-left"></div>
 			<div class="back-bg-right"></div>
@@ -341,7 +63,7 @@ $(function(){
 		
 	</div>
 	<div class="section section3">
-		<div class="bg"><img src="http://www.dowebok.com/demo/2014/97/images/section3.jpg" alt=""></div>
+		<div class="bg"><img src="images/section3.jpg" alt=""></div>
 		<div class="back-bg">
 			<div class="back-bg-left"></div>
 			<div class="back-bg-right"></div>
@@ -356,7 +78,7 @@ $(function(){
 		</div>
 	</div>
 	<div class="section section4">
-		<div class="bg"><img src="http://www.dowebok.com/demo/2014/97/images/section4.jpg" alt=""></div>
+		<div class="bg"><img src="images/section4.jpg" alt=""></div>
 		<div class="back-bg"></div>
 		<div class="face-bg"></div>
 		<div class="des-title">
