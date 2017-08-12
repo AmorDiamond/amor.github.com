@@ -26,10 +26,14 @@ $(function(){
 		var imgObj = new Image();
 		$(imgObj).on('load error',function () {
 			$rate.html(Math.round((count+1)/len*100)+'%');
-			
+			console.log(Math.round((count+1)/len*100)+'%')
 			if(count >=len-1){
-				$('.cover').hide();
-				$('.rates').css('animation','none');
+				var timer = setTimeout(function () {
+					$('.cover').hide();
+					$('.rates').css('animation','none');
+					clearTimeout(timer);
+				},300)
+
 			}
 
 			 count++;
