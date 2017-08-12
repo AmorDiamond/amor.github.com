@@ -1,6 +1,24 @@
 body {
     font: 16px/1.8 "Microsoft Yahei",verdana;
 }
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
+.cover{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background: #fff;
+	color: #000;
+	text-align: center;
+	font-size: 26px;
+}
+.cover .tips{
+	position: absolute;
+	width: 200px;
+	top: 50%;
+	left: 50%;
+	margin-left: -100px;
+}
 h2,h3{
 	font-weight: normal;
 	margin: 0;

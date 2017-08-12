@@ -5,25 +5,7 @@
 <title>fullPageDemo</title>
 <link rel="stylesheet" href="css/jquery.fullPage.css">
 <link rel="stylesheet" href="css/style.css">
-<style>
-.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff;}
-.cover{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background: #fff;
-	color: #000;
-	text-align: center;
-}
-.cover .tips{
-	position: absolute;
-	width: 200px;
-	top: 50%;
-	left: 50%;
-	margin-left: -100px;
-}
-.cover .tips{}
-</style>
+
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
 <script>
@@ -36,8 +18,9 @@ $(function(){
 		navigationTooltips: ['一页','二页','三页','四页']
 	});
 
+	/*图片预加载处理*/
 	var imgs = ['https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/section1.jpg','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/section2.jpg','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/section3.jpg','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/section4.jpg','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/dot.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/logo.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/slogan.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg13.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg12.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/t2.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg23.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg21.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg22.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/t3.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg33.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg31.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg32.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/t4.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg42.png','https://amordiamond.github.io/amor.github.com/pc-web/fullpage-demo/images/bg43.png'];
-	var index = 0,len = imgs.length,count=0,$rate=$(".rate");
+	var len = imgs.length,count=0,$rate=$(".rate");
 	$.each(imgs,function (i,src) {
 		var imgObj = new Image();
 		$(imgObj).on('load error',function () {
