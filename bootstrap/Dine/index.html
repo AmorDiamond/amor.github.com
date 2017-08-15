@@ -19,10 +19,15 @@
       <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+		body{
+			position: relative;/* 实现滚动监听 */
+		}
+    </style>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar-example"><!-- 实现滚动监听 -->
   <header class="navbar navbar-fixed-top none">
-  <nav class="container">
+  <nav class="container" id="navbar-example">
   	<div class="navbar-header">
   		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 	        <span class="sr-only">Toggle navigation</span>
@@ -38,21 +43,21 @@
         <li><a href="#section-1">ABOUT</a></li>
         <li><a href="#section-3">HOW TO DINE</a></li>
         <li role="separator" class="divider"></li>
-        <li><a href="#">Testimonials</a></li>
+        <li><a href="#section-4">Testimonials</a></li>
         <li role="separator" class="divider"></li>
-        <li><a href="#">Inside Dine</a></li>
-        <li><a href="#">Download</a></li>
+        <li><a href="#section-5">Inside Dine</a></li>
+        <li><a href="#section-6">Download</a></li>
         <li class="dropdown" style="display: none;">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">HOW TO DINE</a></li>
+            <li><a href="#section-1">ABOUT</a></li>
+            <li><a href="#section-3">HOW TO DINE</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Testimonials</a></li>
+            <li><a href="#section-4">Testimonials</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="#">Inside Dine</a></li>
-            <li><a href="#">Download</a></li>
+            <li><a href="#section-5">Inside Dine</a></li>
+            <li><a href="#section-6">Download</a></li>
           </ul>
         </li>
       </ul>
@@ -190,7 +195,7 @@
   	</section>
   </div>
 
-    <section class="reviews">
+    <section id="section-4" class="reviews">
     <div class="review-mark" style="background-color: rgba(16, 16, 16, 0.4);">
 	    <div class="col-md-7 clear-float">
 			<div class="desc-banner">
@@ -241,7 +246,7 @@
 		</div>
 	</div>	
   </section>
-  <section class="section">
+  <section id="section-5" class="section">
   <div class="container">
 	  <div class="app-title">
 	  	<h2>App Screenshots</h2>
@@ -269,7 +274,7 @@
 	</div>	
   </section>
 
-<section class="section-bg">
+<section id="section-6" class="section-bg">
 	<div class="container">
 		<div class="row down-app">
 		  <div class="down-title wow flipInX" data-wow-delay=".1s">
@@ -465,6 +470,8 @@
 	// 		$(".down-app .down-img").addClass('animated fadeInUp');
 	// 	}
 	})
+
+	$('body').scrollspy({ target: '#navbar-example' });
     </script>
   </body>
 </html>
