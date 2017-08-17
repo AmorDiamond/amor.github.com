@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+	    body{
+	    	font-family: Muli,'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
+	    }
+    	header{
+    		padding: 0 20px;
+    		border-radius: 0;
+    		border: 0;
+		    border-bottom: transparent;
+    		background: -webkit-linear-gradient(top,rgba(0,0,0,.4),rgba(0,0,0,0));
+    	}
+    	.navbar{
+    		background: none;
+    		border: 0;
+    	}
+		.navbar-brand{
+			width: 150px;
+			background: url(http://www.justalkcloud.com/cn/images/new_cloud_logo.png) no-repeat;
+		    background-size: contain;
+		    background-position: center;
+		}
+		.navbar-nav .dropdown-menu{
+			display: block;
+			min-width: 130px;
+			width: auto;
+			left: 0;
+			border: none;
+		}
+		.navbar-nav .two-row{
+			width: 250px;
+		}
+		.navbar-nav .navbar-btn{
+		    margin-left: 20px;
+		    margin-right: 20px;
+		    border: 1px solid #03A9F4;
+		    border-radius: 17px;
+	        padding: 6px 20px;
+		    background: transparent;
+		    color: #03A9F4;
+		    transition: all .3s;
+		}		
+		.navbar-nav .navbar-btn:hover{
+		    background: #03A9F4;
+		    color: #fff;
+		}
+		.navbar-nav .dropdown-menu li{
+			float: left;
+			width: 130px;
+			height: 45px;
+			overflow: hidden;
+		    margin-right: -10px;
+		}
+		.dropdown-menu>li>a{
+			padding: 0;
+		    width: 100%;
+		    /* line-height: 40px; */
+		    padding: 10px;
+		    overflow: hidden;
+		}
+		.dropdown-menu>li>a:hover{
+			background-color: rgba(0,0,0,.2)
+		}
+		/*
+		.nav>li{
+			width: 130px;
+			text-align: center;
+		}*/
+		.navbar-nav>li>a{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.nav>li .dropdown-menu{
+			transform: scale(0);
+			opacity: 0;
+			transition: all .5s;
+		}
+		.nav>li:hover .dropdown-menu{
+			transform: scale(1.0);
+			opacity: 1;
+		}
+		.nav>li:after{
+			content: '';
+			position: absolute;
+			top: 40px;
+			left: 45%;
+			right: 55%;
+			height: 3px;
+			background-color: rgb(52, 162, 240);
+			transition: all .5s; 
+		}
+		.nav>li:hover:after{
+			left: 25%;
+			right: 25%;
+		}
+		.navbar-default .navbar-nav>li>a{
+			color: #fff !important;
+		}
+		.banner-video{
+			overflow: hidden;
+		}
+		#video1{
+			display: block;
+			width: 100%;
+		}
+		#particles-js{
+			position: absolute;
+			/*width: 100%;*/
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+		.gray-bg{
+			height: 60px;
+			background: #EDEFF0;
+			text-align: center;
+		}
+		.gray-bg{
+			line-height: 60px;
+		    font-size: 18px;
+		    letter-spacing: 8px;
+		}
+		.arrow-down{
+			position: absolute;
+			left: 50%;
+			margin-left: -20px;
+			width: 0;
+			height: 0;
+			border-top:20px solid  #EDEFF0;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-bottom: 20px solid transparent;
+		}
+		.customer-banner{
+			/*height: 300px;*/
+			padding: 80px 0;
+			background: #fff;
+		}
+		.owl-carousel .owl-prev{
+			float: left;
+		}
+		.owl-carousel .owl-next{
+			float: right;
+		}
+		.owl-carousel .owl-dots{
+			text-align: center;
+		}
+		.owl-carousel .owl-dots .owl-dot{
+			display: inline-block;
+			margin: 5px;
+		}
+		.owl-carousel .owl-dots span{
+			display: inline-block;
+			width: 46px;
+			height: 46px;
+			border-radius: 10px;
+			background: url(http://www.justalkcloud.com/images/360logo_0.png) no-repeat;
+		}		
+		.owl-carousel .owl-dots .active span{
+			background: url(http://www.justalkcloud.com/images/360logo.png) no-repeat;
+		}
+		.owl-carousel .owl-dots .owl-dot:nth-child(2) span{
+			background: url(http://www.justalkcloud.com/images/Qtone-Educaition_0.png) no-repeat;
+		}
+		.owl-carousel .owl-dots  .owl-dot:nth-child(2).active span{
+			background: url(http://www.justalkcloud.com/images/Qtone-Educaition.png) no-repeat;
+		}
+		.owl-carousel .owl-dots .owl-dot:nth-child(3) span{
+			background: url(http://www.justalkcloud.com/images/Fun-dubbing_0.png) no-repeat;
+		}
+		.owl-carousel .owl-dots  .owl-dot:nth-child(3).active span{
+			background: url(http://www.justalkcloud.com/images/Fun-dubbing.png) no-repeat;
+		}
+		.video-need{
+			color: #fff;
+			min-height: 688px;
+			background: url(http://www.justalkcloud.com/images/cloud-functions.png) no-repeat;
+			/*background-attachment:fixed;*/
+			background-size: cover;
+		}
+		.video-need h2,.cloud-service h2,.onlie-teach h2{
+			margin: 80px 0 60px;
+			font-size: 36px;
+			text-align: center;
+		}
+		.video-need .title,.cloud-service .title{
+			margin-bottom: 20px;
+			font-size: 18px;
+			text-overflow: ellipsis;
+		    white-space: nowrap;
+		    overflow: hidden;
+		}
+		.video-need .detail-need-main{
+			height: 160px;
+			margin-top: 40px;
+			border-bottom: 1px dashed #ced7db;
+		}
+		.video-need .bot-line{
+		    position: absolute;
+		    width: 100%;
+		    bottom: -1px;
+		    left: 0;
+			float: none;
+			margin: 0 auto;
+			border-bottom: 1px dashed #ced7db;
+		}
+		.video-need .detail-need-main p{
+			color: #d8d8d8;
+		}
+		.video-need .detail-need-main.last{
+			border-bottom: 0;
+		}
+		.detail-cloud-main{
+			height: 250px;
+			text-align: center;
+		}
+		.cloud-service .container{
+			max-width: 1000px;
+			margin: auto;
+		}
+		.owl-carousel .owl-item .item-main-detail .more a{
+			float: right;
+			font-size: 14px;
+			margin-top: 30px;
+		}
+		.owl-carousel .owl-item .item-main-detail .more img{
+			width: 18px;
+			display: inline-block;
+		}
+		.owl-carousel .owl-item .item-main-detail{
+			line-height: 30px;
+			font-size: 16px;
+			text-align: left;
+		}
+		.owl-carousel .owl-item .item-main-detail span{
+			width: 20px;
+			float: left;
+		}
+
+		.owl-carousel .owl-item .item-main-detail span:nth-child(2){
+			float: right;
+		}
+		.cloud-service .icon{
+			margin-bottom: 20px;
+		}
+		.onlie-teach{
+			height: 500px;
+		}
+		.onlie-teach .big-case{
+			height: 280px;
+			background: url(http://www.justalkcloud.com/images/offline_edu.png) center no-repeat;
+		}
+		.onlie-teach .sm-case-left{
+			height: 190px;
+			background: url(http://www.justalkcloud.com/images/yiliao.png) center no-repeat;
+		}
+		.onlie-teach .sm-case-right{
+			height: 190px;
+			background: url(http://www.justalkcloud.com/images/tongxun.png) center no-repeat;
+		}
+		.onlie-teach .big-case,.onlie-teach .sm-case{
+			margin-bottom: 30px;
+			background-size: cover;
+		    border-radius: 5px;
+		    transition: all .3s;
+		}
+		.onlie-teach .big-case:hover,.onlie-teach .sm-case:hover{
+	        box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+		    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+		}
+
+		@media (max-width: 992px){
+			.video-need .detail-need-main{
+				float: none;
+			    margin-left: auto;
+			    margin-right: auto;
+			}
+		} 
+		@media (min-width: 992px){
+			.video-need .detail-need-main:nth-child(even){
+				margin-left: 4%;
+			}
+		} 
+		@media (max-width: 400px){
+			.video-need h2, .cloud-service h2 , .onlie-teach h2 {
+			    font-size: 26px;
+			}
+		} 
+		@media (max-width: 320px){
+			.detail-cloud-main{
+				height: 280px;
+			}
+		} 
+    </style>
+  </head>
+  <body>
+ 	<header class=" navbar-fixed-top">
+ 		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#"></a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav navbar-right">
+		      <li class="dropdown">
+		          <a href="#">私有云<span class="caret"></span></a>
+		          <ul class="dropdown-menu two-row">
+		            <li><a href="#">语音通话</a></li>
+		            <li><a href="#">在线教育</a></li>
+		            <li><a href="#">视频通话</a></li>
+		           
+		            <li><a href="#">智慧医疗</a></li>
+		            
+		            <li><a href="#">IM 消息</a></li>
+		            <li><a href="#">社交通讯</a></li>
+		          </ul>
+		        </li>
+		        <li><a href="#">教育云</a></li>
+		        <li><a href="#">统一通信</a></li>
+		        <li><a href="#">案例</a></li>
+		        <li><a href="#">价格</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下载<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a href="#">Action</a></li>
+		            <li><a href="#">Another action</a></li>
+		            <li><a href="#">Something else here</a></li>
+		            <li><a href="#">Separated link</a></li>
+		            <li><a href="#">One more separated link</a></li>
+		          </ul>
+		        </li>
+		        <button type="button" class="btn btn-default navbar-btn">登录</button>
+		      </ul>
+		      
+		     
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	
+ 	</header>
+ 	<div class="banner-video">
+ 		<video id="video1" autoplay="autoplay" loop="loop">
+			<source id="banner_source" src="http://www.justalkcloud.com/images/banner.mp4">
+		</video>
+
+		<div id="particles-js"></div>
+ 	</div>
+
+ 	
+    
+
+    <div class="gray-bg">
+    	<span>场景化视频通讯,让应用有无限可能</span>
+    	<div class="arrow-down"></div>
+    </div>
+
+    <div class="customer-banner">
+    <div class="container text-center">
+    	<div class="owl-carousel">
+    		<div class="item">
+				<div class="item-main-detail col-md-6 col-xs-12">
+					<span><img src="http://www.justalkcloud.com/cn/images/yinhao-01.png" alt=""></span>
+					JusTalk Cloud 移动视频通讯云的 SDK 接入比其他主流通讯云要简单得多，开发量少。我们之前尝试过其他的云通讯，但接通率和 SDK 稳定性都明显不如 JusTalk Cloud 移动视频通讯云，所以最后我们果断放弃了之前的选择。另外，JusTalk Cloud 移动视频通讯云的服务也非常好，很贴心，对用户需求的反应非常迅速。我们提的很多需求都及时得到了满足，定制开发也不会拖慢进度。	
+					<span><img src="http://www.justalkcloud.com/cn/images/yinhao-02.png" alt=""></span>
+					<div class="more"><a href="#">查看详细案例<img src="http://www.justalkcloud.com/images/video-application.png" alt=""></a></div>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<img src="http://www.justalkcloud.com/images/360-Video.png" alt="">
+				</div>
+    		</div>
+    		<div class="item">
+				<div class="item-main-detail col-md-6 col-xs-12">
+					<span><img src="http://www.justalkcloud.com/cn/images/yinhao-01.png" alt=""></span>
+					JusTalk Cloud 移动视频通讯云的 SDK 接入比其他主流通讯云要简单得多，开发量少。我们之前尝试过其他的云通讯，但接通率和 SDK 稳定性都明显不如 JusTalk Cloud 移动视频通讯云，所以最后我们果断放弃了之前的选择。另外，JusTalk Cloud 移动视频通讯云的服务也非常好，很贴心，对用户需求的反应非常迅速。我们提的很多需求都及时得到了满足，定制开发也不会拖慢进度。	
+					<span><img src="http://www.justalkcloud.com/cn/images/yinhao-02.png" alt=""></span>
+					<div class="more"><a href="#">查看详细案例<img src="http://www.justalkcloud.com/images/video-application.png" alt=""></a></div>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<img src="http://www.justalkcloud.com/images/360-Video.png" alt="">
+				</div>
+    		</div>
+    		<div class="item">
+				<div class="item-main-detail col-md-6 col-xs-12">
+					<span><img src="http://www.justalkcloud.com/cn/images/yinhao-01.png" alt=""></span>
+					JusTalk Cloud 移动视频通讯云的 SDK 接入比其他主流通讯云要简单得多，开发量少。我们之前尝试过其他的云通讯，但接通率和 SDK 稳定性都明显不如 JusTalk Cloud 移动视频通讯云，所以最后我们果断放弃了之前的选择。另外，JusTalk Cloud 移动视频通讯云的服务也非常好，很贴心，对用户需求的反应非常迅速。我们提的很多需求都及时得到了满足，定制开发也不会拖慢进度。	
+					<span><img src="http://www.justalkcloud.com/cn/images/yinhao-02.png" alt=""></span>
+					<div class="more"><a href="#">查看详细案例<img src="http://www.justalkcloud.com/images/video-application.png" alt=""></a></div>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<img src="http://www.justalkcloud.com/images/360-Video.png" alt="">
+				</div>
+    		</div>
+
+    	</div>
+    </div>
+    	
+    </div>
+
+    <div class="video-need">
+    	<div class="container">
+    		<h2>满足您一切的音视频互动需求</h2>
+    		<div class="col-md-5 col-sm-11 col-md-offset-1 detail-need-main">
+    			<div class="title">一对一语音通话</div>
+				<p>全平台支持，包括iOS 、Android、Windows、Mac OSX和Web Browser。独家语音质量增强技术能根据网络环境自动选择最佳编解码，消除回声，并且在丢包率高达30%的环境下依然能保障声音流畅不失真。</p>
+    		</div>
+
+    		<div class="col-md-5 col-sm-11 col-md-offset-1 detail-need-main">
+    			<div class="title">一对一视频通话</div>
+				<p>支持各类主流平台与终端设备，视频清晰度最高可达1080P。独家SPo甜点技术可自动适应各类复杂网络环境，ARC传输机制保障数据能动态选择最高质量的传输路径，保证视频清晰不卡顿。</p>
+    		</div>
+
+    		<div class="col-md-5 col-sm-11 col-md-offset-1 detail-need-main">
+    			<div class="title">语音会议</div>
+				<p>企业级语音会议SDK，可数万人同时参会，全球120多个国家部署服务器，确保世界各个角落都能畅享极度稳定、清晰、流畅的语音会议。</p>
+    		</div>
+
+    		<div class="col-md-5 col-sm-11 col-md-offset-1 detail-need-main">
+    			<div class="title">视频会议</div>
+				<p>可支持16人同时开启视频参会，独家音视频引擎保障视频清晰、流畅。支持视频录制功能，适应多种应用场景需要；同时支持文件共享、屏幕共享、视频涂鸦、视频白板等功能，保证视频会议的互动性。</p>
+    		</div>
+
+    		<div class="col-md-5 col-sm-11 col-md-offset-1 detail-need-main">
+    			<div class="title">互动式视频直播</div>
+				<p>支持最多16路视频同时直播，直播毫秒级延迟，独家音视频引擎能完美适应复杂的移动网络环境，保证视频清晰、流畅。用户可通过语音、视频、涂鸦、IM 方式接入互动再推流，即时讨论或提问，融入直播。</p>
+    		</div>
+
+    		<div class="col-md-5 col-sm-11 col-md-offset-1 detail-need-main">
+    			<div class="title">广播式视频直播</div>
+				<p>ARC机制保障媒体传输的多路径优化，确保视频清晰流畅；独家音视频引擎技术，可在视频同等清晰度条件下降低视频流量；通过级联方式实现广播扩容，支持亿级终端广播。</p>
+    		</div>
+
+    		<div class="col-md-5 col-sm-11 col-md-offset-1 detail-need-main last">
+    			<div class="title">数据协同</div>
+				<p>提供包括文字、图片、语音、地理位置、涂鸦、白板、文件共享等多种内容载体，ARC传输机制保障极度流畅的数据共享功能。</p>
+				<div class="visible-xs-block visible-sm-block col-sm-11 bot-line"></div>
+    		</div>
+			
+
+    		<div class="col-md-5 col-sm-11 col-md-offset-1 detail-need-main last">
+    			<div class="title">更多</div>
+				<p>更多精彩功能，由您自由演绎。</p>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="cloud-service">
+	    <div class="container">
+	    <div class="row">
+	    	<h2>稳定可靠的云通讯服务</h2>
+    		<div class="col-xs-6 col-sm-4 detail-cloud-main">
+    			<div class="icon"><img src="http://www.justalkcloud.com/images/global-distributed.png" alt=""></div>
+    			<div class="title">全球分布式接入</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1">全球120多个国家部署服务器，ARC实现SDN在全球范围的支持就近接入。</div>
+				</div>
+    		</div>
+
+    		<div class="col-xs-6 col-sm-4 detail-cloud-main">
+    			<div class="icon"><img src="http://www.justalkcloud.com/images/SVC.png" alt=""></div>
+    			<div class="title">高性能SVC编码</div>
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">支持SVC，一次编码适应多种网络和终端需求，延时比传统 MCU 低 100~200ms。</div>
+    		</div>
+
+    		<div class="col-xs-6 col-sm-4 detail-cloud-main">
+    			<div class="icon"><img src="http://www.justalkcloud.com/images/high-stability.png" alt=""></div>
+    			<div class="title">高稳定运维平台</div>
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">云平台稳定运行1000万小时，多维度运营平台实时监测，全球音视频通话质量数据与优化管理。</div>
+    		</div>
+
+    		<div class="col-xs-6 col-sm-4 detail-cloud-main">
+    			<div class="icon"><img src="http://www.justalkcloud.com/images/super-smooth.png" alt=""></div>
+    			<div class="title">超流畅音视频体验</div>
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">独家语音增强技术与SPo视频甜点技术，在丢包达到 30%时，仍然能够提供清晰流畅的音视频通话效果。</div>
+    		</div>
+
+    		<div class="col-xs-6 col-sm-4 detail-cloud-main">
+    			<div class="icon"><img src="http://www.justalkcloud.com/images/dynamic-transmission.png" alt=""></div>
+    			<div class="title">超智能动态传输模块</div>
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">独家ARC传输模块，比TCP更加高效可靠，动态分布式传输、防火墙穿透、智能Push等能力完美适用移动互联网环境。</div>
+    		</div>
+
+    		<div class="col-xs-6 col-sm-4 detail-cloud-main">
+    			<div class="icon"><img src="http://www.justalkcloud.com/images/high-quality.png" alt=""></div>
+    			<div class="title">高质量数据机制</div>
+				<div class="col-xs-12 col-sm-10 col-sm-offset-1">智能连接和数据 QoS保证高质量，亿级用户规模的软件方案。</div>
+    		</div>
+	    </div>
+	    	
+	    </div>
+    	
+    </div>
+
+    <div class="onlie-teach">
+    	<div class="container-fluid">
+    		<h2>承载十亿级用户规模，在关键新兴行业引领通讯潮流</h2>
+    		<div class="row">
+    			<div class="col-sm-12">
+    				<div class="big-case"></div>
+    			</div>
+    			<div class="col-sm-6 col-xs-12">
+    				<div class="sm-case sm-case-left"></div>
+    			</div>
+    			<div class="col-sm-6 col-xs-12">
+    				<div class="sm-case sm-case-right"></div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script>
+    	$(function (){
+    		var owl = $('.owl-carousel');
+			owl.owlCarousel({
+			    items:1,
+			    loop:true,
+			    autoplay:true,
+			    autoplayTimeout:3000,
+			    autoplayHoverPause:true,
+			    smartSpeed:800/*控制切换速度*/
+			    //nav:true/*是否显示前后切换按钮*/
+			});
+    	})
+    </script>
+
+  </body>
+</html>
