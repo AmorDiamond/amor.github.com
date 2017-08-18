@@ -381,6 +381,7 @@ header.site-head{
 	.navbar-header{
 		float: none;
 	    text-align: center; 
+        margin-bottom: -20px;
 	}
 	.navbar-brand{
 		float: none;
