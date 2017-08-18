@@ -1,0 +1,392 @@
+body{
+	font-family: Muli,'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
+}
+header{
+	padding: 0 20px;
+	border-radius: 0;
+	border: 0;
+    border-bottom: transparent;
+	background: -webkit-linear-gradient(top,rgba(0,0,0,.4),rgba(0,0,0,0));
+	transition: all .3s;
+}
+.navbar{
+	background: none;
+	border: 0;
+	margin-bottom: 0;
+	font-size: 16px;
+}
+header.site-head{
+	background: none;
+    border-bottom: 1px solid transparent;
+    -webkit-box-shadow: 0 2px 20px rgba(0,0,0,.16);
+    -moz-box-shadow: 0 2px 20px rgba(0,0,0,.16);
+    box-shadow: 0 2px 20px rgba(0,0,0,.16);
+    background-color: rgba(255,255,255,.97);
+}
+.site-head .navbar-default .navbar-nav>li>a {
+    color: #383838 !important;
+}
+.site-head .navbar-brand{
+	background: url(http://www.justalkcloud.com/cn/images/cloud_logo@2x.png) no-repeat;
+	background-size: contain;
+    background-position: center;
+}
+.navbar-brand{
+	width: 150px;
+	background: url(http://www.justalkcloud.com/cn/images/new_cloud_logo.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.navbar-nav .dropdown-menu{
+	display: block;
+	min-width: 130px;
+	width: auto;
+	left: 0;
+	border: none;
+}
+.navbar-nav .two-row{
+	width: 250px;
+}
+.navbar-nav .navbar-btn{
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 1px solid #03A9F4;
+    border-radius: 17px;
+    padding: 6px 20px;
+    background: transparent;
+    color: #03A9F4;
+    transition: all .3s;
+}		
+.navbar-nav .navbar-btn:hover{
+    background: #03A9F4;
+    color: #fff;
+}
+.navbar-nav .dropdown-menu li{
+	float: left;
+	width: 130px;
+	height: 45px;
+	overflow: hidden;
+    margin-right: -10px;
+}
+.dropdown-menu>li>a{
+	padding: 0;
+    width: 100%;
+    /* line-height: 40px; */
+    padding: 10px;
+    overflow: hidden;
+}
+.dropdown-menu>li>a:hover{
+	background-color: rgba(0,0,0,.2)
+}
+/*
+.nav>li{
+	width: 130px;
+	text-align: center;
+}*/
+.navbar-nav>li>a{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.nav>li .dropdown-menu{
+	transform: scale(0);
+	opacity: 0;
+	transition: all .5s;
+}
+.nav>li:hover .dropdown-menu{
+	transform: scale(1.0);
+	opacity: 1;
+}
+.nav>li:after{
+	content: '';
+	position: absolute;
+	top: 40px;
+	left: 45%;
+	right: 55%;
+	height: 3px;
+	background-color: rgb(52, 162, 240);
+	transition: all .5s; 
+}
+.nav>li:hover:after{
+	left: 25%;
+	right: 25%;
+}
+.navbar-default .navbar-nav>li>a{
+	color: #fff !important;
+}
+.banner-video{
+	overflow: hidden;
+}
+#video1{
+	display: block;
+	width: 100%;
+}
+.banner-video .banner-info{
+	position: absolute;
+	top: 120px;
+	color: #fff;
+}
+.banner-m{
+	position: relative;
+}
+.banner-m .banner-info{
+	padding-top: 100px;
+	padding-bottom: 100px;
+	color: #fff;
+    position: relative;
+    float: none;
+}
+.banner-m .banner-info h2{
+    font-size: 38px;
+}
+.carousel{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.carousel-inner,.carousel-inner>.item{
+	height: 100%;
+}
+.banner-info h2{
+	font-size: 42px;
+	margin-bottom: 30px;
+}
+.banner-info a{
+	display: inline-table;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	border: 2px solid #fff;
+	border-radius: 25px;
+	font-size: 18px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	transition: all .3s;
+}
+.banner-info a.case,.banner-info a.free:hover{
+	background: #fff;
+	color: #34a2f0;
+}
+
+.banner-info a.case:hover{
+	background: transparent;
+	color: #fff;
+}
+#particles-js{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+}
+.gray-bg{
+	height: 60px;
+	background: #EDEFF0;
+	text-align: center;
+}
+.gray-bg{
+	line-height: 60px;
+    font-size: 18px;
+    letter-spacing: 8px;
+}
+.arrow-down{
+	position: absolute;
+	left: 50%;
+	margin-left: -20px;
+	width: 0;
+	height: 0;
+	border-top:20px solid  #EDEFF0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+}
+.customer-banner{
+	/*height: 300px;*/
+	padding: 80px 0;
+	background: #fff;
+}
+.owl-carousel .owl-prev{
+	float: left;
+}
+.owl-carousel .owl-next{
+	float: right;
+}
+.owl-carousel .owl-dots{
+	text-align: center;
+}
+.owl-carousel .owl-dots .owl-dot{
+	display: inline-block;
+	margin: 5px;
+}
+.owl-carousel .owl-dots span{
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	border-radius: 10px;
+	background: url(http://www.justalkcloud.com/images/360logo_0.png) no-repeat;
+}		
+.owl-carousel .owl-dots .active span{
+	background: url(http://www.justalkcloud.com/images/360logo.png) no-repeat;
+}
+.owl-carousel .owl-dots .owl-dot:nth-child(2) span{
+	background: url(http://www.justalkcloud.com/images/Qtone-Educaition_0.png) no-repeat;
+}
+.owl-carousel .owl-dots  .owl-dot:nth-child(2).active span{
+	background: url(http://www.justalkcloud.com/images/Qtone-Educaition.png) no-repeat;
+}
+.owl-carousel .owl-dots .owl-dot:nth-child(3) span{
+	background: url(http://www.justalkcloud.com/images/Fun-dubbing_0.png) no-repeat;
+}
+.owl-carousel .owl-dots  .owl-dot:nth-child(3).active span{
+	background: url(http://www.justalkcloud.com/images/Fun-dubbing.png) no-repeat;
+}
+.video-need{
+	color: #fff;
+	min-height: 688px;
+	background: url(http://www.justalkcloud.com/images/cloud-functions.png) no-repeat;
+	/*background-attachment:fixed;*/
+	background-size: cover;
+}
+.video-need h2,.cloud-service h2,.onlie-teach h2{
+	margin: 80px 0 60px;
+	font-size: 36px;
+	text-align: center;
+}
+.video-need .title,.cloud-service .title{
+	margin-bottom: 20px;
+	font-size: 18px;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.video-need .detail-need-main{
+	height: 160px;
+	margin-top: 40px;
+	border-bottom: 1px dashed #ced7db;
+}
+.video-need .bot-line{
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+	float: none;
+	margin: 0 auto;
+	border-bottom: 1px dashed #ced7db;
+}
+.video-need .detail-need-main p{
+	color: #d8d8d8;
+}
+.video-need .detail-need-main.last{
+	border-bottom: 0;
+}
+.detail-cloud-main{
+	height: 250px;
+	text-align: center;
+}
+.cloud-service .container{
+	max-width: 1000px;
+	margin: auto;
+}
+.owl-carousel .owl-item .item-main-detail .more a{
+	float: right;
+	font-size: 14px;
+	margin-top: 30px;
+}
+.owl-carousel .owl-item .item-main-detail .more img{
+	width: 18px;
+	display: inline-block;
+}
+.owl-carousel .owl-item .item-main-detail{
+	line-height: 30px;
+	font-size: 16px;
+	text-align: left;
+}
+.owl-carousel .owl-item .item-main-detail span{
+	width: 20px;
+	float: left;
+}
+
+.owl-carousel .owl-item .item-main-detail span:nth-child(2){
+	float: right;
+}
+.cloud-service .icon{
+	margin-bottom: 20px;
+}
+.onlie-teach{
+	height: 500px;
+}
+.onlie-teach .big-case{
+	height: 280px;
+	background: url(http://www.justalkcloud.com/images/offline_edu.png) center no-repeat;
+}
+.onlie-teach .sm-case-left{
+	height: 190px;
+	background: url(http://www.justalkcloud.com/images/yiliao.png) center no-repeat;
+}
+.onlie-teach .sm-case-right{
+	height: 190px;
+	background: url(http://www.justalkcloud.com/images/tongxun.png) center no-repeat;
+}
+.onlie-teach .big-case,.onlie-teach .sm-case{
+	margin-bottom: 30px;
+	background-size: cover;
+    border-radius: 5px;
+    transition: all .3s;
+}
+.onlie-teach .big-case:hover,.onlie-teach .sm-case:hover{
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+}
+
+.banner-m .owl-banner .item {
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-size: cover;
+}
+
+@media (max-width: 992px){
+	.video-need .detail-need-main{
+		float: none;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+} 
+@media (min-width: 992px){
+	.video-need .detail-need-main:nth-child(even){
+		margin-left: 4%;
+	}
+} 
+@media (max-width: 400px){
+	.video-need h2, .cloud-service h2 , .onlie-teach h2 {
+	    font-size: 26px;
+	}
+	.gray-bg {
+	    font-size: 16px;
+	    letter-spacing: 0;
+	}
+} 
+@media (max-width: 320px){
+	.detail-cloud-main{
+		height: 280px;
+	}
+} 
+@media (min-width: 1200px){
+	.banner-video .banner-info{
+		top: 180px;
+	}
+}  
+@media (min-width: 768px) and (max-width: 840px){
+	.navbar-header{
+		float: none;
+	    text-align: center; 
+	}
+	.navbar-brand{
+		float: none;
+		display: inline-block;
+	}
+	.navbar-right{
+		float: none !important;
+	}
+} 

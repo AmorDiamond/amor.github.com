@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>Bootstrap 101 Template</title>
+    <title>Just talk cloud</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -18,297 +18,7 @@
       <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-	    body{
-	    	font-family: Muli,'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
-	    }
-    	header{
-    		padding: 0 20px;
-    		border-radius: 0;
-    		border: 0;
-		    border-bottom: transparent;
-    		background: -webkit-linear-gradient(top,rgba(0,0,0,.4),rgba(0,0,0,0));
-    	}
-    	.navbar{
-    		background: none;
-    		border: 0;
-    	}
-		.navbar-brand{
-			width: 150px;
-			background: url(http://www.justalkcloud.com/cn/images/new_cloud_logo.png) no-repeat;
-		    background-size: contain;
-		    background-position: center;
-		}
-		.navbar-nav .dropdown-menu{
-			display: block;
-			min-width: 130px;
-			width: auto;
-			left: 0;
-			border: none;
-		}
-		.navbar-nav .two-row{
-			width: 250px;
-		}
-		.navbar-nav .navbar-btn{
-		    margin-left: 20px;
-		    margin-right: 20px;
-		    border: 1px solid #03A9F4;
-		    border-radius: 17px;
-	        padding: 6px 20px;
-		    background: transparent;
-		    color: #03A9F4;
-		    transition: all .3s;
-		}		
-		.navbar-nav .navbar-btn:hover{
-		    background: #03A9F4;
-		    color: #fff;
-		}
-		.navbar-nav .dropdown-menu li{
-			float: left;
-			width: 130px;
-			height: 45px;
-			overflow: hidden;
-		    margin-right: -10px;
-		}
-		.dropdown-menu>li>a{
-			padding: 0;
-		    width: 100%;
-		    /* line-height: 40px; */
-		    padding: 10px;
-		    overflow: hidden;
-		}
-		.dropdown-menu>li>a:hover{
-			background-color: rgba(0,0,0,.2)
-		}
-		/*
-		.nav>li{
-			width: 130px;
-			text-align: center;
-		}*/
-		.navbar-nav>li>a{
-			padding-left: 20px;
-			padding-right: 20px;
-		}
-		.nav>li .dropdown-menu{
-			transform: scale(0);
-			opacity: 0;
-			transition: all .5s;
-		}
-		.nav>li:hover .dropdown-menu{
-			transform: scale(1.0);
-			opacity: 1;
-		}
-		.nav>li:after{
-			content: '';
-			position: absolute;
-			top: 40px;
-			left: 45%;
-			right: 55%;
-			height: 3px;
-			background-color: rgb(52, 162, 240);
-			transition: all .5s; 
-		}
-		.nav>li:hover:after{
-			left: 25%;
-			right: 25%;
-		}
-		.navbar-default .navbar-nav>li>a{
-			color: #fff !important;
-		}
-		.banner-video{
-			overflow: hidden;
-		}
-		#video1{
-			display: block;
-			width: 100%;
-		}
-		#particles-js{
-			position: absolute;
-			/*width: 100%;*/
-			top: 0;
-			left: 0;
-			right: 0;
-		}
-		.gray-bg{
-			height: 60px;
-			background: #EDEFF0;
-			text-align: center;
-		}
-		.gray-bg{
-			line-height: 60px;
-		    font-size: 18px;
-		    letter-spacing: 8px;
-		}
-		.arrow-down{
-			position: absolute;
-			left: 50%;
-			margin-left: -20px;
-			width: 0;
-			height: 0;
-			border-top:20px solid  #EDEFF0;
-			border-left: 20px solid transparent;
-			border-right: 20px solid transparent;
-			border-bottom: 20px solid transparent;
-		}
-		.customer-banner{
-			/*height: 300px;*/
-			padding: 80px 0;
-			background: #fff;
-		}
-		.owl-carousel .owl-prev{
-			float: left;
-		}
-		.owl-carousel .owl-next{
-			float: right;
-		}
-		.owl-carousel .owl-dots{
-			text-align: center;
-		}
-		.owl-carousel .owl-dots .owl-dot{
-			display: inline-block;
-			margin: 5px;
-		}
-		.owl-carousel .owl-dots span{
-			display: inline-block;
-			width: 46px;
-			height: 46px;
-			border-radius: 10px;
-			background: url(http://www.justalkcloud.com/images/360logo_0.png) no-repeat;
-		}		
-		.owl-carousel .owl-dots .active span{
-			background: url(http://www.justalkcloud.com/images/360logo.png) no-repeat;
-		}
-		.owl-carousel .owl-dots .owl-dot:nth-child(2) span{
-			background: url(http://www.justalkcloud.com/images/Qtone-Educaition_0.png) no-repeat;
-		}
-		.owl-carousel .owl-dots  .owl-dot:nth-child(2).active span{
-			background: url(http://www.justalkcloud.com/images/Qtone-Educaition.png) no-repeat;
-		}
-		.owl-carousel .owl-dots .owl-dot:nth-child(3) span{
-			background: url(http://www.justalkcloud.com/images/Fun-dubbing_0.png) no-repeat;
-		}
-		.owl-carousel .owl-dots  .owl-dot:nth-child(3).active span{
-			background: url(http://www.justalkcloud.com/images/Fun-dubbing.png) no-repeat;
-		}
-		.video-need{
-			color: #fff;
-			min-height: 688px;
-			background: url(http://www.justalkcloud.com/images/cloud-functions.png) no-repeat;
-			/*background-attachment:fixed;*/
-			background-size: cover;
-		}
-		.video-need h2,.cloud-service h2,.onlie-teach h2{
-			margin: 80px 0 60px;
-			font-size: 36px;
-			text-align: center;
-		}
-		.video-need .title,.cloud-service .title{
-			margin-bottom: 20px;
-			font-size: 18px;
-			text-overflow: ellipsis;
-		    white-space: nowrap;
-		    overflow: hidden;
-		}
-		.video-need .detail-need-main{
-			height: 160px;
-			margin-top: 40px;
-			border-bottom: 1px dashed #ced7db;
-		}
-		.video-need .bot-line{
-		    position: absolute;
-		    width: 100%;
-		    bottom: -1px;
-		    left: 0;
-			float: none;
-			margin: 0 auto;
-			border-bottom: 1px dashed #ced7db;
-		}
-		.video-need .detail-need-main p{
-			color: #d8d8d8;
-		}
-		.video-need .detail-need-main.last{
-			border-bottom: 0;
-		}
-		.detail-cloud-main{
-			height: 250px;
-			text-align: center;
-		}
-		.cloud-service .container{
-			max-width: 1000px;
-			margin: auto;
-		}
-		.owl-carousel .owl-item .item-main-detail .more a{
-			float: right;
-			font-size: 14px;
-			margin-top: 30px;
-		}
-		.owl-carousel .owl-item .item-main-detail .more img{
-			width: 18px;
-			display: inline-block;
-		}
-		.owl-carousel .owl-item .item-main-detail{
-			line-height: 30px;
-			font-size: 16px;
-			text-align: left;
-		}
-		.owl-carousel .owl-item .item-main-detail span{
-			width: 20px;
-			float: left;
-		}
-
-		.owl-carousel .owl-item .item-main-detail span:nth-child(2){
-			float: right;
-		}
-		.cloud-service .icon{
-			margin-bottom: 20px;
-		}
-		.onlie-teach{
-			height: 500px;
-		}
-		.onlie-teach .big-case{
-			height: 280px;
-			background: url(http://www.justalkcloud.com/images/offline_edu.png) center no-repeat;
-		}
-		.onlie-teach .sm-case-left{
-			height: 190px;
-			background: url(http://www.justalkcloud.com/images/yiliao.png) center no-repeat;
-		}
-		.onlie-teach .sm-case-right{
-			height: 190px;
-			background: url(http://www.justalkcloud.com/images/tongxun.png) center no-repeat;
-		}
-		.onlie-teach .big-case,.onlie-teach .sm-case{
-			margin-bottom: 30px;
-			background-size: cover;
-		    border-radius: 5px;
-		    transition: all .3s;
-		}
-		.onlie-teach .big-case:hover,.onlie-teach .sm-case:hover{
-	        box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-		    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
-		}
-
-		@media (max-width: 992px){
-			.video-need .detail-need-main{
-				float: none;
-			    margin-left: auto;
-			    margin-right: auto;
-			}
-		} 
-		@media (min-width: 992px){
-			.video-need .detail-need-main:nth-child(even){
-				margin-left: 4%;
-			}
-		} 
-		@media (max-width: 400px){
-			.video-need h2, .cloud-service h2 , .onlie-teach h2 {
-			    font-size: 26px;
-			}
-		} 
-		@media (max-width: 320px){
-			.detail-cloud-main{
-				height: 280px;
-			}
-		} 
+	    
     </style>
   </head>
   <body>
@@ -365,15 +75,64 @@
 		</nav>
 	
  	</header>
- 	<div class="banner-video">
+
+ 	<!-- pc轮播 -->
+ 	<div class="banner-video hidden-xs">
  		<video id="video1" autoplay="autoplay" loop="loop">
 			<source id="banner_source" src="http://www.justalkcloud.com/images/banner.mp4">
 		</video>
-
+		
 		<div id="particles-js"></div>
+		<div class="banner-info col-sm-offset-1">
+			<div class="">
+				<h2>全球领先的移动音视频<br class="hidden-lg">通讯云平台</h2>
+			</div>
+			
+			<a class="case" href="#">在线教育解决方案</a>
+			<a class="free" href="#">免费体验</a>
+		</div>
  	</div>
+	<!-- 手机轮播 -->
+ 	<div class="banner-m visible-xs-block">
+ 		<div id="carousel-example-generic" class="carousel carousel-fade slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
 
- 	
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			    <div class="item active" style="background: url(http://www.justalkcloud.com/cn/images/index-us1.jpg) center no-repeat;background-size: cover;">
+			      
+			      <div class="carousel-caption">
+			        <p>每一次改变，都是诚意与心意。—— JusTalk Cloud 新价格上线 ></p>
+			      </div>
+			    </div>
+			    <div class="item" style="background: url(http://www.justalkcloud.com/cn/images/index1-02.jpg) center no-repeat;background-size: cover;">
+			      <div class="carousel-caption">
+			       <p>教育云解决方案惊艳上线 —— 打造属于你的智慧教育 app ></p>
+			      </div>
+			    </div>
+			    <div class="item" style="background: url(http://www.justalkcloud.com/cn/images/index1-00.jpg) center no-repeat;background-size: cover;">
+			      <div class="carousel-caption">
+			       <p>每一次改变，都是诚意与心意。—— JusTalk Cloud 新价格上线 ></p>
+			      </div>
+			    </div>
+			    
+			  </div>
+			</div>
+	 		<div class="banner-info col-sm-12 col-xs-12 text-center">
+				<div class="">
+					<h2>全球领先的移动音视频通讯云平台</h2>
+				</div>
+				
+				<a class="case" href="#">在线教育解决方案</a>
+				<a class="free" href="#">免费体验</a>
+			</div>
+    	
+ 	</div>
     
 
     <div class="gray-bg">
@@ -553,6 +312,16 @@
 			    smartSpeed:800/*控制切换速度*/
 			    //nav:true/*是否显示前后切换按钮*/
 			});
+    	})
+
+    	$(document).on("scroll",function () {
+    		var top = $(this).scrollTop(); 
+    		
+    		if(top>10){
+    			$('header').addClass('site-head')
+    		}else{
+    			$('header').removeClass('site-head')
+    		}
     	})
     </script>
 
