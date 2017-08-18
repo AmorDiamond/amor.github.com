@@ -389,4 +389,7 @@ header.site-head{
 	.navbar-right{
 		float: none !important;
 	}
+	header{
+	    background-color: rgba(0,0,0,0.6);
+	}
 } 
