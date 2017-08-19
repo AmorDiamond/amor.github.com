@@ -248,7 +248,7 @@ header.site-head{
 	/*background-attachment:fixed;*/
 	background-size: cover;
 }
-.video-need h2,.cloud-service h2,.onlie-teach h2{
+.video-need h2,.cloud-service h2,.onlie-teach h2,.partner h2{
 	margin: 80px 0 60px;
 	font-size: 36px;
 	text-align: center;
@@ -313,9 +313,6 @@ header.site-head{
 .cloud-service .icon{
 	margin-bottom: 20px;
 }
-.onlie-teach{
-	height: 500px;
-}
 .onlie-teach .big-case{
 	height: 280px;
 	background: url(http://www.justalkcloud.com/images/offline_edu.png) center no-repeat;
@@ -329,10 +326,32 @@ header.site-head{
 	background: url(http://www.justalkcloud.com/images/tongxun.png) center no-repeat;
 }
 .onlie-teach .big-case,.onlie-teach .sm-case{
+	text-align: center;
+	color: #fff;
 	margin-bottom: 30px;
 	background-size: cover;
     border-radius: 5px;
     transition: all .3s;
+}
+.onlie-teach .big-case h3{
+	font-size: 30px;
+	padding-top: 70px;
+}
+.onlie-teach .big-case p{
+	padding-top: 10px;
+	font-size: 26px;
+}
+.onlie-teach .big-case .more{
+	padding-top: 10px;
+}
+.onlie-teach .big-case .more a{
+	text-decoration: none;
+	color: #fff;
+}
+.onlie-teach .sm-case h3{
+	font-size: 28px;
+	line-height: 190px;
+	margin: 0;
 }
 .onlie-teach .big-case:hover,.onlie-teach .sm-case:hover{
     box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
@@ -346,11 +365,49 @@ header.site-head{
     background-size: cover;
 }
 
+footer{
+	margin-top: 30px;
+	padding: 30px 0;
+	background-color: #0e2335;
+    color: #fff;
+}
+footer .article{
+	padding: 0;
+}
+footer .article dt{
+	margin-top: 20px;
+	font-size: 18px;
+	line-height: 45px;
+	color: #AABDBD;
+	font-weight: normal;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+footer .article dd{
+	line-height: 30px;
+}
+footer .article a {
+    text-decoration: none;
+    color: #777;
+}
+footer .article a:hover {
+    color: #ededed;
+}
+
 @media (max-width: 992px){
 	.video-need .detail-need-main{
 		float: none;
 	    margin-left: auto;
 	    margin-right: auto;
+	}
+
+	footer .article{
+		border-bottom: 1px dashed #6e6e6e;
+	}
+	footer .article.last{
+		border-bottom: 0;
+		white-space:nowrap;
 	}
 } 
 @media (min-width: 992px){
@@ -392,5 +449,59 @@ header.site-head{
 	}
 	header{
 	    background-color: rgba(0,0,0,0.6);
+	}
+}
+@media (max-width: 768px) {
+	.nav>li:after{
+		content: none;
+	}
+	.nav>li{
+		text-align: center;
+		border-bottom: 1px dashed #ededed;
+		overflow: hidden;
+	}
+	.navbar-default .navbar-nav>li>a:hover{
+	    color: #03A9F4 !important;
+	}
+	.navbar-nav li .dropdown-menu{
+		width: 100%;
+		transform: none;
+		opacity: 1;
+		display: none;
+	}
+	.navbar-nav .dropdown-menu li{
+		width: 50%;
+	    text-align: center;
+	    margin-right: 0;
+	}
+	.nav>li:hover .dropdown-menu{
+		position: relative;
+		display: block;
+	}
+	.navbar-fixed-top .navbar-collapse{
+		max-height: none;
+	}
+	header{
+		background: none;
+	    border-bottom: 1px solid transparent;
+	    -webkit-box-shadow: 0 2px 20px rgba(0,0,0,.16);
+	    -moz-box-shadow: 0 2px 20px rgba(0,0,0,.16);
+	    box-shadow: 0 2px 20px rgba(0,0,0,.16);
+	    background-color: rgba(255,255,255,.97);
+	}
+	.navbar-brand {
+	    background: url(http://www.justalkcloud.com/cn/images/cloud_logo@2x.png) no-repeat;
+        background-size: contain;
+	    background-position: center;
+	}
+	.navbar-default .navbar-nav>li>a{
+		color: #383838 !important;
+	}
+	.dropdown-menu>li>a{
+		color: #6e6e6e;
+	}
+	.navbar-nav .navbar-btn{
+	    width: 80%;
+	    margin-left: 10%;
 	}
 } 
