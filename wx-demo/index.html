@@ -4,21 +4,89 @@
 	<meta charset="UTF-8">
 	<title>WX-Demo</title>
 	<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 </head>
 <body>
 		
 	<script>
+	var time = Math.ceil(+new Date()/1000);
+	var nonceStr='';
+
+	for(var i=0;i<16;i++){
+		nonceStr+=String(Math.floor(Math.random()*10));
+	}
+
+
+	// var accessToken = getLocalMsg('accessToken');
+	// if(!accessToken || accessToken.expire_time<time){
+
+	// 	accessToken = setLocalMsg('accessToken',access_token);
+	// }
+	// var jsapiTicket = getLocalMsg('jsapiTicket');
+	// if(!jsapiTicket || jsapiTicket.expire_time<time){
+
+	// 	jsapiTicket = setLocalMsg('jsapiTicket',jsapi_ticket);
+	// }
+	getToken ();
+	console.log(time)
+	console.log(nonceStr)
 		wx.config({
 		    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 		    // appId: 'wx25bcadab6332cd52', // 必填，公众号的唯一标识
-		    // timestamp: '', // 必填，生成签名的时间戳
-		    // nonceStr: '', // 必填，生成签名的随机串
+		    // timestamp: time, // 必填，生成签名的时间戳
+		    // nonceStr: nonceStr, // 必填，生成签名的随机串
 		    // signature: '',// 必填，签名，见附录1
 		    jsApiList: ["onMenuShareTimeline"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 		});
 	    wx.error(function (res) {
 	        alert(res);
 	    });
+
+
+	    function getToken () {
+	    	var url = "https://api.weixin.qq.com/cgi-bin/token";
+	    	$.ajax({
+	    		url:url,
+	    		type:'GET',
+	    		dataType:'jsonp',
+	    		data:{'grant_type':'client_credential','appid':'wx25bcadab6332cd52','secret':'d7d4b491902637445a2402713fcdca67'},
+	    		success:getTicket
+	    	}) 
+	    }
+	    function getTicket (result) {
+	    	// console.log(result.access_token)
+	    	// var url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=$accessToken"; 
+	    }
+	    /*
+		储存信息到localStorage：
+		localName:储存在localStorage里的名称
+		obj:要储存的数据
+		*/
+		function setLocalMsg(localName,obj) {
+			localStorage.setItem(localName,JSON.stringify(obj)); //往本地存cartList这个数组(先将其转为字符串)  
+			userName=JSON.parse(localStorage.getItem(localName));  //从本地取出 cartList这个数组并转为对象 
+			// console.log(typeof cartList);
+			console.log(userName);
+			console.log(localStorage);
+			return userName;
+			// alert(localStorage.userName)
+			// localStorage.removeItem("userName");//清除userName的值
+			// localStorage.clear(); //批量删除数据
+		}
+
+
+
+		/*
+		获得储存的localStorage：
+		localName:储存在localStorage里的名称
+		*/
+		function getLocalMsg(localName) {
+		 	// localStorage.clear(); //批量删除数据
+			return JSON.parse(localStorage.getItem(localName));  //从本地取出 cartList这个数组并转为对象 
+			
+			// localStorage.removeItem("userName");//清除userName的值
+			// localStorage.clear(); //批量删除数据
+		}
 	</script>
 </body>
 </html>
