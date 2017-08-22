@@ -28,6 +28,7 @@
 	// 	jsapiTicket = setLocalMsg('jsapiTicket',jsapi_ticket);
 	// }
 	getToken ();
+	// getTicket ();
 	console.log(time)
 	console.log(nonceStr)
 		wx.config({
@@ -44,18 +45,37 @@
 
 
 	    function getToken () {
-	    	var url = "https://api.weixin.qq.com/cgi-bin/token";
+	    		    	
+	  //   	$.getJSON("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx25bcadab6332cd52&secret=d7d4b491902637445a2402713fcdca67&jsoncallback=?", function (data) {
+			//     console.log(data)
+			// });
+			var url = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential";
 	    	$.ajax({
 	    		url:url,
 	    		type:'GET',
 	    		dataType:'jsonp',
-	    		data:{'grant_type':'client_credential','appid':'wx25bcadab6332cd52','secret':'d7d4b491902637445a2402713fcdca67'},
-	    		success:getTicket
+	    		data:{'appid':'wx25bcadab6332cd52','secret':'d7d4b491902637445a2402713fcdca67'},
+		        success:function(json){ 
+		             eval(json); 
+		        }
 	    	}) 
 	    }
 	    function getTicket (result) {
-	    	// console.log(result.access_token)
-	    	// var url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&access_token=$accessToken"; 
+	    	console.log(result)
+	    	var url = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi";
+	    	$.ajax({
+	    		url:url,
+	    		type:'GET',
+	    		dataType:'jsonp',
+	    		data:{'access_token':'TbwGRn7lQSU2Uybz-8to5Hr44T0fcghzm-HVcENCbUn3cPpJIW0n42nhCCan2_0k_8-AlxI5LJAo4JKKSBuE8AWIht6NVdzO9BePMEVcW6tK7q28BAt2a270oqtEpeaxZHRhAEACKU'},
+	    		// jsonp: "callback",
+		         //自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
+		         // jsonpCallback:"getTicket",
+		         //成功获取跨域服务器上的json数据后,会动态执行这个callback函数
+		         success:function(json){ 
+		             console.log(json); 
+		         }
+	    	})  
 	    }
 	    /*
 		储存信息到localStorage：

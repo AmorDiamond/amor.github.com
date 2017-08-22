@@ -1,12 +1,16 @@
 body{
 	font-family: Muli,'Helvetica Neue','Hiragino Sans GB','WenQuanYi Micro Hei','Microsoft Yahei',sans-serif;
 }
+a:hover{
+	text-decoration: none;
+}
 header{
 	padding: 0 20px;
 	border-radius: 0;
 	border: 0;
     border-bottom: transparent;
 	background: -webkit-linear-gradient(top,rgba(0,0,0,.4),rgba(0,0,0,0));
+	-webkit-transition: all .3s;
 	transition: all .3s;
 }
 .navbar{
@@ -55,6 +59,7 @@ header.site-head{
     padding: 6px 20px;
     background: transparent;
     color: #03A9F4;
+    -webkit-transition: all .3s;
     transition: all .3s;
 }		
 .navbar-nav .navbar-btn:hover{
@@ -88,11 +93,20 @@ header.site-head{
 	padding-right: 20px;
 }
 .nav>li .dropdown-menu{
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	-o-transform: scale(0);
+	-moz-transform: scale(0);
 	transform: scale(0);
 	opacity: 0;
+	-webkit-transition: all .5s;
 	transition: all .5s;
 }
 .nav>li:hover .dropdown-menu{
+	-webkit-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	-o-transform: scale(1.0);
+	-moz-transform: scale(1.0);
 	transform: scale(1.0);
 	opacity: 1;
 }
@@ -104,6 +118,7 @@ header.site-head{
 	right: 55%;
 	height: 3px;
 	background-color: rgb(52, 162, 240);
+	-webkit-transition: all .5s; 
 	transition: all .5s; 
 }
 .nav>li:hover:after{
@@ -138,7 +153,7 @@ header.site-head{
 .banner-m .banner-info h2{
     font-size: 38px;
 }
-.carousel{
+.banner-m .carousel{
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -163,6 +178,7 @@ header.site-head{
 	color: #fff;
 	text-align: center;
 	text-decoration: none;
+	-webkit-transition: all .3s;
 	transition: all .3s;
 }
 .banner-info a.case,.banner-info a.free:hover{
@@ -331,6 +347,7 @@ header.site-head{
 	margin-bottom: 30px;
 	background-size: cover;
     border-radius: 5px;
+    -webkit-transition: all .3s;
     transition: all .3s;
 }
 .onlie-teach .big-case h3{
@@ -395,6 +412,116 @@ footer .article a:hover {
     color: #ededed;
 }
 
+
+
+/* cloud */
+.banner-cloud .banner-info{
+	color: #fff;
+	font-size: 22px;
+	font-weight: 400;
+	padding: 150px 0;
+}
+.banner-cloud .banner-info .case{
+	margin-top: 30px;
+}
+/* bootstrap淡入淡出轮播 */
+.carousel-fade .carousel-inner .item {
+	transition-property: opacity;
+	-webkit-transition-property:opacity;
+	-moz-transition-property:opacity;
+	-ms-transition-property:opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	opacity: 0
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+	opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	left: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+
+
+.cloud-list .cloud-title{
+    margin: 80px;
+}.cloud-list .cloud-title h2{
+    margin-bottom: 30px;
+}
+.cloud-item{
+	margin-bottom: 50px;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+}
+.cloud-item:hover{    
+	box-shadow: 0px 5px 8px 1px #eee;
+	-webkit-transform: translateY(-10px);
+	-ms-transform: translateY(-10px);
+	-moz-transform: translateY(-10px);
+	-o-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+.cloud-pic img{
+	width: 100%;
+}
+.cloud-item .info{    
+	text-align: left;
+}
+.contact-pic{
+	background: url(http://www.justalkcloud.com/cn/private_cloud/images/bg-safe.png);
+	min-height: 450px;
+    padding-top: 20px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+.contact-pic img{
+	width: 100%;
+}
+.contact-pic .contact-title{
+    padding-top: 10%;
+    font-size: 36px;
+}
+.contact-info{
+	color: #2196F3;
+}
+.contact-info .info-text{
+	margin-top: 30px;
+}
+.contact-info .more a{
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 40px;
+	color: #fff;
+	border: 1px solid #15B2FF;
+	border-radius: 25px;
+	background: linear-gradient(90deg, #15B2FF , #298CE2);
+    font-size: 16px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0,0.2);
+}
+.contact-info .more a:hover{
+	color: #2196F3;
+	background: transparent;
+}
+
+
+
 @media (max-width: 992px){
 	.video-need .detail-need-main{
 		float: none;
@@ -410,11 +537,13 @@ footer .article a:hover {
 		white-space:nowrap;
 	}
 } 
+
 @media (min-width: 992px){
 	.video-need .detail-need-main:nth-child(even){
 		margin-left: 4%;
 	}
 } 
+
 @media (max-width: 400px){
 	.video-need h2, .cloud-service h2 , .onlie-teach h2 {
 	    font-size: 26px;
@@ -424,16 +553,19 @@ footer .article a:hover {
 	    letter-spacing: 0;
 	}
 } 
+
 @media (max-width: 320px){
 	.detail-cloud-main{
 		height: 280px;
 	}
 } 
+
 @media (min-width: 1200px){
 	.banner-video .banner-info{
 		top: 180px;
 	}
 }  
+
 @media (min-width: 768px) and (max-width: 840px){
 	.navbar-header{
 		float: none;
@@ -465,6 +597,10 @@ footer .article a:hover {
 	}
 	.navbar-nav li .dropdown-menu{
 		width: 100%;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-o-transform: none;
+		-ms-transform: none;
 		transform: none;
 		opacity: 1;
 		display: none;
@@ -504,4 +640,42 @@ footer .article a:hover {
 	    width: 80%;
 	    margin-left: 10%;
 	}
+
+	/*cloud*/
+	.banner-cloud .banner-info{
+		text-align: center;
+		font-size: 16px;
+	}
+	.banner-cloud .banner-info h2{
+		font-size: 32px;
+		padding: 0 10px;
+	}
+	.banner-cloud .banner-info .case{
+		width: 80%;
+	}
+	.contact-pic img {
+	    padding-top: 50px;
+	}
+	.contact-pic .contact-title{
+		font-size: 28px;
+	}
 } 
+
+
+
+@media (min-width: 768px){
+	.carousel-indicators{
+		text-align: right;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 992px){
+	.cloud-pic img{
+		width: 50%;
+	}
+}
+@media (max-width: 991px) and (min-width: 800px){
+	.cloud-list .container {
+	    width: 100%;
+	}
+}
