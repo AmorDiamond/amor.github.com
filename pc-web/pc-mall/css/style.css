@@ -2351,13 +2351,13 @@ i{
 	margin: 0 auto;
 	overflow: hidden;
 }
-.login-box{
+.login-bd .login-box{
 	float: right;
 	width: 300px;
 	padding: 20px;
 	background: #fff;
 }
-.login-box a{
+.login-bd .login-box a{
 	color: #E31939;
 }
 .login-con .login-tab{
