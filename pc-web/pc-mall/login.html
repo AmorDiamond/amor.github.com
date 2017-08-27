@@ -31,7 +31,7 @@
 				</div>
 				<div class="form-tab">
 					<div class="form-con">
-						<form action="#" class="login-form">
+						<form action="#" class="login-form" onSubmit="return loginCheck(this)">
 							<div class="form-group name">
 								<i class="icon-input icon-font">&#xe62e;</i>
 								<input type="text" name="user" value="" placeholder="手机/邮箱/用户名">
@@ -52,7 +52,7 @@
 					
 					<!-- 动态密码登录 -->
 					<div class="form-con hide">
-						<form action="#" class="login-form">
+						<form action="#" class="login-form" onSubmit="return loginCheck(this)">
 							<div class="form-group name">
 								<i class="icon-input icon-font">&#xe62e;</i>
 								<input type="text" name="user" value="" placeholder="手机号码">
@@ -123,7 +123,7 @@
 			}
 		})
 
-		
+
 
 	</script>
 </body>

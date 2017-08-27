@@ -128,106 +128,63 @@
 			}
 		})
 
-		function registerCheck (obj) {
-			console.log(12);
-			var frm = $(obj)[0];
-			var isMobile = frm.elements['mobile'];
-			if(isMobile){
-				var mobile = frm.elements['mobile'].value;
-			}else{
-				var email = frm.elements['email'].value;
-			}
+		// function registerCheck (obj) {
+		// 	console.log(12);
+		// 	var frm = $(obj)[0];
+		// 	var isMobile = frm.elements['mobile'];
+		// 	if(isMobile){
+		// 		var mobile = frm.elements['mobile'].value;
+		// 	}else{
+		// 		var email = frm.elements['email'].value;
+		// 	}
 			
-			var password = frm.elements['password'].value;
-			var msg='';
-			if(isMobile){
-				if(!mobile){
-					msg +='手机号码不能为空！\n';
-				}
-			}else{
-				if(!email){
-					msg +='邮箱不能为空！\n';
-				}
-			}
+		// 	var password = frm.elements['password'].value;
+		// 	var msg='';
+		// 	if(isMobile){
+		// 		if(!mobile){
+		// 			msg +='手机号码不能为空！\n';
+		// 		}
+		// 	}else{
+		// 		if(!email){
+		// 			msg +='邮箱不能为空！\n';
+		// 		}
+		// 	}
 			
-			if(!password){
-				msg +='密码不能为空！\n';
+		// 	if(!password){
+		// 		msg +='密码不能为空！\n';
 				
-			}
+		// 	}
 			
-			if(isMobile){
-				var mobile_code = frm.elements['mobile-code'].value;
-			}else{
-				var email_code = frm.elements['email-code'].value;
-			}
-			if(isMobile){
-				if(!mobile_code){
-					msg +='校验码不能为空！\n';
+		// 	if(isMobile){
+		// 		var mobile_code = frm.elements['mobile-code'].value;
+		// 	}else{
+		// 		var email_code = frm.elements['email-code'].value;
+		// 	}
+		// 	if(isMobile){
+		// 		if(!mobile_code){
+		// 			msg +='校验码不能为空！\n';
 					
-				}
-			}else{
-				if(!email_code){
-					msg +='校验码不能为空！\n';
+		// 		}
+		// 	}else{
+		// 		if(!email_code){
+		// 			msg +='校验码不能为空！\n';
 					
-				}
-			}
+		// 		}
+		// 	}
 			
 			
-			if(msg){
-				alert(msg);
-				return false;
-			}
+		// 	if(msg){
+		// 		alert(msg);
+		// 		return false;
+		// 	}
 			
 			
-			return false;
-		}
+		// 	return false;
+		// }
 
 
 
-		function registerCheck2 (obj) {
-			var frm = $(obj)[0];
-			var isMobile = frm.elements['mobile'];
-			
-			var password = frm.elements['password'].value;
-			var msg='';
-			if(isMobile){
-				var mobile = frm.elements['mobile'].value;
-				var mobile_code = frm.elements['mobile-code'].value;
-				if(!mobile){
-					msg +='手机号码不能为空！\n';
-				}
-				if(!mobile_code){
-					msg +='校验码不能为空！\n';
-					
-				}
-
-			}else{
-				var email = frm.elements['email'].value;
-				var email_code = frm.elements['email-code'].value;
-				if(!email){
-					msg +='邮箱不能为空！\n';
-				}
-				if(!email_code){
-					msg +='校验码不能为空！\n';
-					
-				}
-			}
-			
-			if(!password){
-				msg +='密码不能为空！\n';
-				
-			}
-			
-			if(msg){
-				alert(msg);
-				return false;
-			}else{
-				location.href='index.html';
-				return false;
-			}
-
-			
-		}
+		
 	</script>
 </body>
 </html>

@@ -180,3 +180,91 @@ function settime(obj,cookie_name) {
 	}
 	var timerOut = setTimeout(function() { settime(obj,cookie_name) },1000) //每1000毫秒执行一次	
 }
+
+
+/*验证登录*/
+function loginCheck (obj) {
+	var frm = $(obj)[0];
+	var isMobile = frm.elements['mobile-code'];
+	var msg='';
+	if(isMobile){
+		var mobile = frm.elements['user'].value;
+		var mobile_code = frm.elements['mobile-code'].value;
+		if(!mobile){
+			msg +='手机号码不能为空！\n';
+		}
+		if(!mobile_code){
+			msg +='校验码不能为空！\n';
+			
+		}
+
+	}else{
+		var user = frm.elements['user'].value;
+		var password = frm.elements['password'].value;
+		if(!user){
+			msg +='帐号不能为空！\n';
+		}
+		if(!password){
+			msg +='密码不能为空！\n';
+		
+		}
+	}
+	
+
+	if(msg){
+		alert(msg);
+		return false;
+	}else{
+		location.href='index.html';
+		return false;
+	}
+
+	
+}
+
+
+/*验证注册*/
+function registerCheck2 (obj) {
+	var frm = $(obj)[0];
+	var isMobile = frm.elements['mobile'];
+	
+	var password = frm.elements['password'].value;
+	var msg='';
+	if(isMobile){
+		var mobile = frm.elements['mobile'].value;
+		var mobile_code = frm.elements['mobile-code'].value;
+		if(!mobile){
+			msg +='手机号码不能为空！\n';
+		}
+		if(!mobile_code){
+			msg +='校验码不能为空！\n';
+			
+		}
+
+	}else{
+		var email = frm.elements['email'].value;
+		var email_code = frm.elements['email-code'].value;
+		if(!email){
+			msg +='邮箱不能为空！\n';
+		}
+		if(!email_code){
+			msg +='校验码不能为空！\n';
+			
+		}
+	}
+	
+	if(!password){
+		msg +='密码不能为空！\n';
+		
+	}
+	
+	if(msg){
+		alert(msg);
+		return false;
+	}else{
+		location.href='index.html';
+		return false;
+	}
+
+	
+}
