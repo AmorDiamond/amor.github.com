@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
 	<style>
 		body{
 			background-color: #fff;
@@ -59,7 +60,7 @@
 							</div>
 							<div class="form-group password">
 								<i class="icon-input icon-font">&#xe60b;</i>
-								<input type="text" class="mobile-code" name="mobile-code" value="" placeholder="验证码"><button>获取验证码</button>
+								<input type="text" class="mobile-code" name="mobile-code" value="" placeholder="验证码"><button type="button" class="send-code">获取验证码</button>
 								<div class="tips"><i class="icon-font">&#xe61e;</i><span>验证码不能为空！</span></div>
 							</div>
 							<div class="form-bt">
@@ -110,7 +111,20 @@
 					$(this).siblings('.tips').css('visibility','hidden');
 				}
 			})
+
+
+			/*倒计时*/
+			$(".send-code").click(function (){
+				sendCode($(this),60,'secondsremained');
+			});
+			v = getCookieValue("secondsremained");//获取cookie值
+			if(v>0){
+				settime($(".send-code"),'secondsremained');//开始倒计时
+			}
 		})
+
+		
+
 	</script>
 </body>
 </html>

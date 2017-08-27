@@ -37,7 +37,7 @@
 							<div class="tips"><i class="icon-font">&#xe61e;</i><span>密码不能为空！</span></div>
 						</div>
 						<div class="form-group">
-							<label for="mobile-code"><span class="spark">*</span>短信校验码：</label><input type="text" id="mobile-code" name="mobile-code" class="mobile-code"><button>获取短信校验码</button>
+							<label for="mobile-code"><span class="spark">*</span>短信校验码：</label><input type="text" id="mobile-code" name="mobile-code" class="mobile-code"><button type="button" class="send-code">获取短信校验码</button>
 							<div class="tips"><i class="icon-font">&#xe61e;</i><span>校验码不能为空！</span></div>
 						</div>
 						<div class="form-bt">
@@ -59,7 +59,7 @@
 							<div class="tips"><i class="icon-font">&#xe61e;</i><span>密码不能为空！</span></div>
 						</div>
 						<div class="form-group">
-							<label for="email-code"><span class="spark">*</span>邮箱校验码：</label><input type="text" id="email-code" name="email-code" class="email-code"><button>获取邮箱校验码</button>
+							<label for="email-code"><span class="spark">*</span>邮箱校验码：</label><input type="text" id="email-code" name="email-code" class="email-code"><button type="button" class="send-code">获取邮箱校验码</button>
 							<div class="tips"><i class="icon-font">&#xe61e;</i><span>校验码不能为空！</span></div>
 						</div>
 						<div class="form-bt">
@@ -109,6 +109,16 @@
 					$(this).siblings('.tips').css('visibility','hidden');
 				}
 			})
+
+
+			/*倒计时*/
+			$(".send-code").click(function (){
+				sendCode($(this),60,'secondsregister');
+			});
+			v = getCookieValue("secondsregister");//获取cookie值
+			if(v>0){
+				settime($(".send-code"),'secondsregister');//开始倒计时
+			}
 		})
 
 		function registerCheck (obj) {

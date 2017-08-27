@@ -115,3 +115,68 @@ function wheelScroll(){
 			
 	});
 }
+
+
+//发送验证码时添加cookie
+function addCookie(c_name,value,expiresHours){ 
+	//判断是否设置过期时间,0代表关闭浏览器时失效
+	if(expiresHours>0){ 
+		var exdate=new Date(); 
+		exdate.setTime(exdate.getTime()+expiresHours*1000); 
+		document.cookie=c_name+ "=" +escape(value)+((expiresHours==null) ? "" : ";expires="+exdate.toGMTString());
+	}else{
+		// $.cookie(name, escape(value));
+		document.cookie=c_name+ "=" +escape(value);
+	}
+
+} 
+//修改cookie的值
+function editCookie(c_name,value,expiresHours){ 
+	if(expiresHours>0){ 
+		var exdate=new Date(); 
+		exdate.setTime(exdate.getTime()+expiresHours*1000); //单位是毫秒
+		
+		document.cookie=c_name+ "=" +escape(value)+((expiresHours==null) ? "" : ";expires="+exdate.toGMTString());
+	} else{
+		document.cookie=c_name+ "=" +escape(value);
+	}
+} 
+//根据名字获取cookie的值
+function getCookieValue(c_name){ 
+	if (document.cookie.length>0){
+	  c_start=document.cookie.indexOf(c_name + "=")
+	  if (c_start!=-1){ 
+		    c_start=c_start + c_name.length+1 
+		    c_end=document.cookie.indexOf(";",c_start)
+		    if (c_end==-1) c_end=document.cookie.length
+		    return unescape(document.cookie.substring(c_start,c_end))
+	    } 
+  	}
+	return ""
+}
+
+
+//发送验证码
+function sendCode(obj,times,cookie_name){
+	console.log(cookie_name)
+	addCookie(cookie_name,times,60);//添加cookie记录,有效时间60s
+	settime(obj,cookie_name);//开始倒计时
+}
+//开始倒计时
+var countdown;
+function settime(obj,cookie_name) { 
+	countdown=getCookieValue(cookie_name);
+	console.log(document.cookie);
+	if (countdown == 0 || countdown == null) { 
+		obj.removeAttr("disabled"); 
+		obj.html("获取验证码");
+		clearTimeout(timerOut); 
+		return;
+	} else { 
+		obj.attr("disabled", true); 
+		obj.html("重新发送(" + countdown + ")"); 
+		countdown--;
+		editCookie(cookie_name,countdown,countdown+1);
+	}
+	var timerOut = setTimeout(function() { settime(obj,cookie_name) },1000) //每1000毫秒执行一次	
+}
