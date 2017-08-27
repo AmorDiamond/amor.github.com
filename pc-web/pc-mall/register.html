@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>免费注册</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+		<style>
+		body{
+			background-color: #fff;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="login-hd">
+		<a href="index.html"><img src="images/57p58PICJxm.jpg" alt=""></a><span>欢迎注册</span>
+	</div>
+	<div class="login-bd register-bd">
+		<div class="register-tab">
+			<div class="register-way active">手机注册</div>
+			<div class="register-way register-email">邮箱注册</div>
+		</div>
+		<div class="register-box">
+			<div class="form-tab fl">
+				<div class="form-con">
+					<form action="#" class="register-form" onSubmit="return registerCheck2(this)">
+						<div class="form-group">
+							<label for="mobile-num"><span class="spark">*</span>手机号：</label><input type="text" id="mobile-num" name="mobile">
+							<div class="tips"><i class="icon-font">&#xe61e;</i><span>手机号码不能为空！</span></div>
+						</div>
+						<div class="form-group">
+							<label for="password"><span class="spark">*</span>密码：</label><input type="text" id="password" name="password">
+							<div class="tips"><i class="icon-font">&#xe61e;</i><span>密码不能为空！</span></div>
+						</div>
+						<div class="form-group">
+							<label for="mobile-code"><span class="spark">*</span>短信校验码：</label><input type="text" id="mobile-code" name="mobile-code" class="mobile-code"><button>获取短信校验码</button>
+							<div class="tips"><i class="icon-font">&#xe61e;</i><span>校验码不能为空！</span></div>
+						</div>
+						<div class="form-bt">
+							<label><input type="checkbox" name="remember">我已阅读并同意 《用户注册协议》</label>
+						</div>
+						<input class="form-btn" type="submit" value="立即注册">
+					</form>
+				</div>
+			
+				<!-- 邮箱注册 -->
+				<div class="form-con hide">
+					<form action="#" class="register-form" onSubmit="return registerCheck2(this)">
+						<div class="form-group">
+							<label for="email-num"><span class="spark">*</span>邮箱：</label><input type="text" id="email-num" name="email">
+							<div class="tips"><i class="icon-font">&#xe61e;</i><span>邮箱不能为空！</span></div>
+						</div>
+						<div class="form-group">
+							<label for="password"><span class="spark">*</span>密码：</label><input type="text" id="password" name="password">
+							<div class="tips"><i class="icon-font">&#xe61e;</i><span>密码不能为空！</span></div>
+						</div>
+						<div class="form-group">
+							<label for="email-code"><span class="spark">*</span>邮箱校验码：</label><input type="text" id="email-code" name="email-code" class="email-code"><button>获取邮箱校验码</button>
+							<div class="tips"><i class="icon-font">&#xe61e;</i><span>校验码不能为空！</span></div>
+						</div>
+						<div class="form-bt">
+							<label><input type="checkbox" name="remember">我已阅读并同意 《用户注册协议》</label>
+						</div>
+						<input class="form-btn" type="submit" value="立即注册">
+					</form>
+				</div>
+			
+			</div>
+			<div class="rigister-right fr">
+				<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/site/1/gallery/2017/05/05/14939667246795.jpg" alt="">
+			</div>
+		</div>
+	</div>
+
+	
+	<!-- 底部 -->
+	<div class="footer">
+		<div class="links">
+			<div class="title"><span>友情链接</span></div>
+		</div>
+		<div class="footer-service">
+			<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/backend/1/images/2016/11/28/14803038465459.jpg" alt="">
+		</div>
+		<div class="footer-guide">
+			<div class="footer-artice"></div>
+		</div>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+		$(function() {
+			$('.register-tab').on('click','.register-way',function () {
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.form-tab .form-con').eq($(this).index()).fadeIn(0).siblings().fadeOut(0);
+			})
+
+			$('.form-group input').on('focusout',function () {
+				var val = $(this).val();
+				console.log(val)
+				if(!val){
+					$(this).siblings('.tips').css('visibility','visible');
+				}else{
+					$(this).siblings('.tips').css('visibility','hidden');
+				}
+			})
+		})
+
+		function registerCheck (obj) {
+			console.log(12);
+			var frm = $(obj)[0];
+			var isMobile = frm.elements['mobile'];
+			if(isMobile){
+				var mobile = frm.elements['mobile'].value;
+			}else{
+				var email = frm.elements['email'].value;
+			}
+			
+			var password = frm.elements['password'].value;
+			var msg='';
+			if(isMobile){
+				if(!mobile){
+					msg +='手机号码不能为空！\n';
+				}
+			}else{
+				if(!email){
+					msg +='邮箱不能为空！\n';
+				}
+			}
+			
+			if(!password){
+				msg +='密码不能为空！\n';
+				
+			}
+			
+			if(isMobile){
+				var mobile_code = frm.elements['mobile-code'].value;
+			}else{
+				var email_code = frm.elements['email-code'].value;
+			}
+			if(isMobile){
+				if(!mobile_code){
+					msg +='校验码不能为空！\n';
+					
+				}
+			}else{
+				if(!email_code){
+					msg +='校验码不能为空！\n';
+					
+				}
+			}
+			
+			
+			if(msg){
+				alert(msg);
+				return false;
+			}
+			
+			
+			return false;
+		}
+
+
+
+		function registerCheck2 (obj) {
+			var frm = $(obj)[0];
+			var isMobile = frm.elements['mobile'];
+			
+			var password = frm.elements['password'].value;
+			var msg='';
+			if(isMobile){
+				var mobile = frm.elements['mobile'].value;
+				var mobile_code = frm.elements['mobile-code'].value;
+				if(!mobile){
+					msg +='手机号码不能为空！\n';
+				}
+				if(!mobile_code){
+					msg +='校验码不能为空！\n';
+					
+				}
+
+			}else{
+				var email = frm.elements['email'].value;
+				var email_code = frm.elements['email-code'].value;
+				if(!email){
+					msg +='邮箱不能为空！\n';
+				}
+				if(!email_code){
+					msg +='校验码不能为空！\n';
+					
+				}
+			}
+			
+			if(!password){
+				msg +='密码不能为空！\n';
+				
+			}
+			
+			if(msg){
+				alert(msg);
+				return false;
+			}else{
+				location.href='index.html';
+				return false;
+			}
+
+			
+		}
+	</script>
+</body>
+</html>

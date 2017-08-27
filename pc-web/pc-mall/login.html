@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<style>
+		body{
+			background-color: #fff;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="login-hd">
+		<a href="index.html"><img src="images/57p58PICJxm.jpg" alt=""></a><span>欢迎登录</span>
+	</div>
+	<div class="login-bg">
+		<div class="login-bd">
+			<div class="login-box">
+				<p>还没账户？<a href="#">立即注册></a></p>
+				<div class="login-con">
+				<div class="login-tab">
+					<div class="login-way active">普通登录</div>
+					<div class="login-way">动态密码登录</div>
+				</div>
+				<div class="form-tab">
+					<div class="form-con">
+						<form action="#" class="login-form">
+							<div class="form-group name">
+								<i class="icon-input icon-font">&#xe62e;</i>
+								<input type="text" name="user" value="" placeholder="手机/邮箱/用户名">
+								<div class="tips"><i class="icon-font">&#xe61e;</i><span>用户名不能为空！</span></div>
+							</div>
+							<div class="form-group password">
+								<i class="icon-input icon-font">&#xe60b;</i>
+								<input type="password" name="password" value="" placeholder="密码">
+								<div class="tips"><i class="icon-font">&#xe61e;</i><span>密码不能为空！</span></div>
+							</div>
+							<div class="form-bt">
+								<label><input type="checkbox" name="remember">自动登录</label>
+								<a href="#" class="get-password fr">忘记密码？</a>
+							</div>
+							<input class="form-btn" type="submit" value="立即登录">
+						</form>
+					</div>
+					
+					<!-- 动态密码登录 -->
+					<div class="form-con hide">
+						<form action="#" class="login-form">
+							<div class="form-group name">
+								<i class="icon-input icon-font">&#xe62e;</i>
+								<input type="text" name="user" value="" placeholder="手机号码">
+								<div class="tips"><i class="icon-font">&#xe61e;</i><span>手机号码不能为空！</span></div>
+							</div>
+							<div class="form-group password">
+								<i class="icon-input icon-font">&#xe60b;</i>
+								<input type="text" class="mobile-code" name="mobile-code" value="" placeholder="验证码"><button>获取验证码</button>
+								<div class="tips"><i class="icon-font">&#xe61e;</i><span>验证码不能为空！</span></div>
+							</div>
+							<div class="form-bt">
+								<label><input type="checkbox" name="remember">自动登录</label>
+								<a href="#" class="get-password fr">忘记密码？</a>
+							</div>
+							<input class="form-btn" type="submit" value="立即登录">
+						</form>
+					</div>
+					
+				</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+	<!-- 底部 -->
+	<div class="footer">
+		<div class="links">
+			<div class="title"><span>友情链接</span></div>
+		</div>
+		<div class="footer-service">
+			<img src="http://68dsw.oss-cn-beijing.aliyuncs.com/images/backend/1/images/2016/11/28/14803038465459.jpg" alt="">
+		</div>
+		<div class="footer-guide">
+			<div class="footer-artice"></div>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		$(function() {
+			$('.login-tab').on('click','.login-way',function () {
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.form-tab .form-con').eq($(this).index()).fadeIn(0).siblings().fadeOut(0);
+			})
+
+			$('.name input,.password input').on('focusout',function () {
+				var val = $(this).val();
+				console.log(val)
+				if(!val){
+					$(this).siblings('.tips').css('visibility','visible');
+				}else{
+					$(this).siblings('.tips').css('visibility','hidden');
+				}
+			})
+		})
+	</script>
+</body>
+</html>

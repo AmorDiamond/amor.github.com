@@ -2324,3 +2324,177 @@ i{
 	border: none;
 	cursor: pointer;
 }
+
+/*登录注册页*/
+.login-hd{
+	width: 1000px;
+	height: 40px;
+	margin: 30px auto;
+}
+.login-hd img{
+	height: 100%;
+    vertical-align: top;
+}
+.login-hd span{
+	display: inline-block;
+	padding-left: 20px;
+	margin-left: 20px;
+	font-size: 28px;
+	border-left: 1px solid #eee;
+}
+.login-bg{
+	padding: 20px 0 100px;
+	background: url(../images/2017080722485363343.jpg) top center no-repeat rgb(74, 60, 121);
+}
+.login-bd{
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.login-box{
+	float: right;
+	width: 300px;
+	padding: 20px;
+	background: #fff;
+}
+.login-box a{
+	color: #E31939;
+}
+.login-con .login-tab{
+    font-size: 14px;
+	border-bottom: 1px solid #E31939;
+	height: 32px;
+    line-height: 28px;
+	margin: 20px 0;
+}
+.login-con .login-tab .login-way{
+	float: left;
+	height: 30px;
+	padding: 0 20px;
+	border: 1px solid #fff;
+	border-width: 2px 1px;
+	border-bottom: none;
+	background: #fff;
+	cursor: pointer;
+}
+.login-con .login-tab .active{
+	color: #E31939;
+	border-color: #E31939;
+	height: 31px;
+}
+.form-con .form-group{
+	position: relative;
+}
+.form-con .tips{
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	visibility: hidden;
+}
+.form-con .tips i{
+	color: #E31939;
+	font-size: 16px;
+    margin: 0 5px;
+}
+.form-con .icon-input {
+	position: absolute;
+	top: 8px;
+	left: 5px;
+	font-size: 20px;
+}
+.form-con .form-group input{
+	width: 268px;
+	height: 35px;
+	padding-left: 30px;
+	border: 1px solid #eee;
+}
+.form-con input.mobile-code{
+	width: 180px;
+}
+.form-con button{
+	width: 78px;
+	height: 35px;
+	margin-left: 10px;
+	padding: 0;
+	border: none;
+	color: #fff;
+	background: #E31939;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.form-con .form-group input:focus{
+	border-color: #E31939;
+}
+.form-bt{
+	margin: 20px 0;
+}
+.form-btn{
+	width: 300px;
+	height: 35px;
+	border: none;
+	background: #E31939;
+	color: #fff;
+	cursor: pointer;
+}
+.register-bd .register-box{
+	padding: 50px;
+	border: 1px solid #eee;
+	overflow: hidden;
+}
+.form-group .spark{
+	display: inline-block;
+	margin: 0 5px;
+	color: #E31939;
+}
+.register-form .form-group label{
+	float: left;
+	width: 100px;
+	margin-right: 20px;
+	line-height: 39px;
+	text-align: right;
+}
+.register-form .form-bt,.register-form .form-btn,.form-con .register-form .tips{
+	margin-left: 120px;
+}
+.register-form .form-group input{
+	padding-left: 10px;
+}
+ .form-con .register-form input.mobile-code,.form-con .register-form input.email-code{
+	width: 150px;
+}
+ .form-con .register-form button{
+	width: 108px;
+}
+.register-form .form-btn{
+	width: 280px;
+}
+.register-tab{
+	font-size: 14px;
+	margin-left: 170px;
+	height: 42px;
+	line-height: 40px;
+	/*overflow: hidden;*/
+	position: relative;
+}
+.register-tab .register-way{
+	/*float: left;*/
+	position: absolute;
+	width: 133px;
+	text-align: center;
+	margin-right: 10px;
+	padding-top: 1px;
+	border: 1px solid #eee;
+	border-bottom: none;
+	z-index: 9;
+	cursor: pointer;
+}
+.register-tab .register-email{
+	left: 145px;
+}
+.register-tab .register-way.active{
+	padding-top: 0px;
+	border-top: 2px solid #E31939;
+	color: #E31939;
+    height: 41px;
+    background: #fff;
+}
