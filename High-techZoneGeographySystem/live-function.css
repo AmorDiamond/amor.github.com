@@ -1,0 +1,156 @@
+/*infoWindow概况*/
+.right-top-md-head .close-img {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #FFF url(./images/close_icon.png) no-repeat 9px 8px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+.right-top-md-head .close-img img {
+    width: 100%;
+    height: 100%;
+}
+/*污水处理厂处理量与排污量*/
+.land-panel-con-xh {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+.land-panel-con-xh .item {
+    box-shadow: #19316d 4px 8px 12px 0px;
+}
+.land-panel-con-xh .land-use-purpose .use-purpose-title {
+    width: 540px;
+    background: url(./images/foul_water_title_bg.png) no-repeat;
+}
+.right-top-md-style.wastewater {
+    top: 430px;
+}
+
+.km-item-box-xh ul li {    
+    padding-left: 3px;
+    position: relative;
+    width: 65px;
+    text-align: left;
+}
+.km-item-box-xh ul li:before {
+    position: absolute;
+    top: 21px;
+    left: -8px;
+}
+.km-item-box-xh {
+    width: auto;
+}
+.km-item-box-xh {
+    margin-left: 61px;
+}
+/* 提示 */
+.describeIcon {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    background: url(./images/q.png);
+    background-size: cover;
+}
+.discribeBox {
+    display: none;
+}
+.describeIcon:hover .discribeBox {
+    display: block;
+}
+.triangle-with-shadow {
+    width: 30px;
+    height: 16px;
+    position: absolute;
+    overflow: hidden;
+    -webkit-box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 16px 10px -17px rgba(0, 0, 0, 0.6);
+    z-index: 120;
+    top: 20px;
+    left: 0;
+}
+.triangle-with-shadow:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    left: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    background: #fff;
+    -webkit-box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+    box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+}
+.describeContent {
+    position: absolute;
+    left: -70px;
+    top: 35px;
+    width: 170px;
+    line-height: 24px;
+    z-index: 10;
+    border: 1px solid #e0e0e0;
+    -webkit-box-shadow: 1px 1px 15px 1px #ccc;
+    box-shadow: 1px 1px 15px 1px #ccc;
+    background-color: #fff;
+    padding: 5px;
+    font-weight: normal;
+}
+.icon-ctrl-body-item.hospital {
+    display: flex;
+    height: 28px;
+    line-height: 28px;
+}
+.icon-ctrl-body-item.hospital>div {
+    flex: 1;
+}
+.icon-ctrl-panel {
+    max-width: none;
+}
+
+/*图标示意*/
+.icon-ctrl-panel, .right-top-md-style {
+    box-shadow: #19316d 4px 8px 12px 0px;
+}
+
+.right-top-md-body {
+    /* height: 120px; */
+    margin-top: 10PX;
+}
+
+.km-item-box-xh ul li:before {
+    background: rgba(249, 79, 26, 0.3);
+}
+.icon-ctrl-panel.icon-ctrl-panel-xh{
+    overflow: initial;
+}
+.icon-ctrl-panel.icon-ctrl-panel-xh .icon-ctrl-head{
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+}
+.icon-ctrl-panel.icon-ctrl-panel-xh .icon-ctrl-bot{
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    left: 0;
+}
+.icon-ctrl-panel.icon-ctrl-panel-xh .icon-ctrl-bot .around-type{
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+    height: 35px;
+    /*border: 4px solid #f9b620;*/
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    box-shadow: #19316d 4px 8px 12px 0px;
+}

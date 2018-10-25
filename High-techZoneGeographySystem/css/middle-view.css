@@ -1,0 +1,342 @@
+/*.microcosmic_container{
+    width: 7.291667rem;
+}*/
+.m-b-10{
+    margin-bottom: 10px;
+}
+.middle-view-map .mapMarker{
+    width: auto;
+    height: auto;
+}
+.middle-view-map .mapMarker span{
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+}
+.middle-view>.column_title_box{
+    height: 0.260417rem;
+    line-height: 0.260417rem;
+}
+.middle-view>.middle-view-bd{
+    height: calc(100% - 0.260417rem);
+}
+.middle-view-bd .column_title_box h3{
+    cursor: pointer;
+}
+.middle-view>.column_title_box h3{
+    float: left;
+    line-height: inherit;
+    text-align: center;
+    margin-left: 0.052083rem;
+    padding: 0 0.104167rem;
+    text-indent: 0;
+    cursor: pointer;
+    transition: all .3s;
+}
+.middle-view>.column_title_box h3:first-child{
+    margin-left: 0.104167rem;
+}
+.middle-view>.column_title_box h3.active,.middle-view>.column_title_box h3:hover{
+    background: #f9b620;
+    color: #151411;
+    box-shadow: inset 0px -2px 3px 0 rgba(0, 0, 0, 0.9), inset 3px 3px 3px 0 rgba(255, 255, 255, 0.4);
+}
+/*.middle-view .microcosmic_scroll .flex-row>.flex-cell:last-child{
+    padding-left: 0.104167rem;
+}*/
+.middle-view .column-box{
+    height: 2.265625rem;
+    margin-top: 0.104167rem;
+}
+.middle-view .panel-chart-box{
+    height: 100%;
+    border-radius: 6px;
+}
+.middle-view .flex-row .column-box:nth-child(2n+1) .panel-chart-box{
+    background: -webkit-radial-gradient(bottom right, farthest-corner, #2e1813 20%, #151411 70%);
+    background: -moz-radial-gradient(bottom right, farthest-corner, #2e1813 20%, #151411 70%);
+    background: -o-radial-gradient(bottom right, farthest-corner, #2e1813 20%, #151411 70%);
+    /*background: linear-gradient(to bottom right, #151411 50%,#251612 70%, #2e1813);*/
+}
+.middle-view .flex-row .column-box:nth-child(2n) .panel-chart-box{
+    background: -webkit-radial-gradient(bottom right, farthest-side, #162627 20%, #151411 80%);
+    background: -moz-radial-gradient(bottom right, farthest-side, #162627 20%, #151411 80%);
+    background: -o-radial-gradient(bottom right, farthest-side, #162627 20%, #151411 80%);
+    /*background: linear-gradient(to bottom right, #1b1b1c 50%,#251612 70%, #212126);*/
+}
+.middle-view .panel-chart{
+    height: calc(100% - 0.260417rem);
+    padding: 0 0.026042rem;
+    color: #bcbdbf;
+}
+.middle-view .panel-chart .flex-cell{
+    padding: 0 5px;
+}
+.middle-view .panel-chart .flex-cell>.flex-item{
+    height: 1.583333rem;
+    border: 1px solid rgba(249,182,32,.3);
+    border-radius: 6px;
+    margin: 0.104167rem 0;
+}
+.middle-view-bd{
+    position: relative;
+    overflow: hidden;
+}
+.middle-view .microcosmic_scroll{
+    position: absolute;
+    width: 100%;
+    /*visibility: hidden;*/
+    z-index: 9;
+}
+.middle-view .microcosmic_scroll.active{
+    visibility: visible;
+    top: 0;
+    z-index: 10;
+}
+.middle-view .chart_div {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+.middle-view .column_title_box{
+    height: 50px;
+    line-height: 50px;
+    z-index: 1;
+}
+.middle-view .basic-info-btn{
+    position: absolute;
+    right: 20px;
+    top: 0;
+    color: #fff;
+    height: 100%;
+    line-height: inherit;
+    color: #bcbdbf;
+    cursor: pointer;
+    z-index: 10;
+}
+.middle-view .basic-info-btn span{
+    margin-left: 7px;
+    transition: all .3s;
+}
+.middle-view .basic-info-btn .info-arrow.active{
+    transform: rotate(180deg);
+}
+.middle-view .basic-info-con{
+    /*height: 0;*/
+    padding: 20px;
+    background: #151411;
+    border-radius: 0 0 6px 6px;
+    line-height: normal;
+    color: #bcbdbf;
+    box-shadow: 0px 3px 3px #2d2e3c;
+    display: none;
+}
+.middle-view .right-panel .content,.middle-view .middle-view-bd .tab_con{
+    height:100%;
+}
+.middle-view .industry-menu{
+    position: relative;
+    height: 100%;
+    float: left;
+    margin-top:10px;
+}
+.middle-view .industry-menu .menu-item {
+    position: relative;
+    padding: 10px 15px;
+    text-align: left;
+    cursor: pointer;
+    transition: all .5s;
+}
+.middle-view .industry-menu .menu-row.active .menu-item, .industry-menu .menu-item:hover {
+    background: rgba(249, 182, 32, 0.2);
+    color: #f9b620;
+}
+.middle-view .industry-menu .menu-item .menu-text {
+    margin-right: 20px;
+}
+.middle-view .industry-menu .menu-item .info-arrow {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    line-height: inherit;
+    color: #7d85cb;
+    transition: transform .3s;
+}
+.middle-view .industry-menu .menu-row.active .info-arrow{
+    transform: rotate(180deg);
+}
+.middle-view .industry-menu .sub-menu{
+    background: rgba(0,0,0,.5);
+}
+.middle-view .industry-menu .menu-row:not(:first-child) .sub-menu{
+    display: none;
+}
+.middle-view .industry-menu .sub-menu li{
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #86878b;
+}
+.middle-view .industry-menu .sub-menu li.active,.middle-view .industry-menu .sub-menu li:hover{
+    color: #bcbdbf;
+}
+.middle-view .industry-menu .sub-menu li em{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #f9b620;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 4px;
+    visibility: hidden;
+}
+.middle-view .industry-menu .sub-menu li.active em,.middle-view .industry-menu .sub-menu li:hover em{
+    visibility: visible;
+}
+.company-detail .panel-bd,.industry-panel .panel-bd,.foster-panel .panel-bd{
+    /*width: auto;*/
+}
+.company-detail .panel-content .flex-item{
+    /*width: 3.125rem;*/
+    width: 100%;
+    height: 2.083333rem;
+}
+.industry-system .right_div{
+    width: 400px;
+    margin-left: 10px;
+}
+.industry-system .company-list .company-item .company-logo{
+    width: 100px;
+    padding: 0;
+}
+.industry-system #industry{
+    /*width: 4rem;
+    height: 3rem;*/
+    width: 100%;
+    height: 3rem;
+}
+.industry-system #enterprise,.industry-system #gdp{
+    width: 100%;
+    height: 2rem;
+}
+.company-detail .panel-content .park-basic-info{
+    width: 100%;
+    height: 2.083333rem;
+}
+.industry-panel,.foster-panel{
+    position: absolute;
+    width: 100%;
+}
+.foster-panel .flex-item{
+    height: 2rem;
+}
+.foster-tool-title{
+    color: #f9b620;
+    font-weight: bold;
+}
+.text-l{
+    text-align: left;
+}
+.foster-tool-box td,.foster-tool-box tr,.panel-content .foster-tool-box .table tr th:first-child,.foster-tool-box table tr td:first-child{
+    border: none !important;
+}
+.middle-view .panel-content .table tr td {
+    text-align: center;
+}
+#add-new-industry{
+    margin: 5px 10px;
+    clear: both;
+}
+#add-new-industry .new-industry-input{
+    text-align: center;
+    border: 1px solid rgba(249, 182, 32, 0.3);
+    background: none;
+    color: #fff;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 3px;
+    outline: none;
+}
+#add-new-industry .add-new-industry{
+    background: none;
+    border: 1px solid rgba(249, 182, 32, 0.3);
+    height: 35px;
+    line-height: 35px;
+    padding: 0 8px;
+    color: #fff;
+}
+.follow-list {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.follow-list .title {
+    font-size: 16px;
+    color: #f9b620;
+}
+.follow-list li{
+    float: left;
+    margin: 10px 10px 0;
+    border: 1px solid rgba(249,182,32,.3);
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.follow-list li.active{
+    color: #f9b620;
+    border-color: #f9b620;
+}
+.mapMarker.active{
+    animation: markermove 1.5s infinite;
+    box-shadow: 0 0 0 10px rgba(0,0,0,0.4);
+}
+@keyframes markermove {
+    0%,100%{transform: scale(1)}
+    50%{transform: scale(1.1)}
+}
+/*.foster-tool-box{
+    display: table;
+}
+.foster-tool-title,.foster-tool-item{
+    display: table-cell;
+}*/
+@media (max-width: 1366px) {
+    .middle-view>.column_title_box {
+        height: 50px;
+        line-height: 50px;
+    }
+    .middle-view>.column_title_box h3{
+        float: left;
+        text-align: center;
+        margin-left: 10px;
+        padding: 0 20px;
+        text-indent: 0;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    .middle-view .column-box{
+        height: 350px;
+        margin-top: 20px;
+    }
+    .middle-view>.column_title_box h3:first-child{
+        margin-left: 20px;
+    }
+ /*   .middle-view .microcosmic_scroll .flex-row>.flex-cell:last-child{
+        padding-left: 20px;
+    }*/
+    .middle-view .panel-chart{
+        height: calc(100% - 50px);
+        padding: 5px;
+    }
+    .middle-view .panel-chart .flex-cell>.flex-item{
+        margin: 20px 0;
+    }
+    .middle-view>.middle-view-bd{
+        height: calc(100% - 50px);
+    }
+    .company-detail .panel-content .park-basic-info{
+        width: 600px;
+        height: 400px;
+    }
+}
