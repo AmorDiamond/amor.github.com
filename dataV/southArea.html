@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>南区</title>
+    <script src="js/lib-flexible.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/southArea.css">
+</head>
+<body>
+    <div class="map-container south-map-container"></div>
+    <div class="page-container south-area-container">
+        <div class="page-title"></div>
+        <div class="color-list">
+            <ul>
+                <li class="industry-item other-industry">其他</li>
+                <li class="industry-item dianzi-industry">电子信息</li>
+                <li class="industry-item shengwu-industry">生物医药</li>
+                <li class="industry-item xianjin-industry">先进制造</li>
+            </ul>
+        </div>
+        <div class="switch-btn">
+            <div class="switch-con">
+                <span class="item west-area">西</span>
+                <span class="item south-area">南</span>
+                <span class="item research-platform">调</span>
+            </div>
+        </div>
+        <!--左侧面板-->
+        <div class="left-panel item-panel fl">
+            <div class="flex">
+                <div class="public-title position-title"><span class="icon"></span><span class="name">企业概况</span> PROFILE</div>
+                <div class="flex-cell">
+                    <div class="con">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item company-info-item"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item south-scale-echart"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item quality-echart"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="lv-type-echart fl"></div>
+                                        <div class="industry-type-echart fr"></div>
+                                    </div>
+                                </div>
+                                <!--<div class="item south-scale-echart"></div>
+                                <div class="item quality-echart"></div>
+                                <div class="item">
+                                    <div class="lv-type-echart fl"></div>
+                                    <div class="industry-type-echart fr"></div>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-panel item-panel fr">
+            <div class="public-title position-title"><span class="icon"></span><span class="name">创新要素</span> INNOVATION</div>
+            <div class="con">
+                <div class="item item1"></div>
+                <div class="item item2"></div>
+                <div class="item item3"></div>
+            </div>
+        </div>
+        <div class="bottom-panel">
+            <div class="flex">
+                <div class="public-title"><span class="icon"></span><span class="name">人力资源</span> HUMAN</div>
+                <div class="flex-cell">
+                    <div class="con">
+                        <div class="swiper-container2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item item1"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item item2"></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item item3"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<link rel="stylesheet" href="js/swiper/swiper.4.0.2.min.css">
+<script src="js/swiper/swiper.4.0.2.min.js"></script>
+<script src="js/echarts.js"></script>
+<script src="js/jquery.2.2.0.min.js"></script>
+<script src="js/common.js"></script>
+<script language="javascript">
+  var mySwiper1 = new Swiper('.swiper-container',{
+    slidesPerView : 3,
+    setWrapperSize :true,
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
+    // centeredSlides : true,
+    direction: 'vertical',
+    // height: 800
+  })
+  var mySwiper2 = new Swiper('.swiper-container2',{
+    slidesPerView : 2,
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
+    // centeredSlides : true,
+    // height: 800
+  })
+
+  mySwiper1.el.onmouseover = function(){
+    mySwiper1.autoplay.stop();
+  }
+  mySwiper1.el.onmouseout = function(){
+    mySwiper1.autoplay.start();
+  }
+  mySwiper2.el.onmouseover = function(){
+    mySwiper2.autoplay.stop();
+  }
+  mySwiper2.el.onmouseout = function(){
+    mySwiper2.autoplay.start();
+  }
+</script>
+</body>
+</html>

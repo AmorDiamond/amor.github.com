@@ -1,0 +1,56 @@
+.more-left-panel .overview-con{
+    background: url("../images/bg/left_panel_more_overviewlist.png") no-repeat center top;
+    background-size: contain;
+}
+.more-left-panel .echart-item#lv-type{
+    background: url("../images/bg/left_panel_more_echart1.png") no-repeat center top;
+    background-size: contain;
+}
+.more-left-panel .echart-item#industry-type{
+    background: url("../images/bg/left_panel_more_echart2.png") no-repeat center top;
+    background-size: contain;
+}
+.more-left-panel .echart-item#lv-type2{
+    background: url("../images/bg/left_panel_more_echart3.png") no-repeat center top;
+    background-size: contain;
+}
+.more-left-panel .echart-item#industry-type2{
+    background: url("../images/bg/left_panel_more_echart4.png") no-repeat center top;
+    background-size: contain;
+}
+.xcj_more-facilities-box #xcjItem1{
+    background: url("../images/bg/more_right_panel_echart1.png") no-repeat center top;
+    background-size: contain;
+    margin-bottom: .1rem;
+}
+.xcj_more-facilities-box #xcjItem2{
+    background: url("../images/bg/more_right_panel_echart2.png") no-repeat center top;
+    background-size: contain;
+    margin-bottom: .1rem;
+}
+.xcj_more-facilities-box .company-name-tag{
+    background: url("../images/bg/more_right_panel_companylist1.png") no-repeat center top;
+    background-size: contain;
+    height: 85%;
+    margin: 0 10px;
+}
+.left-panel .con{
+    height: 90%;
+}
+.left-panel .con .bottom{
+    height: 50%;
+}
+.left-panel .scale-echart{
+    height: 100%;
+}
+@media (max-width: 1366px) {
+    .more-left-panel .echart-item{
+        height: 1.15rem;
+    }
+    .xcj_more-facilities-box .xcj_column-con .xcj_item_c{
+        margin: 10px 0 0;
+    }
+    .xcj_more-facilities-box .xcj_column-con .xcj_c b{
+        font-size: 26px;
+    }
+}

@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调研平台</title>
+    <script src="js/lib-flexible.js"></script>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/researchPlatform.css">
+</head>
+<body>
+<div class="map-container research-map-container bg-blur"></div>
+<div class="page-container research-page-container">
+    <div class="page-title"></div>
+    <div class="switch-btn">
+        <div class="switch-con">
+            <span class="item west-area">西</span>
+            <span class="item south-area">南</span>
+            <span class="item research-platform">调</span>
+        </div>
+    </div>
+    <div class="panel-con-box">
+        <div class="item item1 fl">
+            <div class="border-box">
+                <div class="con research-group-box">
+                    <div class="flex-column research-group-con">
+                        <div class="group-search-box"><input type="text" class="group-search-input" id="group-search-input"><button class="search-btn">搜索</button></div>
+                        <div class="public-title"><span class="icon"></span><span class="name">调研小组情况</span> GROUP</div>
+                        <div class="flex-cell">
+                            <div class="echart-con">
+                                <div class="list-label position-list-label">
+                                    <div class="research-group-switch-label">
+                                        <div class="swiper-wrapper">
+                                            <!--<div class="swiper-slide">生物医学组</div>
+                                            <div class="swiper-slide">XXXX组</div>
+                                            <div class="swiper-slide">XXXX组</div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-item swiper-container-switch">
+                                    <div class="swiper-wrapper">
+                                        <!--<div class="swiper-slide">
+                                            <div class="left-con fl flex-column">
+                                                <div class="item-top">
+                                                    <div class="number">调研企业总数：<span>999</span>次</div>
+                                                    <div class="line-bar"><div class="color-bar" style="width: 80%;"></div></div>
+                                                </div>
+                                                <div class="flex-cell">
+                                                    <div class="switch-list-con research-group-list">
+                                                        <div class="list-con">
+                                                            <div class="row">
+                                                                <div class="td th name">企业名</div>
+                                                                <div class="td th">次数</div>
+                                                                <div class="td th">状态</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都明旺乳业有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都普天电缆股份有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td doing">进行中</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都华宇制药有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td error">未开始</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都明旺乳业有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">四川太平洋药业有限责任公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right-con fr flex-column">
+                                                <div class="item-top">
+                                                    <div class="number">调研企业次数：<span>999</span>次</div>
+                                                    <div class="line-bar"><div class="color-bar" style="width: 80%;"></div></div>
+                                                </div>
+                                                <div class="flex-cell flex-column item-middle">
+                                                    <div class="number">问题总数：<span>400</span>个</div>
+                                                    <div class="flex-cell">
+                                                        <div class="research-total-end">
+                                                            <span class="row">已完成<span>91</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-bottom">
+                                                    <div class="number">调研报告完成情况：<span class="research-status">已完成</span></div>
+                                                    <div class="line-bar"><div class="color-bar" style="width: 100%;"></div></div>
+                                                </div>
+                                            </div>
+                                            &lt;!&ndash;<div class="switch-item-box">
+                                            </div>&ndash;&gt;
+                                            &lt;!&ndash;<div class="switch-list-con">
+                                                <div class="flex-column">
+                                                    <div class="list-label">生物医学组</div>
+                                                    <div class="flex-cell">
+                                                        <div class="list-con">
+                                                        <div class="row">
+                                                            <div class="td th">调研问题</div>
+                                                            <div class="td th">处理时间</div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">平台需求</div>
+                                                            <div class="td">2018</div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">市场开通</div>
+                                                            <div class="td">2018</div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">生活配套</div>
+                                                            <div class="td">2018</div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">政策指导</div>
+                                                            <div class="td">2018</div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">人才引进及培训</div>
+                                                            <div class="td">2018</div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">资金需求</div>
+                                                            <div class="td">2018</div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">其他问题</div>
+                                                            <div class="td">2018</div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">其他</div>
+                                                            <div class="td">2018</div>
+                                                        </div>
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>&ndash;&gt;
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="left-con fl flex-column">
+                                                <div class="item-top">
+                                                    <div class="number">调研企业总数：<span>999</span>次</div>
+                                                    <div class="line-bar"><div class="color-bar" style="width: 80%;"></div></div>
+                                                </div>
+                                                <div class="flex-cell">
+                                                    <div class="switch-list-con research-group-list">
+                                                        <div class="list-con">
+                                                            <div class="row">
+                                                                <div class="td th name">企业名</div>
+                                                                <div class="td th">次数</div>
+                                                                <div class="td th">状态</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都明旺乳业有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都普天电缆股份有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td doing">进行中</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都华宇制药有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td error">未开始</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都明旺乳业有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">四川太平洋药业有限责任公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right-con fr flex-column">
+                                                <div class="item-top">
+                                                    <div class="number">调研企业次数：<span>999</span>次</div>
+                                                    <div class="line-bar"><div class="color-bar" style="width: 80%;"></div></div>
+                                                </div>
+                                                <div class="flex-cell flex-column item-middle">
+                                                    <div class="number">问题总数：<span>400</span>个</div>
+                                                    <div class="flex-cell">
+                                                        <div class="research-total-end">
+                                                            <span class="row">已完成<span>91</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-bottom">
+                                                    <div class="number">调研报告完成情况：<span class="research-status">已完成</span></div>
+                                                    <div class="line-bar"><div class="color-bar" style="width: 100%;"></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="left-con fl flex-column">
+                                                <div class="item-top">
+                                                    <div class="number">调研企业总数：<span>999</span>次</div>
+                                                    <div class="line-bar"><div class="color-bar" style="width: 80%;"></div></div>
+                                                </div>
+                                                <div class="flex-cell">
+                                                    <div class="switch-list-con research-group-list">
+                                                        <div class="list-con">
+                                                            <div class="row">
+                                                                <div class="td th name">企业名</div>
+                                                                <div class="td th">次数</div>
+                                                                <div class="td th">状态</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都明旺乳业有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都普天电缆股份有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td doing">进行中</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都华宇制药有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td error">未开始</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">成都明旺乳业有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td row-name">四川太平洋药业有限责任公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="right-con fr flex-column">
+                                                <div class="item-top">
+                                                    <div class="number">调研企业次数：<span>999</span>次</div>
+                                                    <div class="line-bar"><div class="color-bar" style="width: 80%;"></div></div>
+                                                </div>
+                                                <div class="flex-cell flex-column item-middle">
+                                                    <div class="number">问题总数：<span>400</span>个</div>
+                                                    <div class="flex-cell">
+                                                        <div class="research-total-end">
+                                                            <span class="row">已完成<span>91</span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-bottom">
+                                                    <div class="number">调研报告完成情况：<span class="research-status">已完成</span></div>
+                                                    <div class="line-bar"><div class="color-bar" style="width: 100%;"></div></div>
+                                                </div>
+                                            </div>
+                                            &lt;!&ndash;<div class="switch-list-con">
+                                                <div class="flex-column">
+                                                    <div class="list-label">XXXX组</div>
+                                                    <div class="flex-cell">
+                                                        <div class="list-con">
+                                                            <div class="row">
+                                                                <div class="td th">调研问题</div>
+                                                                <div class="td th">处理时间</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">平台需求</div>
+                                                                <div class="td">2018</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">市场开通</div>
+                                                                <div class="td">2018</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">生活配套</div>
+                                                                <div class="td">2018</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">政策指导</div>
+                                                                <div class="td">2018</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">人才引进及培训</div>
+                                                                <div class="td">2018</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">资金需求</div>
+                                                                <div class="td">2018</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">其他问题</div>
+                                                                <div class="td">2018</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">其他</div>
+                                                                <div class="td">2018</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>&ndash;&gt;
+                                        </div>-->
+                                    </div>
+                                    <div class="swiper-switch-btn">
+                                        <span class="btn btn-prev swiper-button-prev"></span>
+                                        <span class="btn btn-next swiper-button-next"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div class="swiper-item swiper-container outer-swiper-con">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="left-con fl">
+                                            <div class="flex-column">
+                                                <div class="title">调研企业</div>
+                                                <div class="flex-cell">
+                                                    <div class="table-list">
+                                                            <div class="row">
+                                                                <div class="td th">企业名</div>
+                                                                <div class="td th">调研次数</div>
+                                                                <div class="td th">调研状态</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">成都明旺乳业有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">成都普天电缆股份有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td doing">进行中</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">成都华宇制药有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td error">未开始</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">成都明旺乳业有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">四川太平洋药业有限责任公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">四川汇源星辰光电有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">四川光恒通信技术有限公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="td">四川百纳科技有限责任公司</div>
+                                                                <div class="td">1</div>
+                                                                <div class="td success">完成</div>
+                                                            </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-con fl">
+                                            <div class="flex-column">
+                                                <div class="title">调研企业总数</div>
+                                                <div class="flex-cell">
+                                                    <div class="echart-con research-total-echart">
+                                                        <div class="row">
+                                                            <span>291</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        &lt;!&ndash;<div class="title position-title">调研效率</div>&ndash;&gt;
+                                        <div class="list-label position-list-label">
+                                            <div class="research-group-switch-label">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">生物医学组</div>
+                                                    <div class="swiper-slide">XXXX组</div>
+                                                    <div class="swiper-slide">XXXX组</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="echart-con">
+                                            <div class="swiper-item swiper-container-switch">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="left-con fl flex-column">
+                                                            <div class="item-top">
+                                                                <div class="number">调研企业总数：<span>999</span>次</div>
+                                                                <div class="line-bar"><div class="color-bar" style="width: 80%;"></div></div>
+                                                            </div>
+                                                            <div class="flex-cell">
+                                                                <div class="switch-list-con research-group-list">
+                                                                    <div class="list-con">
+                                                                        <div class="row">
+                                                                            <div class="td th name">企业名</div>
+                                                                            <div class="td th">次数</div>
+                                                                            <div class="td th">状态</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">成都明旺乳业有限公司</div>
+                                                                            <div class="td">1</div>
+                                                                            <div class="td success">完成</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">成都普天电缆股份有限公司</div>
+                                                                            <div class="td">1</div>
+                                                                            <div class="td doing">进行中</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">成都华宇制药有限公司</div>
+                                                                            <div class="td">1</div>
+                                                                            <div class="td error">未开始</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">成都明旺乳业有限公司</div>
+                                                                            <div class="td">1</div>
+                                                                            <div class="td success">完成</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td"><div class="row-name">四川太平洋药业有限责任公司</div></div>
+                                                                            <div class="td">1</div>
+                                                                            <div class="td success">完成</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="right-con fr flex-column">
+                                                            <div class="item-top">
+                                                                <div class="number">调研企业次数：<span>999</span>次</div>
+                                                                <div class="line-bar"><div class="color-bar" style="width: 80%;"></div></div>
+                                                            </div>
+                                                            <div class="flex-cell flex-column item-middle">
+                                                                <div class="number">问题总数：<span>400</span>个</div>
+                                                                <div class="flex-cell">
+                                                                    <div class="research-total-end">
+                                                                        <span class="row">已完成<span>91</span></span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item-bottom">
+                                                                <div class="number">调研报告完成情况：<span class="research-status">已完成</span></div>
+                                                                <div class="line-bar"><div class="color-bar" style="width: 100%;"></div></div>
+                                                            </div>
+                                                        </div>
+                                                        &lt;!&ndash;<div class="switch-item-box">
+                                                        </div>&ndash;&gt;
+                                                        &lt;!&ndash;<div class="switch-list-con">
+                                                            <div class="flex-column">
+                                                                <div class="list-label">生物医学组</div>
+                                                                <div class="flex-cell">
+                                                                    <div class="list-con">
+                                                                    <div class="row">
+                                                                        <div class="td th">调研问题</div>
+                                                                        <div class="td th">处理时间</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">平台需求</div>
+                                                                        <div class="td">2018</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">市场开通</div>
+                                                                        <div class="td">2018</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">生活配套</div>
+                                                                        <div class="td">2018</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">政策指导</div>
+                                                                        <div class="td">2018</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">人才引进及培训</div>
+                                                                        <div class="td">2018</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">资金需求</div>
+                                                                        <div class="td">2018</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">其他问题</div>
+                                                                        <div class="td">2018</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">其他</div>
+                                                                        <div class="td">2018</div>
+                                                                    </div>
+                                                                </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>&ndash;&gt;
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="switch-list-con">
+                                                            <div class="flex-column">
+                                                                <div class="list-label">XXXX组</div>
+                                                                <div class="flex-cell">
+                                                                    <div class="list-con">
+                                                                        <div class="row">
+                                                                            <div class="td th">调研问题</div>
+                                                                            <div class="td th">处理时间</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">平台需求</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">市场开通</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">生活配套</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">政策指导</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">人才引进及培训</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">资金需求</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">其他问题</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">其他</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="switch-list-con">
+                                                            <div class="flex-column">
+                                                                <div class="list-label">XXXX组</div>
+                                                                <div class="flex-cell">
+                                                                    <div class="list-con">
+                                                                        <div class="row">
+                                                                            <div class="td th">调研问题</div>
+                                                                            <div class="td th">处理时间</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">平台需求</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">市场开通</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">生活配套</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">政策指导</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">人才引进及培训</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">资金需求</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">其他问题</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                        <div class="row">
+                                                                            <div class="td">其他</div>
+                                                                            <div class="td">2018</div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-switch-btn">
+                                                    <span class="btn btn-prev swiper-button-prev"></span>
+                                                    <span class="btn btn-next swiper-button-next"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    &lt;!&ndash;<div class="swiper-slide">
+                                        <div class="flex-column">
+                                            <div class="title">排名情况</div>
+                                            <div class="flex-cell p-b-20">
+                                                <div class="echart-con research-echart">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>&ndash;&gt;
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="company-more-info my-hide">
+                        <div class="more-con flex-column">
+                            <div class="more-tab">
+                                <div class="item-tab active">调研问题</div>
+                                <div class="item-tab">调研日志</div>
+                            </div>
+                            <div class="flex-cell more-tab-con">
+                                <div class="item-column">
+                                    <div class="flex-column">
+                                        <div class="title">调研问题</div>
+                                        <div class="flex-cell">
+                                            <div class="scroll-box">
+                                                <div class="scroll-con">
+                                                    <div class="table-list more-info-problem">
+                                                    <div class="row">
+                                                        <div class="td th">问题类型</div>
+                                                        <div class="td th">问题标题</div>
+                                                        <div class="td th">问题描述</div>
+                                                        <div class="td th">问题回答</div>
+                                                    </div>
+                                                    <!--<div class="row">
+                                                        <div class="td">人才引进</div>
+                                                        <div class="td">留住人才以及外语培训</div>
+                                                        <div class="td"><div class="td-con">1.现在市场竞争激烈，企业之间人才竞争也十分激烈，公司按照上市公司要求，给员工足额缴纳了社保和公积金，缴存基数大，但员工看不到这些，旺旺发现拿到手的工资比较少，就容易被其他公司挖走，导致人才不稳定，希望政府在人才上多做一些措施，留住人才，特别是基础人才。\r\n2.由于公司是国际化公司，急需培训外语人才，公司的人员需要英语培训，可否牵线搭桥。</div></div>
+                                                        <div class="td"><div class="td-con">1.调研组告知企业，目前高新区人力资源产业服务园以及人力资源协会可以为企业提供一些人力资源政策的策略，帮助企业留住人，人力资源协会已经联系企业。另外，人力资源产业服务园每月有举办智汇高新招聘活动，给企业提供了招聘渠道。\n2.告知企业每年成都高新区会举办天府人才行动校园行、城市行、海外行活动，高新区管委会报销部分费用，企业可以根据自己意愿参加。\n3.目前高新区出台了金熊猫人才政策，对企业购买培训、招聘等人力资源服务给予相应补贴，鼓励企业通过市场化手段选人才。\n4.调研组联系了天府软件园，目前天府软件园成立了一带一路外语大讲堂，天府软件园欢迎公司派人过去培训。同时承诺如果天府生命科技园外语培训需求达到一定数量，一带一路大讲堂可开分院，并且愿意为公司提供培训机构联系方式。</div></div>
+                                                    </div>-->
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item-column my-hide">
+                                    <div class="flex-column">
+                                        <div class="title">调研日志</div>
+                                        <div class="flex-cell">
+                                            <div class="scroll-box">
+                                                <div class="scroll-con">
+                                                    <div class="table-list more-info-logs">
+                                                        <div class="row">
+                                                            <div class="td th">调研方式</div>
+                                                            <div class="td th">联系人职位</div>
+                                                            <div class="td th">日志内容</div>
+                                                            <div class="td th">调研时间</div>
+                                                            <div class="td th">联系人电话</div>
+                                                            <div class="td th">联系人姓名</div>
+                                                        </div>
+                                                        <!--<div class="row">
+                                                            <div class="td">电话调研</div>
+                                                            <div class="td">工作人员</div>
+                                                            <div class="td"><div class="td-con">\r\n向企业介绍了高新区“大学习、大讨论、大调…新区进行进一步交流，共同谋划产业未来发展规划。</div></div>
+                                                            <div class="td">2018-06-01 09:49:30</div>
+                                                            <div class="td">15882497856</div>
+                                                            <div class="td">陈瑶嘉</div>
+                                                        </div>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item item2 fl">
+            <div class="border-box">
+                <div class="con">
+                    <div class="flex-column">
+                        <div class="public-title"><span class="icon"></span><span class="name">大调研推进情况</span> PROMOTE</div>
+                        <div class="flex-cell research-report">
+                            <div class="swiper-item swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide complete-team-box">
+                                        <div class="left-con fl">
+                                            <div class="flex-column">
+                                                <div class="title">小组完成情况</div>
+                                                <div class="flex-cell">
+                                                    <div class="scroll-box">
+                                                        <div class="scroll-con">
+                                                            <div class="table-list complete-team-list">
+                                                                <div class="row">
+                                                                    <div class="td th">小组名</div>
+                                                                    <div class="td th">完成情况</div>
+                                                                </div>
+                                                                <!--<div class="row">
+                                                                    <div class="td">生物医学组</div>
+                                                                    <div class="td success">完成</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="td">数字游戏3组</div>
+                                                                    <div class="td error">未完成</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="td">中药生物组</div>
+                                                                    <div class="td success">完成</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="td">化学药组</div>
+                                                                    <div class="td success">完成</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="td">软件及外包1组</div>
+                                                                    <div class="td success">完成</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="td">航空航天组</div>
+                                                                    <div class="td success">完成</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="td">系统集成服务2组</div>
+                                                                    <div class="td success">完成</div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="td">互联网应用软件组</div>
+                                                                    <div class="td success">完成</div>
+                                                                </div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-con fl">
+                                            <div class="flex-column con-box complete-team-count">
+                                                <!--<div class="title">调研企业总数</div>-->
+                                                <div class="flex-cell">
+                                                    <div class="table">
+                                                    <div class="row">
+                                                    <div class="td">
+                                                        <div class="title">调研企业总数</div>
+                                                        <div class="number research-total"><span>291</span>家</div>
+
+                                                    </div>
+                                                    </div>
+                                                    </div>
+                                                    <!--<div class="line-bar"><div class="color-bar" style="width: 80%"></div></div>-->
+                                                </div>
+                                                <!--<div class="title">调研次数总数</div>-->
+                                                <div class="flex-cell">
+                                                    <div class="table">
+                                                        <div class="row">
+                                                            <div class="td">
+                                                    <div class="title">调研次数总数</div>
+                                                    <div class="number research-times"><span>201</span>次</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<div class="line-bar"><div class="color-bar" style="width: 60%"></div></div>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="flex-column">
+                                            <div class="title">排名情况</div>
+                                            <div class="flex-cell p-b-20">
+                                                <div class="echart-con" id="research-echart">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="flex-column">
+                                            <div class="title">系统访问次数top10企业</div>
+                                            <div class="flex-cell">
+                                                <div class="echart-con research-top10 research-visit-top10">
+                                                    <div class="table-list">
+                                                        <!--<div class="row">
+                                                            <div class="td">1</div>
+                                                            <div class="td">西门子工业自动化产品(成都)有限公司</div>
+                                                            <div class="td"><div class="line-bar"><div class="color-bar" style="width: 80%"></div><span>11120</span></div></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">2</div>
+                                                            <div class="td">英特尔产品(成都)有限公司</div>
+                                                            <div class="td"><div class="line-bar"><div class="color-bar" style="width: 70%"></div><span>11020</span></div></div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="td">3</div>
+                                                            <div class="td">成都恒瑞制药有限公司</div>
+                                                            <div class="td"><div class="line-bar"><div class="color-bar" style="width: 60%"></div><span>11000</span></div></div>
+                                                        </div>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide today-visit-count">
+                                        <div class="left-con fl">
+                                            <div class="research-promote-left-top">
+                                                <div class="number">当日系统访问总次数：</div>
+                                            </div>
+                                            <div class="research-promote-left-bottom">
+                                                <div class="research-promote-left-bg">
+                                                    <div class="row">
+                                                        当日
+                                                        <div><span>59135</span>次</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="right-con fl">
+                                            <div class="research-promote-right-top">
+                                                <div class="number">大调研热词度</div>
+                                            </div>
+                                            <div class="research-promote-right-bottom">
+                                                <div class="research-promote-right-bg fl" id="research-promote-right-bg1">
+                                                </div>
+                                                <div class="research-promote-right-bg fl" id="research-promote-right-bg">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item item3 fl">
+            <div class="border-box">
+                <div class="con">
+                    <div class="flex-column">
+                        <div class="public-title"><span class="icon"></span><span class="name">调研企业分析</span> ANALYSIS</div>
+                        <div class="flex-cell">
+                            <div class="swiper-item swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="left-con fl business-box highQualityBusiness">
+                                            <div class="flex-column">
+                                                <div class="text-c title">优质企业</div>
+                                                <div class="flex-cell">
+                                                    <div class="scroll-box">
+                                                        <div class="scroll-con">
+                                                            <div class="list">
+                                                                <!--<div class="row">成都明旺乳业有限公司</div>
+                                                                <div class="row">成都华宇制药有限公司</div>
+                                                                <div class="row">东晶锐康晶体(成都)有限公司</div>
+                                                                <div class="row">希望深蓝空调制造有限公司</div>
+                                                                <div class="row">成都阜特科技股份有限公司</div>
+                                                                <div class="row">东晶锐康晶体(成都)有限公司</div>
+                                                                <div class="row">希望深蓝空调制造有限公司</div>
+                                                                <div class="row">成都阜特科技股份有限公司</div>
+                                                                <div class="row">成都中光电科技有限公司</div>
+                                                                <div class="row">成都普天电缆股份有限公司</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--<div class="right-con fl dangerousBusiness">
+                                            <div class="list">
+                                                <div class="text-c th">危险企业</div>
+                                                &lt;!&ndash;<div class="row">索尔思光电（成都）有限公司</div>
+                                                <div class="row">四川西南交大铁路发展股份有限公司</div>
+                                                <div class="row">富通光纤光缆（成都）有限公司</div>
+                                                <div class="row">四川汇源星辰光电有限公司</div>
+                                                <div class="row">四川太平洋药业有限责任公司</div>
+                                                <div class="row">敦阳泰克科技（成都）有限公司</div>
+                                                <div class="row">四川红宇创智信息科技有限责任公司</div>
+                                                <div class="row">四川光恒通信技术有限公司</div>
+                                                <div class="row">四川百纳科技有限责任公司</div>
+                                                <div class="row">赫比(成都)精密塑胶制品有限公司</div>&ndash;&gt;
+                                            </div>
+                                        </div>-->
+
+                                        <div class="right-con fl business-box ventureBusiness">
+                                            <div class="flex-column">
+                                                <div class="text-c title">风险企业</div>
+                                                <div class="flex-cell">
+                                                    <div class="scroll-box">
+                                                        <div class="scroll-con">
+                                                            <div class="list">
+                                                                <!--<div class="row">成都明旺乳业有限公司</div>
+                                                                <div class="row">成都华宇制药有限公司</div>
+                                                                <div class="row">东晶锐康晶体(成都)有限公司</div>
+                                                                <div class="row">希望深蓝空调制造有限公司</div>
+                                                                <div class="row">成都阜特科技股份有限公司</div>
+                                                                <div class="row">东晶锐康晶体(成都)有限公司</div>
+                                                                <div class="row">希望深蓝空调制造有限公司</div>
+                                                                <div class="row">成都阜特科技股份有限公司</div>
+                                                                <div class="row">成都中光电科技有限公司</div>
+                                                                <div class="row">成都普天电缆股份有限公司</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="swiper-slide">
+                                        <div class="left-con fl potentialBusiness">
+                                            <div class="list">
+                                                <div class="text-c th">潜力企业</div>
+                                                &lt;!&ndash;<div class="row">索尔思光电（成都）有限公司</div>
+                                                <div class="row">四川西南交大铁路发展股份有限公司</div>
+                                                <div class="row">富通光纤光缆（成都）有限公司</div>
+                                                <div class="row">四川汇源星辰光电有限公司</div>
+                                                <div class="row">四川太平洋药业有限责任公司</div>
+                                                <div class="row">敦阳泰克科技（成都）有限公司</div>
+                                                <div class="row">四川红宇创智信息科技有限责任公司</div>
+                                                <div class="row">四川光恒通信技术有限公司</div>
+                                                <div class="row">四川百纳科技有限责任公司</div>
+                                                <div class="row">赫比(成都)精密塑胶制品有限公司</div>&ndash;&gt;
+                                            </div>
+                                        </div>
+                                        <div class="right-con fl ventureBusiness">
+                                            <div class="list">
+                                                <div class="text-c th">风险企业</div>
+                                                &lt;!&ndash;<div class="row">西门子工业自动化产品(成都)有限公司</div>
+                                                <div class="row">英特尔产品(成都)有限公司</div>
+                                                <div class="row">成都恒瑞制药有限公司</div>
+                                                <div class="row">成都明旺乳业有限公司</div>
+                                                <div class="row">成都华宇制药有限公司</div>
+                                                <div class="row">东晶锐康晶体(成都)有限公司</div>
+                                                <div class="row">希望深蓝空调制造有限公司</div>
+                                                <div class="row">成都阜特科技股份有限公司</div>
+                                                <div class="row">成都中光电科技有限公司</div>
+                                                <div class="row">成都普天电缆股份有限公司</div>&ndash;&gt;
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    <div class="swiper-slide">
+                                        <div class="flex-column">
+                                            <div class="title">调研企业2018营业收入top5</div>
+                                            <div class="flex-cell research-shouru-top5">
+                                                <div class="table-list">
+                                                    <!--<div class="row">
+                                                        <div class="td">1</div>
+                                                        <div class="td">西门子工业自动化产品(成都)有限公司</div>
+                                                        <div class="td"><div class="line-bar"><div class="color-bar" style="width: 80%"></div><span>11120</span></div></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="td">2</div>
+                                                        <div class="td">英特尔产品(成都)有限公司</div>
+                                                        <div class="td"><div class="line-bar"><div class="color-bar" style="width: 70%"></div><span>11020</span></div></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="td">3</div>
+                                                        <div class="td">成都恒瑞制药有限公司</div>
+                                                        <div class="td"><div class="line-bar"><div class="color-bar" style="width: 60%"></div><span>11000</span></div></div>
+                                                    </div>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="flex-column">
+                                            <div class="title">调研企业2018税收top5</div>
+                                            <div class="flex-cell research-shuishou-top5 top-rank-con">
+                                                <div class="table-list">
+                                                    <!--<div class="row">
+                                                        <div class="td">1</div>
+                                                        <div class="td">西门子工业自动化产品(成都)有限公司</div>
+                                                        <div class="td"><div class="line-bar"><div class="color-bar" style="width: 80%"></div><span>11120</span></div></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="td">2</div>
+                                                        <div class="td">英特尔产品(成都)有限公司</div>
+                                                        <div class="td"><div class="line-bar"><div class="color-bar" style="width: 70%"></div><span>11020</span></div></div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="td">3</div>
+                                                        <div class="td">成都恒瑞制药有限公司</div>
+                                                        <div class="td"><div class="line-bar"><div class="color-bar" style="width: 60%"></div><span>11000</span></div></div>
+                                                    </div>-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide research-item3-column">
+                                        <!--<div class="item-column left-con fl">
+                                            <div class="flex-column">
+                                                <div class="number">调研企业总数：<span>300</span></div>
+                                                <div class="flex-cell">
+                                                    <div class="research-item3-number-bg">
+                                                        <div class="row">实际调研<span>156</span></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>-->
+                                        <div class="item-column middle-con fl">
+                                            <div class="list-con">
+                                                <div class="flex-column">
+                                                    <div class="th">流动企业名录</div>
+                                                    <div class="flex-cell">
+                                                        <div class="scroll-box">
+                                                            <div class="list flow-company">
+                                                                <!--<div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>
+                                                                <div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>
+                                                                <div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>
+                                                                <div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>
+                                                                <div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>
+                                                                <div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>
+                                                                <div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>
+                                                                <div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>
+                                                                <div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>
+                                                                <div class="row"><div class="td name">西门子工业自动化产品(成都)有限公司</div><div class="td problem-type">税收关系不在高新区</div></div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item-column right-con fl">
+                                            <!--<div class="item-row">
+                                                <div class="number">调研企业总数：<span>300</span></div>
+                                            </div>
+                                            <div class="item-row">
+                                                <div class="number moneyTotal">资金缺口总数：<span>986</span></div>
+                                                <div class="line-bar"><div class="color-bar" style="width: 50%"></div></div>
+                                            </div>
+                                            <div class="item-row">
+                                                <div class="number moneyDebtRatio">资产负债率：<span>31</span>%</div>
+                                                <div class="line-bar"><div class="color-bar" style="width: 31%"></div></div>
+                                            </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--<div class="left-con fl">
+                        <div class="flex-column">
+                            <div class="public-title"><span class="icon"></span><span class="name">潜力企业</span> POTENTIAL</div>
+                            <div class="flex-cell">
+                                <div class="list">
+                                    <div class="row">索尔思光电（成都）有限公司</div>
+                                    <div class="row">四川西南交大铁路发展股份有限公司</div>
+                                    <div class="row">富通光纤光缆（成都）有限公司</div>
+                                    <div class="row">四川汇源星辰光电有限公司</div>
+                                    <div class="row">四川太平洋药业有限责任公司</div>
+                                    <div class="row">敦阳泰克科技（成都）有限公司</div>
+                                    <div class="row">四川红宇创智信息科技有限责任公司</div>
+                                    <div class="row">四川光恒通信技术有限公司</div>
+                                    <div class="row">四川百纳科技有限责任公司</div>
+                                    <div class="row">赫比(成都)精密塑胶制品有限公司</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-con fl">
+                        <div class="flex-column">
+                            <div class="public-title"><span class="icon"></span><span class="name">风险企业</span> RISK</div>
+                            <div class="flex-cell">
+                                <div class="list">
+                                    <div class="row">西门子工业自动化产品(成都)有限公司</div>
+                                    <div class="row">英特尔产品(成都)有限公司</div>
+                                    <div class="row">成都恒瑞制药有限公司</div>
+                                    <div class="row">成都明旺乳业有限公司</div>
+                                    <div class="row">成都华宇制药有限公司</div>
+                                    <div class="row">东晶锐康晶体(成都)有限公司</div>
+                                    <div class="row">希望深蓝空调制造有限公司</div>
+                                    <div class="row">成都阜特科技股份有限公司</div>
+                                    <div class="row">成都中光电科技有限公司</div>
+                                    <div class="row">成都普天电缆股份有限公司</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+        <div class="item item4 fl">
+            <div class="border-box">
+                <div class="con">
+                    <div class="flex-column">
+                        <div class="public-title"><span class="icon"></span><span class="name">企业问题情况</span> PROBLEM</div>
+                        <div class="flex-cell">
+                            <div class="swiper-item swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="flex-column problem-handle">
+                                            <div class="number">累计收集问题<span>9998</span>件</div>
+                                            <div class="flex-cell">
+                                                <div class="echart-con problem-echart" id="problem-echart">
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="swiper-slide">
+                                        <div class="swiper-item swiper-container-switch">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="switch-list-con">
+                                                        <div class="flex-column">
+                                                            <div class="list-label">电子信息</div>
+                                                            <div class="flex-cell">
+                                                                <div class="list-con">
+                                                                    <div class="row">
+                                                                        <div class="td th">问题分类</div>
+                                                                        <div class="td th">件数</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">平台需求</div>
+                                                                        <div class="td">1</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">市场开通</div>
+                                                                        <div class="td">10</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">生活配套</div>
+                                                                        <div class="td">12</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">政策指导</div>
+                                                                        <div class="td">62</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">人才引进及培训</div>
+                                                                        <div class="td">79</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">资金需求</div>
+                                                                        <div class="td">113</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">其他问题</div>
+                                                                        <div class="td">332</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">其他</div>
+                                                                        <div class="td">1111</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="switch-list-con">
+                                                        <div class="flex-column">
+                                                            <div class="list-label">XXXX</div>
+                                                            <div class="flex-cell">
+                                                                <div class="list-con">
+                                                                    <div class="row">
+                                                                        <div class="td th">问题分类</div>
+                                                                        <div class="td th">件数</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">平台需求</div>
+                                                                        <div class="td">1</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">市场开通</div>
+                                                                        <div class="td">10</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">生活配套</div>
+                                                                        <div class="td">12</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">政策指导</div>
+                                                                        <div class="td">62</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">人才引进及培训</div>
+                                                                        <div class="td">79</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">资金需求</div>
+                                                                        <div class="td">113</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">其他问题</div>
+                                                                        <div class="td">332</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">其他</div>
+                                                                        <div class="td">1111</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="switch-list-con">
+                                                        <div class="flex-column">
+                                                            <div class="list-label">XXXX</div>
+                                                            <div class="flex-cell">
+                                                                <div class="list-con">
+                                                                    <div class="row">
+                                                                        <div class="td th">问题分类</div>
+                                                                        <div class="td th">件数</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">平台需求</div>
+                                                                        <div class="td">1</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">市场开通</div>
+                                                                        <div class="td">10</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">生活配套</div>
+                                                                        <div class="td">12</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">政策指导</div>
+                                                                        <div class="td">62</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">人才引进及培训</div>
+                                                                        <div class="td">79</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">资金需求</div>
+                                                                        <div class="td">113</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">其他问题</div>
+                                                                        <div class="td">332</div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="td">其他</div>
+                                                                        <div class="td">1111</div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-switch-btn">
+                                                <span class="btn btn-prev swiper-button-prev"></span>
+                                                <span class="btn btn-next swiper-button-next"></span>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    <!--<div class="swiper-slide">
+                                        <div class="list">
+                                            <div class="row">
+                                                <div class="td th">公司名</div>
+                                                <div class="td th">问题</div>
+                                                <div class="td th">责任小组</div>
+                                                <div class="td th">状态</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="td">成都数字媒体产业化基地有限公司</div>
+                                                <div class="td">人才引进及培育</div>
+                                                <div class="td">生物医学组</div>
+                                                <div class="td success">完成</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="td">四川电器集团股份有限公司</div>
+                                                <div class="td">资金需求</div>
+                                                <div class="td">数字游戏3组</div>
+                                                <div class="td doing">办理中</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="td">敦阳泰克科技（成都）有限公司</div>
+                                                <div class="td">平台需求</div>
+                                                <div class="td">中药生物组</div>
+                                                <div class="td error">超期</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="td">易达天成软件有限公司</div>
+                                                <div class="td">资金需求</div>
+                                                <div class="td">化学药组</div>
+                                                <div class="td success">完成</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="td">易达天成软件有限公司</div>
+                                                <div class="td">资金需求</div>
+                                                <div class="td">化学药组</div>
+                                                <div class="td success">完成</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="td">易达天成软件有限公司</div>
+                                                <div class="td">资金需求</div>
+                                                <div class="td">化学药组</div>
+                                                <div class="td success">完成</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="td">易达天成软件有限公司</div>
+                                                <div class="td">资金需求</div>
+                                                <div class="td">化学药组</div>
+                                                <div class="td success">完成</div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="td">易达天成软件有限公司</div>
+                                                <div class="td">资金需求</div>
+                                                <div class="td">化学药组</div>
+                                                <div class="td success">完成</div>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                    <div class="swiper-slide">
+                                        <div class="flex-column">
+                                            <div class="title">问题处理</div>
+                                            <div class="flex-cell research-problem-time">
+                                                <div class="item-con left-con">
+                                                    <div class="table-list">
+                                                        <div class="row"><div class="td number">平均受理时间：<span>2小时</span></div></div>
+                                                        <div class="row"><div class="td"><div class="time-box flex"><div class="line-bar flex-cell"><div class="color-bar" style="width: 90%"></div></div><span>90.00%</span></div></div></div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-con middle-con">
+                                                    <div class="table-list">
+                                                        <div class="td">
+                                                            <div class="number">总数</div>
+                                                            <div class="number"><span>12135</span>个</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-con right-con">
+                                                    <div class="table-list">
+                                                        <div class="row"><div class="td number">平均处理时间：<span>2小时</span></div></div>
+                                                        <div class="row">
+                                                            <div class="td">
+                                                                <div class="time-box flex"><div class="line-bar flex-cell"><div class="color-bar" style="width: 90%"></div></div><span>90.00%</span></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="float-window my-hide">
+    <div class="con">
+        <div class="item-row time"><!--2018年5月30日--></div>
+        <div class="item-row more-info"><div class="btn"><!--电子信息制造组--></div></div>
+        <div class="item-row number">已调研<span><!--98--></span>家企业</div>
+    </div>
+</div>
+<script src="js/jquery.2.2.0.min.js"></script>
+<script src="js/common.js"></script>
+
+<link rel="stylesheet" href="js/swiper/swiper.4.0.2.min.css">
+<script src="js/swiper/swiper.4.0.2.min.js"></script>
+<script src="js/echarts.js"></script>
+<link rel="stylesheet" href="js/scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+<!--<script src="js/scrollbar-plugin-master/jquery.mousewheel.min.js"></script>-->
+<script src="js/scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/layer-v3.1.1/layer.js"></script>
+<script src="js/jquery.bay-window.js"></script>
+<script src="js/research-platform.js"></script>
+<script>
+    /*飘窗*/
+    // $('.float-window').autoMove({angle:-Math.PI/4, speed:100});
+  var mySwiper = new Swiper('.swiper-container', {
+    // autoplay:true,//等同于以下设置
+    setWrapperSize :true,
+    autoplay: {
+      delay: 3000,
+      stopOnLastSlide: false,
+      disableOnInteraction: false,
+    },
+  });
+  //鼠标覆盖停止自动切换
+  // mySwiper.el.onmouseover = function(){
+  //   mySwiper.autoplay.stop();
+  // }
+  mySwiper.forEach(function(v,i){
+    v.el.onmouseover = function(){
+      v.autoplay.stop();
+    }
+    v.el.onmouseout = function(){
+      v.autoplay.start();
+    }
+  })
+  var mySwiper3 = new Swiper('.research-group-switch-label', {
+    // loop : true,
+    observer:true,
+  })
+    var mySwiper2 = new Swiper('.swiper-container-switch', {
+      // loop : true,
+      observer:true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      controller: {
+        control: mySwiper3, //控制Swiper1
+      },
+      on:{
+        slideChangeTransitionEnd: function(){
+          $('.swiper-container-switch .research-group-list .scroll-box').mCustomScrollbar("scrollTo",'top');
+        }
+      }
+    })
+    mySwiper3.controller.control = mySwiper2; //Swiper3控制Swiper2，需要在Swiper2初始化后
+
+    const floatWindowInfoUrl = '/economic/datavPage/js/jsonData/apiG.json';
+    /*$.getJSON(floatWindowInfoUrl,function(result){
+      const data = result.content;
+      // var arr = [{time: '2018年5月30日', name: '电子信息制造组',num: 98},{time: '2018年4月30日',name: '生物医学组',num: 88},{time: '2018年3月30日',name: '中药生物组',num: 68}];
+      var arr = [];
+      data.forEach((v) => {
+        let timeText = '';
+        if(v['调研的最后时间']){
+            timeText = v['调研的最后时间'];
+        }else{
+          timeText = '休息日，无状态'
+        }
+          const itemObj = {
+            time: timeText,
+            name: v['小组名'],
+            num: v['调研企业数']
+          };
+        arr.push(itemObj);
+      });
+      $('.float-window').show();
+      var countNum = 0;
+      changeFloatWindow(countNum);
+      setInterval(function(){
+        countNum++;
+        if(countNum >= arr.length){
+          countNum = 0;
+        }
+        changeFloatWindow(countNum);
+      },3000);
+      function changeFloatWindow(countNum) {
+        $('.float-window .more-info .btn').html(arr[countNum].name);
+        $('.float-window .time').html(arr[countNum].time);
+        $('.float-window .number span').html(arr[countNum].num);
+      }
+    });*/
+    /*搜索小组操作*/
+    $('.group-search-box .search-btn').on('click',function(){
+      searchGroupData();
+    });
+    $('.group-search-box #group-search-input').on('keydown',function(e){
+      e.stopPropagation();
+      $('.group-search-box').addClass('active');
+      const keyCode = e.keyCode;
+      const val = $('#group-search-input').val().trim();
+      if(keyCode == 13 && val){
+        searchGroupData();
+      }
+    });
+    $(document).on('click',function(e){
+      initSearchGroupStatus();
+      $('.research-group-box .company-more-info').hide();
+      $('.research-group-box .research-group-con').removeClass('active');
+      $('.company-more-info .item-tab').eq(0).addClass('active').siblings().removeClass('active');
+      $('.item-column').eq(0).show().siblings().hide();
+    });
+    $('.group-search-box #group-search-input').on('click',function(e){
+      e.stopPropagation();
+      $('.group-search-box').addClass('active');
+    });
+    /*$('.group-search-box #group-search-input').on('focus',function(e){
+      console.log(e)
+      $('.group-search-box').addClass('active');
+    });*/
+    function searchGroupData() {
+      const val = $('#group-search-input').val().trim();
+      const ems = $('.research-group-switch-label .swiper-wrapper').find('.swiper-slide');
+      for(let i=0;i<ems.length;i++){
+        const emNum = $(ems[i]).data('name').replace(/[^0-9]/ig,"");
+        if(emNum == val){
+          // mySwiper2.slideToLoop(i);
+          mySwiper2.slideTo(i);
+          initSearchGroupStatus();
+          return;
+        }else if(i == ems.length - 1){
+          layer.msg('无小组信息！',{icon: 0});
+        }
+      }
+    }
+    function initSearchGroupStatus(){
+      $('#group-search-input').val('');
+      $('.group-search-box').removeClass('active');
+    }
+</script>
+</body>
+</html>
