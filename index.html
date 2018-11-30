@@ -13,10 +13,52 @@
         <div class="item"><a href="ngEconomicSystem">ngEconomicSystem</a></div>
         <div class="item"><a href="dataV">dataV</a></div>
         <div class="item"><a href="High-techZoneGeographySystem">High-techZoneGeographySystem</a></div>
+        <div class="item"><a href="vue/Travel/index.html">VUE</a></div>
         <div class="item"><a href="bootstrap">bootstrap</a></div>
         <div class="item"><a href="pc-web">pc-web</a></div>
         <div class="item"><a href="tmall">TmallMobile</a></div>
         <div class="item"><a href="JD">JDMobile</a></div>
     </div>
+    <style>
+        .video-box{
+            position: relative;
+        }
+        .video-box .wrapper, .video-box .text-logo{
+            position: absolute;
+        }
+        .video-box .wrapper{
+            pointer-events: none;
+            width: 1920px;
+            height: 422px;
+            left: 50%;
+            margin-left: -960px;
+            top: 0px;
+        }
+        .video-box .text-logo{
+            width: 524px;
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            margin-left: -262px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+<div class="video-box">
+    <video id="video" src="//cloud.video.taobao.com/play/u/3964046646/p/1/e/6/t/1/211254350671.mp4" poster="" width="100%" height="420" autoplay="" muted="" loop="" controls="controls"></video>
+    <img class="wrapper" src="//img.alicdn.com/tps/i4/TB12lPfiZbpK1RjSZFywu0_qFXa.png" width="1920">
+    <img class="text-logo" src="//img.alicdn.com/tps/i4/TB1F7deiVzqK1RjSZSgwu3pAVXa.png" width="355">
+</div>
+    <button onclick="setCurTime()">设置</button>
+    <script>
+      myVid=document.getElementById("video");
+      function setCurTime(){
+        var lastTime = myVid.duration;
+        myVid.currentTime=10;
+        console.log(myVid);
+      }
+    </script>
 </body>
 </html>
