@@ -1,0 +1,670 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "banner": {
+        "bannerImg": "//p1.meituan.net/deal/935c1da59b0c4a4a790c836e8bae91ac25953.jpg",
+        "bannerTitle": "海底捞火锅",
+        "bannerDesc": "畅享套餐，建议2人使用",
+        "galleryList": [
+          "//p1.meituan.net/deal/935c1da59b0c4a4a790c836e8bae91ac25953.jpg",
+          "//p1.meituan.net/440.0/dealwaterb/38ed4e43f0a9a2e80deb075a6413aded18036.jpg"
+        ]
+      },
+      "priceInfo": {
+        "price": 156,
+        "shopPrice": 252,
+        "soldNumber": 1467
+      },
+      "evaluation": {
+        "scoreNumber": 4.4,
+        "evaluationTotal": 173,
+        "evaluationTag": [
+          "服务热情81",
+          "味道赞51",
+          "干净卫生38",
+          "环境优雅37",
+          "菜品健康37",
+          "分量足21",
+          "上菜快21"
+        ],
+        "lists": [
+          {
+            "id": 1,
+            "nickname": "伊灵舞",
+            "avatarUrl": "https://img.meituan.net/avatar/9cd231a9428adcdbf7f3de4c24425a8b67676.jpg@74w_74h_1e_1c",
+            "scoreNumber": 5,
+            "time": "2018-12-08",
+            "evaluationMsg": "我是第一次去海底劳龙湖三楼这家店吃东西，真心感受到温馨舒服的感觉，菜品也很好吃，份也足，难怪别人店里晚上和周末要等很久才有位子，里面上班的小哥哥，小姐们让人很开心，工作认真热情，让人感觉宾至如归的感觉，太喜欢了，环境也。很干净，下次还去他家吃饭！",
+            "evaluationImg": [
+              "//p0.meituan.net/60.0/shaitu/f9c2e5f57f2c18d8de571129cad54e771481053.jpg",
+              "//p0.meituan.net/60.0/shaitu/ffffed98c94aebea4d59138920cbbe771665996.jpg",
+              "//p0.meituan.net/60.0/shaitu/a4ad02d68f731370f44ff71034a4541f1548657.jpg"
+            ],
+            "evaluationBigImg": [
+              "//p0.meituan.net/400.0/shaitu/f9c2e5f57f2c18d8de571129cad54e771481053.jpg",
+              "//p0.meituan.net/400.0/shaitu/ffffed98c94aebea4d59138920cbbe771665996.jpg",
+              "//p0.meituan.net/400.0/shaitu/a4ad02d68f731370f44ff71034a4541f1548657.jpg"
+            ],
+            "shopAddress": "海底捞火锅（金牛凯德店）",
+            "showMore": false
+          },
+          {
+            "id": 2,
+            "nickname": "昵称",
+            "avatarUrl": "//p0.meituan.net/mmc/35ad1f9253761ea6ff822b5e659f234f3758.png@74w_74h_1e_1c",
+            "scoreNumber": 4,
+            "time": "2018-11-08",
+            "evaluationMsg": "第一次来吃！服务比起行业里面算好的！环境OK！还给我约免费指甲！也是一个亮点！刚开始准备点几个菜的！服务员叫我们先吃完在点！才发现碗多！东西少！不代表不够吃！最后没有吃完😅😅😅……说真的那个小碗上菜！确实拉低档次！可以用两个和蒸笼大小的盒子！一个荤一个素！可以学一下一品鲜鲍！ #捞派捞面# #番茄锅底# #捞派滑牛肉# #无刺巴沙鱼片# #小酥肉#",
+            "evaluationImg": [
+              "//p0.meituan.net/shaitu/4d4709ebe4d08cb885a5c026c8452de51770259.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/396bbf1a72c3ba4c36a298df12d4a2d52089445.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p0.meituan.net/400.0/shaitu/4d4709ebe4d08cb885a5c026c8452de51770259.jpg",
+              "//p0.meituan.net/400.0/shaitu/396bbf1a72c3ba4c36a298df12d4a2d52089445.jpg"
+            ],
+            "shopAddress": "海底捞火锅（龙湖三千集店）",
+            "showMore": false
+          }
+        ]
+      },
+      "foodPackage": {
+        "packageList": [
+          {
+            "name": "畅享套餐",
+            "list": [
+              {
+                "name": "滑牛肉（100g）",
+                "number": "1份",
+                "price": "16元"
+              },
+              {
+                "name": "巴沙鱼片（120g)",
+                "number": "1份",
+                "price": "14元"
+              },
+              {
+                "name": "招牌虾滑（60g）",
+                "number": "1份",
+                "price": "18元"
+              },
+              {
+                "name": "抖抖面筋球（面筋球4个，鸡蛋2个）",
+                "number": "1份",
+                "price": "16元"
+              }
+            ]
+          },
+          {
+            "name": "豪华套餐",
+            "list": [
+              {
+                "name": "测试",
+                "number": "1份",
+                "price": "18元"
+              }
+            ]
+          }
+        ],
+        "remarkList": [
+          "免费提供纸巾"
+        ]
+      },
+      "shopInfo": {
+        "name": "海底捞火锅（龙湖三千集店）",
+        "address": "成华区建设北路三段2号龙湖三千集3层成华区建设北路三段2号龙湖三千集3层",
+        "tel": "028",
+        "shopTotal": 2
+      }
+    },
+    {
+      "id": 2,
+      "banner": {
+        "bannerImg": "//p0.meituan.net/deal/2a20c6a4d296a86950279a78c83d6ab948722.jpg",
+        "bannerTitle": "芭菲盛宴",
+        "bannerDesc": "单人自助午餐，流连忘返的美食",
+        "galleryList": [
+          "//p0.meituan.net/deal/2a20c6a4d296a86950279a78c83d6ab948722.jpg",
+          "//p0.meituan.net/440.0/deal/__12725048__5888342.jpg",
+          "//p1.meituan.net/440.0/deal/__12725049__1579749.jpg",
+          "//p1.meituan.net/440.0/deal/__12725047__7251526.jpg",
+          "//p1.meituan.net/440.0/deal/__12725045__6198347.jpg",
+          "//p0.meituan.net/440.0/deal/__12725051__7856738.jpg",
+          "//p0.meituan.net/440.0/deal/__12725042__1560760.jpg",
+          "//p0.meituan.net/440.0/deal/__12725041__2753771.jpg",
+          "//p0.meituan.net/440.0/deal/__12725040__1489977.jpg",
+          "//p1.meituan.net/440.0/deal/ce08ae6b817ffd6ffa4139b2631c8beb214039.jpg"
+        ]
+      },
+      "priceInfo": {
+        "price": 129,
+        "shopPrice": 148,
+        "soldNumber": 222882
+      },
+      "evaluation": {
+        "scoreNumber": 4.4,
+        "evaluationTotal": 19469,
+        "evaluationTag": [
+          "回头客575",
+          "味道赞51",
+          "干净卫生190",
+          "上菜快95",
+          "朋友聚餐85",
+          "家庭聚餐37",
+          "停车方便21",
+          "公司聚餐16"
+        ],
+        "lists": [
+          {
+            "id": 1,
+            "nickname": "_qqzmw1443927035",
+            "avatarUrl": "//p1.meituan.net/mmc/9eb02e99626203347ba0237ac7699f924241.png@74w_74h_1e_1c",
+            "scoreNumber": 4,
+            "time": "2018-12-25",
+            "evaluationMsg": "牛排和重庆的一样一如既往的好吃，但是没有看到鲍鱼，真会来说还不错，值得推荐，价格比重庆的便宜，中途停电了，服务员一一的来道歉，享受了一会儿烛光晚餐，走的时候还赠送了因为停电而致歉的甜点",
+            "evaluationImg": [
+              "//p0.meituan.net/shaitu/c7bc70ce995b2c237386ee149c1efa1a301695.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/d5754ef76bcd6c31700dd64b9588afa2238697.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/e5ba02832327e7e81641891851d08f33266323.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/b85809f204c80be5e132c33676ac2eed226922.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/8941f01bb0d80a5d1a672da2f08fc40d225332.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p0.meituan.net/shaitu/c7bc70ce995b2c237386ee149c1efa1a301695.jpg",
+              "//p0.meituan.net/shaitu/d5754ef76bcd6c31700dd64b9588afa2238697.jpg",
+              "//p0.meituan.net/shaitu/e5ba02832327e7e81641891851d08f33266323.jpg",
+              "//p0.meituan.net/shaitu/b85809f204c80be5e132c33676ac2eed226922.jpg",
+              "//p0.meituan.net/shaitu/8941f01bb0d80a5d1a672da2f08fc40d225332.jpg"
+            ],
+            "shopAddress": "芭菲盛宴·环球美食（奥克斯广场店）",
+            "showMore": false
+          },
+          {
+            "id": 2,
+            "nickname": "刘郝聪明",
+            "avatarUrl": "https://img.meituan.net/avatar/02af4189217bd6089e897f4786b852948783.jpg@74w_74h_1e_1c",
+            "scoreNumber": 5,
+            "time": "2018-12-02",
+            "evaluationMsg": "挺可以的，第二次来吃啦！中午一点多来的这儿，吃了一个多小时，超级撑，很多菜品，毕竟这个价格，牛排生蚝寿司点心红酒吃了超级多挺棒的，挺好吃的。对于我们这种农民来说是有点贵了。但是还是。挺可以的，体验了一盘高档体验。",
+            "evaluationImg": [
+              "//p1.meituan.net/shaitu/2e68e50e9a62fddc4e9816657d839084451974.jpg@110w_110h_1e_1c",
+              "//p1.meituan.net/shaitu/a3c288f5d5cb28f9a4dcd2663a4b870782076.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p1.meituan.net/shaitu/2e68e50e9a62fddc4e9816657d839084451974.jpg",
+              "//p1.meituan.net/shaitu/a3c288f5d5cb28f9a4dcd2663a4b870782076.jpg"
+            ],
+            "shopAddress": "芭菲盛宴·环球美食（奥克斯广场店）",
+            "showMore": false
+          }
+        ]
+      },
+      "foodPackage": {
+        "packageList": [
+          {
+            "list": [
+              {
+                "name": "周一至周日11:30-14:30",
+                "number": "1位",
+                "price": "148元"
+              }
+            ]
+          }
+        ],
+        "remarkList": []
+      },
+      "shopInfo": {
+        "name": "芭菲盛宴·环球美食（奥克斯广场店）",
+        "address": "武侯区锦城大道666号奥克斯广场西区3层",
+        "tel": "028",
+        "shopTotal": 0
+      }
+    },
+    {
+      "id": 3,
+      "banner": {
+        "bannerImg": "https://p1.meituan.net/dpdeal/715be38a90f0f684edf38d87295a72dd154765.jpg%40450w_280h_1e_1c_1l%7Cwatermark%3D0",
+        "bannerTitle": "卡拉卡拉漫温泉汗蒸",
+        "bannerDesc": "仅售129元，价值139元单人汗蒸门票+自助夜宵+早餐，节假日通用！",
+        "galleryList": [
+          "https://p1.meituan.net/dpdeal/715be38a90f0f684edf38d87295a72dd154765.jpg%40450w_280h_1e_1c_1l%7Cwatermark%3D0",
+          "https://p1.meituan.net/dpdeal/1a382f2b4d99351bf66c4ec6993e69bf115739.jpg%40450w_280h_1e_1c_1l%7Cwatermark%3D0",
+          "https://p0.meituan.net/dpdeal/6677544ccab08745226c915cf727ba7b204819.jpg%40450w_280h_1e_1c_1l%7Cwatermark%3D0",
+          "https://p1.meituan.net/dpdeal/b6cb0f89c1f0d102d6247611064e9a31127889.jpg%40450w_280h_1e_1c_1l%7Cwatermark%3D0",
+          "https://p1.meituan.net/dpdeal/779f3c9c145a4b5a4cef982dcbcc956b110026.jpg%40450w_280h_1e_1c_1l%7Cwatermark%3D0"
+        ]
+      },
+      "priceInfo": {
+        "price": 129,
+        "shopPrice": 139,
+        "soldNumber": 4508
+      },
+      "evaluation": {
+        "scoreNumber": 4,
+        "evaluationTotal": 317,
+        "evaluationTag": [],
+        "lists": [
+          {
+            "id": 1,
+            "nickname": "Btv600274366",
+            "avatarUrl": "https://p1.meituan.net/mmc/e663563d638f3f2c56274e28ac949a143761.png%40120w_120h_0e_1l%7Cwatermark%3D0",
+            "scoreNumber": 5,
+            "time": "2018-12-30",
+            "evaluationMsg": "干净，卫生，每次都来，强烈推荐，每次带着疲惫的身体进来，在一楼舒舒服服的泡个澡，洗去一身疲惫，然后去二楼玩一玩，吃吃水果，唱唱歌，打打球，舒服，饿了就去三楼吃点饭，吃完容易困就上四楼做一个299的做了，还免门票，然后去六楼来一个客房，舒舒服服的睡一觉，第二天走的时候，疲惫感全部消散，所以这家温泉值得推荐，而且服务态度特别好，",
+            "evaluationImg": [
+              "https://p0.meituan.net/shaitu/c75d92efdccea01d3b37546adf39afe5140314.jpg%40249w_249h_0e_1l%7Cwatermark%3D0",
+              "https://p0.meituan.net/shaitu/f1a5f010365e853ee78344fa3a5f8f2173854.jpg%40249w_249h_0e_1l%7Cwatermark%3D0",
+              "https://p1.meituan.net/shaitu/3f9e91b591ff31167dabefb69ce709bc92942.jpg%40249w_249h_0e_1l%7Cwatermark%3D0",
+              "https://p0.meituan.net/shaitu/11503b1e10f2987b7419aeae384668a1141048.jpg%40249w_249h_0e_1l%7Cwatermark%3D0"
+            ],
+            "evaluationBigImg": [
+              "https://p0.meituan.net/shaitu/c75d92efdccea01d3b37546adf39afe5140314.jpg%40700w_700h_0e_1l%7Cwatermark%3D0",
+              "https://p0.meituan.net/shaitu/f1a5f010365e853ee78344fa3a5f8f2173854.jpg%40700w_700h_0e_1l%7Cwatermark%3D0",
+              "https://p1.meituan.net/shaitu/3f9e91b591ff31167dabefb69ce709bc92942.jpg%40700w_700h_0e_1l%7Cwatermark%3D0",
+              "https://p0.meituan.net/shaitu/11503b1e10f2987b7419aeae384668a1141048.jpg%40700w_700h_0e_1l%7Cwatermark%3D0"
+            ],
+            "shopAddress": "",
+            "showMore": false
+          },
+          {
+            "id": 2,
+            "nickname": "Btv600274366",
+            "avatarUrl": "https://p1.meituan.net/mmc/e663563d638f3f2c56274e28ac949a143761.png%40120w_120h_0e_1l%7Cwatermark%3D0",
+            "scoreNumber": 5,
+            "time": "2019-12-07",
+            "evaluationMsg": "来了几次了，还是一如既往的喜欢这里，在里面不论是环境还是氛围还是不错的，而且里面的工作人员还是非常热情的，来了几次都是住的客房，里面设备很齐全，而且房间很干净，很舒适，所以每次来了都是住客房，从一楼进去是男女宾，可以泡澡，二楼还可以汗蒸，工作累了，去蒸一蒸还是不错的，我就喜欢，三楼太空舱和餐厅，餐厅的东西很精致，一看就有食欲，太空舱很有特色，四楼有足疗，按摩，做了几次299的项目，还是不错的，时间还很长，值得推荐，五楼休息，六楼就是客房了，每次来都是住客房，很值得推荐，而且房间大，干净，舒适，",
+            "evaluationImg": [
+              "https://p1.meituan.net/shaitu/a47185a45577b2373818fe7e0c95b68e176873.jpg%40249w_249h_0e_1l%7Cwatermark%3D0",
+              "https://p1.meituan.net/shaitu/c2e42e565b557443acb3fca0162162b3125001.jpg%40249w_249h_0e_1l%7Cwatermark%3D0",
+              "https://p1.meituan.net/shaitu/029b9d0f177b4545a8c69bbed3c7b61e234564.jpg%40249w_249h_0e_1l%7Cwatermark%3D0",
+              "https://p0.meituan.net/shaitu/46b1c5552a3cbe8631302a23c35bfd8178053.jpg%40249w_249h_0e_1l%7Cwatermark%3D0"
+            ],
+            "evaluationBigImg": [
+              "https://p1.meituan.net/shaitu/a47185a45577b2373818fe7e0c95b68e176873.jpg%40700w_700h_0e_1l%7Cwatermark%3D0",
+              "https://p1.meituan.net/shaitu/c2e42e565b557443acb3fca0162162b3125001.jpg%40700w_700h_0e_1l%7Cwatermark%3D0",
+              "https://p1.meituan.net/shaitu/029b9d0f177b4545a8c69bbed3c7b61e234564.jpg%40700w_700h_0e_1l%7Cwatermark%3D0",
+              "https://p0.meituan.net/shaitu/46b1c5552a3cbe8631302a23c35bfd8178053.jpg%40700w_700h_0e_1l%7Cwatermark%3D0"
+            ],
+            "shopAddress": "",
+            "showMore": false
+          }
+        ]
+      },
+      "foodPackage": {
+        "packageList": [
+          {
+            "list": [
+              {
+                "name": "单人汗蒸门票+自助夜宵+早餐",
+                "number": "1次",
+                "price": "139元"
+              }
+            ]
+          }
+        ],
+        "remarkList": []
+      },
+      "shopInfo": {
+        "name": "卡拉卡拉漫温泉汗蒸",
+        "address": "解放路一段192号",
+        "tel": "028",
+        "shopTotal": 0
+      }
+    },
+    {
+      "id": 4,
+      "banner": {
+        "bannerImg": "//p0.meituan.net/deal/dece13ed36329ca8cd078186ca13e0e927775.jpg",
+        "bannerTitle": "谭鸭血老火锅",
+        "bannerDesc": "100元代金券1张，可叠加2张, 周一至周日可用",
+        "galleryList": [
+          "//p0.meituan.net/deal/dece13ed36329ca8cd078186ca13e0e927775.jpg",
+          "//p1.meituan.net/440.0/dealwaterb/3c873ac4ba01a624b14e0cb64119d4f527775.jpg",
+          "//p0.meituan.net/440.0/dealwaterb/0b724aef341805d324fd301f9086bf7222209.jpg",
+          "//p1.meituan.net/440.0/dealwaterb/00e67172ff27e6b1d400bfa18efdd71337399.jpg",
+          "//p0.meituan.net/440.0/dealwaterb/0122fb31f5330dedf2dce091d86b263a31891.jpg",
+          "//p0.meituan.net/440.0/dealwaterb/df0e59b2c07a6452401b87e4bc8806cb23798.jpg"
+        ]
+      },
+      "priceInfo": {
+        "price": 28,
+        "shopPrice": 100,
+        "soldNumber": 12253
+      },
+      "evaluation": {
+        "scoreNumber": 4,
+        "evaluationTotal": 659,
+        "evaluationTag": [
+          "味道赞133",
+          "性价比高105",
+          "服务热情103",
+          "价格实惠96",
+          "菜品健康91",
+          "上菜快84",
+          "肉类好84",
+          "回头客63"
+        ],
+        "lists": [
+          {
+            "id": 1,
+            "nickname": "夏目大人的猫咪",
+            "avatarUrl": "https://img.meituan.net/avatar/18257e6ea627da8f130da00e291d4fc1139423.jpg@74w_74h_1e_1c",
+            "scoreNumber": 4,
+            "time": "2018-12-26",
+            "evaluationMsg": "礼拜一中午去吃的，排队排了一个小时。要去的朋友可以提前关注美味来了公众号，提前网上排队节约时间，要注意过号作废的。之前在营门口谭鸭血吃的，感觉俩家的味道还是有一点点区别的。太古里的味道更清淡一点，可能是景区考虑外地游客的口味。 菜品的话菜单上面的明星推荐都还可以试一下，感触最深的就是卤豆腐干。服务态度比较好，上菜速度很快，一次性直接把菜上齐(熟菜可能要慢一点)在厕所外面还可以看到一次性的牙刷。缺点就是厕所男女通用，而且只有俩个，厕所排队时间比较长。用代金劵俩个人吃了208块钱。人均38，建议可以在零点抢代金劵会优惠很多钱。 #谭公鸭血# #鲜鸭肠# #极品鲜毛肚# #午餐肉# #麻辣牛肉# #卤水豆腐干#",
+            "evaluationImg": [
+              "//p0.meituan.net/shaitu/95205daaede37278c628e7049d6cf04f3043517.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/8d42c29efc14eb1e66da783e7fb9cd5c4565090.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/e046ff60a5cf6d6beafc9ebc956b02a13852416.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/c85d65bb1859f0a11283219d8f5d896c3165070.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/99534c5f53abdb405e6707e6186adbf83129844.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p0.meituan.net/shaitu/95205daaede37278c628e7049d6cf04f3043517.jpg",
+              "//p0.meituan.net/shaitu/8d42c29efc14eb1e66da783e7fb9cd5c4565090.jpg",
+              "//p0.meituan.net/shaitu/e046ff60a5cf6d6beafc9ebc956b02a13852416.jpg",
+              "//p0.meituan.net/shaitu/c85d65bb1859f0a11283219d8f5d896c3165070.jpg",
+              "//p0.meituan.net/shaitu/99534c5f53abdb405e6707e6186adbf83129844.jpg"
+            ],
+            "shopAddress": "谭鸭血老火锅（太古里直营店）",
+            "showMore": false
+          },
+          {
+            "id": 2,
+            "nickname": "ZQ0302",
+            "avatarUrl": "https://img.meituan.net/avatar/734602313c596e56262f57f49c160bc116938.jpg@74w_74h_1e_1c",
+            "scoreNumber": 5,
+            "time": "2019-12-28",
+            "evaluationMsg": "【口味】非常棒(⊙o⊙)哦。大家积极抢券吧(ง •̀_•́)ง。味道非常不错，很好吃。强烈推荐鸭血【等位】好多人在排队，幸亏我们去得早，so强烈建议大家去早点，大概4点半到5点较为合适。【服务】态度都挺好的。 #谭公鸭血# #火锅牛排# #精品肥牛#",
+            "evaluationImg": [
+              "//p1.meituan.net/shaitu/e18a29f66399ea1af6fb4f76cea50cc8450665.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/8fb5c09c1a9f900a8cd59a99b8ca4276539581.jpg@110w_110h_1e_1c",
+              "//p1.meituan.net/shaitu/ba7c2d0a901d3d5896753b0eb8cf90b2435571.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/473aa380795a7b462b6ff26929fe67ae490635.jpg@110w_110h_1e_1c",
+              "//p1.meituan.net/shaitu/8a852d9337b866d60a81c775f289def1581957.jpg@110w_110h_1e_1c",
+              "//p1.meituan.net/shaitu/eeaf5a05d08a82cd099f5944d77b7ad9228986.jpg@110w_110h_1e_1c",
+              "//p1.meituan.net/shaitu/cefa26078bc32d6d3a0857e9cdbfb45e590492.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/5b3fdfbb27ae74345ef95ae0962aebd3508412.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p1.meituan.net/shaitu/e18a29f66399ea1af6fb4f76cea50cc8450665.jpg",
+              "//p0.meituan.net/shaitu/8fb5c09c1a9f900a8cd59a99b8ca4276539581.jpg",
+              "//p1.meituan.net/shaitu/ba7c2d0a901d3d5896753b0eb8cf90b2435571.jpg",
+              "//p0.meituan.net/shaitu/473aa380795a7b462b6ff26929fe67ae490635.jpg",
+              "//p1.meituan.net/shaitu/8a852d9337b866d60a81c775f289def1581957.jpg",
+              "//p1.meituan.net/shaitu/eeaf5a05d08a82cd099f5944d77b7ad9228986.jpg",
+              "//p1.meituan.net/shaitu/cefa26078bc32d6d3a0857e9cdbfb45e590492.jpg",
+              "//p0.meituan.net/shaitu/5b3fdfbb27ae74345ef95ae0962aebd3508412.jpg"
+            ],
+            "shopAddress": "谭鸭血老火锅（太古里直营店）",
+            "showMore": false
+          },
+          {
+            "id": 3,
+            "nickname": "陈小妹..",
+            "avatarUrl": "https://img.meituan.net/avatar/4fda244632876419f8e527eb6fab92953464.jpg@74w_74h_1e_1c",
+            "scoreNumber": 5,
+            "time": "2019-12-24",
+            "evaluationMsg": "抢的卷   然后中午去的    人挺多   还挺好吃  【服务】挺好     两人没吃完还打包了四个菜  😛   吼吼吼吼   阿姨很热心滴给我们打包 【等位】 我们两人没有排队   人没有来齐是要排队滴哦 【口味】还行吧       锅底没有我想象中那么好    不多性价比是超高了 #谭公鸭血# #火锅牛排# #鲜千层肚# #卤水肥肠# #极品鲜毛肚# #麻辣牛肉# #卤鹌鹑蛋# #鲜虾滑# #虾饺# #网红谭鸭血拼盘#",
+            "evaluationImg": [
+              "//p1.meituan.net/shaitu/cb94289a0f450e8b82ddb08ae54aa1de505614.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/01f6690be92a35f2f27652960f741a43499889.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/2af902991684b921ea4f5248d4481e08404179.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p1.meituan.net/shaitu/cb94289a0f450e8b82ddb08ae54aa1de505614.jpg",
+              "//p0.meituan.net/shaitu/01f6690be92a35f2f27652960f741a43499889.jpg",
+              "//p0.meituan.net/shaitu/2af902991684b921ea4f5248d4481e08404179.jpg"
+            ],
+            "shopAddress": "谭鸭血老火锅（太古里直营店）",
+            "showMore": false
+          }
+        ]
+      },
+      "foodPackage": {
+        "packageList": [
+          {
+            "list": [
+              {
+                "name": "代金券",
+                "number": "1张",
+                "price": "100元"
+              }
+            ]
+          }
+        ],
+        "remarkList": [
+          "店内人均消费参考价：50 元",
+          "店内部分菜品价格参考：鲜鸭肠（ 22.00 元/份）卤水肥肠（ 26.00 元/份）大刀五花（ 13.00 元/份）卤千层肚（ 26.00 元/份）麻辣牛肉（ 23.00 元/份）秘制午餐肉（ 20.00 元/份）鲜毛肚（ 29.00 元/份）笋花（ 15.00 元/份）干豆皮（ 12.00 元/份）土豆（ 8.00 元/份）"
+        ]
+      },
+      "shopInfo": {
+        "name": "谭鸭血老火锅（太古里直营店）",
+        "address": "锦江区东大街下东大街段三圣街68号院底商（农商银行后身）",
+        "tel": "028",
+        "shopTotal": 0
+      }
+    },
+    {
+      "id": 5,
+      "banner": {
+        "bannerImg": "//p0.meituan.net/deal/__42534664__4283905.jpg",
+        "bannerTitle": "339旋转餐厅",
+        "bannerDesc": "单人自助晚餐",
+        "galleryList": [
+          "//p0.meituan.net/deal/__42534664__4283905.jpg",
+          "//p0.meituan.net/440.0/deal/__42624495__2723727.jpg",
+          "//p1.meituan.net/440.0/deal/__42534556__6368366.jpg",
+          "//p0.meituan.net/440.0/deal/__42626607__7967278.jpg",
+          "//p1.meituan.net/440.0/deal/__42625225__1226772.jpg",
+          "//p1.meituan.net/440.0/deal/__42625227__5172335.jpg"
+        ]
+      },
+      "priceInfo": {
+        "price": 271,
+        "shopPrice": 298,
+        "soldNumber": 71382
+      },
+      "evaluation": {
+        "scoreNumber": 4.1,
+        "evaluationTotal": 4047,
+        "evaluationTag": [
+          "夜景赞225",
+          "高大上169",
+          "服务热情103",
+          "价格实惠96",
+          "菜品健康91",
+          "上菜快84",
+          "肉类好84",
+          "回头客63"
+        ],
+        "lists": [
+          {
+            "id": 1,
+            "nickname": "KBw9922",
+            "avatarUrl": "https://img.meituan.net/avatar/6edd2eb9e3a3860a4b79f395d757a69830752.jpg@74w_74h_1e_1c",
+            "scoreNumber": 4,
+            "time": "2018-12-19",
+            "evaluationMsg": "服务很好，冬天上去会有点冷，春天会好一点，夜景很美，吃饭环境不错，中间容易有点晕，边上很棒可以看风景，但只有两人桌，很适合情侣或者闺蜜，菜品新鲜，虾都是活的煮的",
+            "evaluationImg": [
+              "//p0.meituan.net/shaitu/84869de0a52a7ef8ca6630edbc614c9e2216244.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/55912309a6969a5fdae90cc62554543a501324.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/61705acb714c24451df871c7675d2b902374639.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/2539e92755a2d952d5b5533f363e092a1824893.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/2092a7b455e75efd4b60dbdfd42321e31638879.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p0.meituan.net/shaitu/84869de0a52a7ef8ca6630edbc614c9e2216244.jpg",
+              "//p0.meituan.net/shaitu/55912309a6969a5fdae90cc62554543a501324.jpg",
+              "//p0.meituan.net/shaitu/61705acb714c24451df871c7675d2b902374639.jpg",
+              "//p0.meituan.net/shaitu/2539e92755a2d952d5b5533f363e092a1824893.jpg",
+              "//p0.meituan.net/shaitu/2092a7b455e75efd4b60dbdfd42321e31638879.jpg"
+            ],
+            "shopAddress": "339旋转餐厅",
+            "showMore": false
+          },
+          {
+            "id": 2,
+            "nickname": "shimengxue528",
+            "avatarUrl": "//p1.meituan.net/mmc/9eb02e99626203347ba0237ac7699f924241.png@74w_74h_1e_1c",
+            "scoreNumber": 5,
+            "time": "2019-12-28",
+            "evaluationMsg": "环境很好，吃的也不错，海鲜很新鲜，蛋糕好吃，喜欢哈根达斯",
+            "evaluationImg": [
+              "//p0.meituan.net/shaitu/3a7d28fad90a796c28381758b4a7c63f1650657.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/83d4f73a4b3a011b84010051b6faabde1853020.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/5854eea8b6d031510b4bac286b9fb31b44348.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/6a7bf20de6183e4a9edf3bb6ba28b7621462499.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/836ac10c270a0ed54c88a661ffaf7d3f2134330.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p0.meituan.net/shaitu/3a7d28fad90a796c28381758b4a7c63f1650657.jpg",
+              "//p0.meituan.net/shaitu/83d4f73a4b3a011b84010051b6faabde1853020.jpg",
+              "//p0.meituan.net/shaitu/5854eea8b6d031510b4bac286b9fb31b44348.jpg",
+              "//p0.meituan.net/shaitu/6a7bf20de6183e4a9edf3bb6ba28b7621462499.jpg",
+              "//p0.meituan.net/shaitu/836ac10c270a0ed54c88a661ffaf7d3f2134330.jpg"
+            ],
+            "shopAddress": "339旋转餐厅",
+            "showMore": false
+          }
+        ]
+      },
+      "foodPackage": {
+        "packageList": [
+          {
+            "list": [
+              {
+                "name": "单人自助晚餐",
+                "number": "1位",
+                "price": "298元"
+              }
+            ]
+          }
+        ],
+        "remarkList": [
+          "单人自助晚餐：17:30-21:00",
+          "213米云顶旋转餐厅自助晚餐（含339电视塔观景门票，价值100元）"
+        ]
+      },
+      "shopInfo": {
+        "name": "339旋转餐厅",
+        "address": "成华区猛追湾街168号（锦绣天府塔213米）",
+        "tel": "028",
+        "shopTotal": 0
+      }
+    },
+    {
+      "id": 6,
+      "banner": {
+        "bannerImg": "//p0.meituan.net/deal/b9d572ad8b0e50b4957a0d3c8525582247577.jpg",
+        "bannerTitle": "醉码头火锅",
+        "bannerDesc": "100元午市夜宵代金券1张",
+        "galleryList": [
+          "//p0.meituan.net/deal/b9d572ad8b0e50b4957a0d3c8525582247577.jpg",
+          "//p0.meituan.net/440.0/dealwatera/129b1d2badd464b8c34b4c8fdb15e5fa1433674.jpg",
+          "//p1.meituan.net/440.0/dealwatera/86ac4aa75fc244076b8fe197cc14d0812160186.jpg",
+          "//p0.meituan.net/440.0/dealwatera/44278a1b4cf7d75e86fb15ee6479e0a21174205.jpg",
+          "//p1.meituan.net/440.0/dealwatera/09b979dbb354604e29ec21d43139fccb1336899.jpg",
+          "//p0.meituan.net/440.0/dealwatera/7b4c295e5470e303cc8e49021cb214811960497.jpg",
+          "//p1.meituan.net/440.0/dealwatera/80de5520ced1927870e7bd1ae97563f2184094.jpg"
+        ]
+      },
+      "priceInfo": {
+        "price": 68,
+        "shopPrice": 100,
+        "soldNumber": 623
+      },
+      "evaluation": {
+        "scoreNumber": 3.7,
+        "evaluationTotal": 7,
+        "evaluationTag": [
+          "服务热情81",
+          "味道赞51",
+          "干净卫生38",
+          "环境优雅37",
+          "菜品健康37",
+          "分量足21",
+          "上菜快21"
+        ],
+        "lists": [
+          {
+            "id": 1,
+            "nickname": "LH7。幽灵",
+            "avatarUrl": "https://img.meituan.net/avatar/ba6f6aa3bc4ad899a089eb705c78176b113467.jpg@74w_74h_1e_1c",
+            "scoreNumber": 1,
+            "time": "2018-12-20",
+            "evaluationMsg": "菜品不新鲜，金针菇都变色了下半截，让服务员换一下服务员说菜没问题啊，我说我见过的金针菇都是白的啊，然后换一份上来还是一样，煮出来都是两截色一口都没吃。土豆片也是不新鲜，上面一点一点黑乎乎的东西。",
+            "evaluationImg": [
+              "//p0.meituan.net/shaitu/f011542121612f9aad9c7adafed769291375910.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p0.meituan.net/shaitu/f011542121612f9aad9c7adafed769291375910.jpg"
+            ],
+            "shopAddress": "醉码头火锅（金牛万达店）",
+            "showMore": false
+          },
+          {
+            "id": 2,
+            "nickname": "L。维",
+            "avatarUrl": "https://img.meituan.net/avatar/66659a167ad4a0f031e35827d888937f63740.jpg@74w_74h_1e_1c",
+            "scoreNumber": 5,
+            "time": "2019-01-01",
+            "evaluationMsg": "鸭血很好吃，糍粑我喜欢，菜都很好，味道很棒，就是我吃了第二天拉肚子了😞，可能是肠胃不适应这么辣的",
+            "evaluationImg": [
+              "//p0.meituan.net/shaitu/4d4709ebe4d08cb885a5c026c8452de51770259.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/396bbf1a72c3ba4c36a298df12d4a2d52089445.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p0.meituan.net/400.0/shaitu/4d4709ebe4d08cb885a5c026c8452de51770259.jpg",
+              "//p0.meituan.net/400.0/shaitu/396bbf1a72c3ba4c36a298df12d4a2d52089445.jpg"
+            ],
+            "shopAddress": "醉码头火锅（春熙路店）",
+            "showMore": false
+          },
+          {
+            "id": 2,
+            "nickname": "L。维",
+            "avatarUrl": "https://img.meituan.net/avatar/66659a167ad4a0f031e35827d888937f63740.jpg@74w_74h_1e_1c",
+            "scoreNumber": 5,
+            "time": "2019-01-01",
+            "evaluationMsg": "鸭血很好吃，糍粑我喜欢，菜都很好，味道很棒，就是我吃了第二天拉肚子了😞，可能是肠胃不适应这么辣的",
+            "evaluationImg": [
+              "//p0.meituan.net/shaitu/4d4709ebe4d08cb885a5c026c8452de51770259.jpg@110w_110h_1e_1c",
+              "//p0.meituan.net/shaitu/396bbf1a72c3ba4c36a298df12d4a2d52089445.jpg@110w_110h_1e_1c"
+            ],
+            "evaluationBigImg": [
+              "//p0.meituan.net/400.0/shaitu/4d4709ebe4d08cb885a5c026c8452de51770259.jpg",
+              "//p0.meituan.net/400.0/shaitu/396bbf1a72c3ba4c36a298df12d4a2d52089445.jpg"
+            ],
+            "shopAddress": "醉码头火锅（春熙路店）",
+            "showMore": false
+          }
+        ]
+      },
+      "foodPackage": {
+        "packageList": [
+          {
+            "list": [
+              {
+                "name": "午市夜宵代金券",
+                "number": "1张",
+                "price": "100元"
+              }
+            ]
+          }
+        ],
+        "remarkList": [
+          "店内人均消费参考价：60 元",
+          "店内部分菜品价格参考：翻江毛肚（ 36.00 元/份）草船借箭（ 29.00 元/份）荷花鱼片（ 28.00 元/份）山城棒棒牛肉（ 32.00 元/份）水晶鸭肠（ 29.00 元/份）香妃芝士丸（ 22.00 元/份）挂帘嫩牛肉（ 32.00 元/份）石磨豆花（ 12.00 元/份）"
+        ]
+      },
+      "shopInfo": {
+        "name": "醉码头火锅（春熙路店）",
+        "address": "锦江区福兴街30号附201-202（王府井旁，四川特产楼上）",
+        "tel": "028",
+        "shopTotal": 2
+      }
+    }
+  ]
+}
