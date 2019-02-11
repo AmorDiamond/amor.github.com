@@ -1,3 +1,13 @@
 *{margin:0;padding:0;}
 ul,ol,dl{list-style:none;}
 body{background-color:gray;}
+.container .item{
+  text-align: center;
+  margin: 20px 0;
+}
+.container .item .img{
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  box-shadow: 2px 2px 10px #ddd;
+}

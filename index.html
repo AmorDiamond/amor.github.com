@@ -7,59 +7,76 @@
 <meta name="description" content="person"/>
 <link rel="stylesheet" href="CSS/common.css" type="text/css"/>
 <script src="JS/index.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <div class="item"><a href="ngEconomicSystem">ngEconomicSystem</a></div>
-        <div class="item"><a href="dataV">dataV</a></div>
-        <div class="item"><a href="High-techZoneGeographySystem">High-techZoneGeographySystem</a></div>
-        <div class="item"><a href="vue/Travel/index.html">VUE</a></div>
-        <div class="item"><a href="vue/meituan/index.html">VUE-美团</a></div>
-        <div class="item"><a href="bootstrap">bootstrap</a></div>
-        <div class="item"><a href="pc-web">pc-web</a></div>
-        <div class="item"><a href="tmall">TmallMobile</a></div>
-        <div class="item"><a href="JD">JDMobile</a></div>
+        <div class="item col-md-4 col-sm-6">
+          <a href="ngEconomicSystem/index.html">
+            <img class="img" src="./images/economic_bg.png" alt="">
+          </a>
+          <a href="ngEconomicSystem/index.html">ngEconomicSystem</a>
+        </div>
+        <div class="item col-md-4 col-sm-6">
+          <a href="dataV/index.html">
+            <img class="img" src="./images/dataV_bg.png" alt="">
+          </a>
+          <a href="dataV/index.html">dataV</a>
+        </div>
+        <div class="item col-md-4 col-sm-6">
+          <a href="High-techZoneGeographySystem/index.html">
+            <img class="img" src="./images/ecnomic_land_bg.png" alt="">
+          </a>
+          <a href="High-techZoneGeographySystem/index.html">High-techZoneGeographySystem</a>
+        </div>
+        <div class="item col-md-4 col-sm-6">
+          <a href="vue/Travel/index.html">
+            <img class="img" src="./images/vue_travel_bg.png" alt="">
+          </a>
+          <a href="vue/Travel/index.html">VUE</a>
+        </div>
+        <div class="item col-md-4 col-sm-6">
+          <a href="vue/meituan/index.html">
+            <img class="img" src="./images/vue_meituan_bg.png" alt="">
+          </a>
+          <a href="vue/meituan/index.html">VUE-美团</a>
+        </div>
+      <div class="item col-md-4 col-sm-6">
+        <a href="bootstrap/company-demo/index.html">
+          <img class="img" src="./images/bootstrap_company_bg.png" alt="">
+        </a>
+        <a href="bootstrap/company-demo/index.html">bootstrap-company</a>
+      </div>
+      <div class="item col-md-4 col-sm-6">
+        <a href="bootstrap/Dine/index.html">
+          <img class="img" src="./images/bootstrap_dine_bg.png" alt="">
+        </a>
+        <a href="bootstrap/Dine/index.html">bootstrap-dine</a>
+      </div>
+      <div class="item col-md-4 col-sm-6">
+        <a href="pc-web/fullpage-demo/index.html">
+          <img class="img" src="./images/pc_fullpage_bg.png" alt="">
+        </a>
+        <a href="pc-web/fullpage-demo/index.html">pc-web-fullpage</a>
+      </div>
+      <div class="item col-md-4 col-sm-6">
+        <a href="pc-web/pc-mall/index.html">
+          <img class="img" src="./images/pc_tianmao_bg.png" alt="">
+        </a>
+        <a href="pc-web/pc-mall/index.html">pc-web-tianmao</a>
+      </div>
+      <div class="item col-md-4 col-sm-6">
+        <a href="tmall/index.html">
+          <img class="img" src="./images/mobile_tianmao_bg.png" alt="">
+        </a>
+        <a href="tmall/index.html">Mobile-tianmao</a>
+      </div>
+      <div class="item col-md-4 col-sm-6">
+        <a href="JD/index.html">
+          <img class="img" src="./images/mobile_jd_bg.png" alt="">
+        </a>
+        <a href="JD/index.html">Mobile-JD</a>
+      </div>
     </div>
-    <style>
-        .video-box{
-            position: relative;
-        }
-        .video-box .wrapper, .video-box .text-logo{
-            position: absolute;
-        }
-        .video-box .wrapper{
-            pointer-events: none;
-            width: 1920px;
-            height: 422px;
-            left: 50%;
-            margin-left: -960px;
-            top: 0px;
-        }
-        .video-box .text-logo{
-            width: 524px;
-            position: absolute;
-            top: 60px;
-            left: 50%;
-            margin-left: -262px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-        }
-    </style>
-<div class="video-box">
-    <video id="video" src="//cloud.video.taobao.com/play/u/3964046646/p/1/e/6/t/1/211254350671.mp4" poster="" width="100%" height="420" autoplay="" muted="" loop="" controls="controls"></video>
-    <img class="wrapper" src="//img.alicdn.com/tps/i4/TB12lPfiZbpK1RjSZFywu0_qFXa.png" width="1920">
-    <img class="text-logo" src="//img.alicdn.com/tps/i4/TB1F7deiVzqK1RjSZSgwu3pAVXa.png" width="355">
-</div>
-    <button onclick="setCurTime()">设置</button>
-    <script>
-      myVid=document.getElementById("video");
-      function setCurTime(){
-        var lastTime = myVid.duration;
-        myVid.currentTime=10;
-        console.log(myVid);
-      }
-    </script>
 </body>
 </html>
